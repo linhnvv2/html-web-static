@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - vL</title>
+  <title>Portfolio Details - Kelly Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,9 +27,16 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- =======================================================
+  * Template Name: Kelly
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body class="contact-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
@@ -45,27 +52,8 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="telegram.html">Telegram AI Bot</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="telegram.html" class="active">Telegram AI Bot</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -81,92 +69,88 @@
 
   <main class="main">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Please email/zalo/telegram to me when you need suport.</p>
+        <h2>Retrieval-Augmented Generation </h2>
+        <p>A simple local Retrieval-Augmented Generation (RAG) chatbot that can answer to questions by acquiring information from personal pdf documents</p>
+        <p>Please visit this AI Bot to get my phone number and more information about me! <a href="https://t.me/VuLinhBot">Telegram @VuLinhBot</a></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
-          <div class="col-lg-12">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>137/5/2 Long Phuoc Street (Old District 9), Thu Duc City, HCMC</p>
-                </div>
-              </div><!-- End Info Item -->
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Me</h3>
-                  <p><a href="https://t.me/VuLinhBot">Phone on Telegram @VuLinhBot</a>
-                </div>
-              </div><!-- End Info Item -->
+              <div class="swiper-wrapper align-items-center">
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Me</h3>
-                  <p>quangvulinh@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              
-            </div>
-          </div>
-
-          <!-- <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="">
                 </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="">
                 </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
                 </div>
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/books-1.jpg" alt="">
                 </div>
 
               </div>
-            </form>
-          </div> -->
-   
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Chatbot LLM</li>
+                <li><strong>Technical</strong>: Python/Telegram/ChromaLangChain/...</li>
+                <li><strong>Project date</strong>: 01 Dec, 2024</li>
+                <li><strong>Telegram URL</strong>: <a href="https://t.me/VuLinhBot">@VuLinhBot</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>For this project, I exploited the following components to build the RAG architecture:</h2>
+              <p>
+                <p>  Chroma: A vector database used to store and retrieve document embeddings efficiently.</p>
+                <p>Flask: Framework for rendering web page and handling user interactions.</p>
+                <p>Ollama: Manages the local language model for generating responses.</p>
+                <p>LangChain: A framework for integrating language models and retrieval systems.</p>
+              </p>
+            </div>
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
@@ -182,7 +166,7 @@
         <a target="_blank"  href="https://www.linkedin.com/in/quangvulinh/"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        Designed by <a href="http://quangvulinh.com/">qvl</a>
+        Designed by <a href="https://quangvulinh.com/">qvl</a>
       </div>
     </div>
 
