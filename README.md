@@ -4,7 +4,7 @@
 
 Dedicated Solution Architect and Web Developer specializing in cloud architectures and driving agile transformations. Experienced in spearheading major digital overhauls within complex environments, resulting in significant enhancements to system flexibility and performance. Demonstrated proficiency in optimizing web functionality to improve data retrieval and workflow efficiencies.
 
-## � Contact Information
+## 📇 Contact Information
 
 - **Address**: 137/5/2 Long Phuoc Street (Old District 9), Thu Duc City, HCMC
 - **Telegram**: [@VuLinhBot](https://t.me/VuLinhBot)
@@ -69,16 +69,18 @@ Designed, developed, and maintained platforms and applications based on WPF and 
 
 ## 🚀 Project Features (This Website)
 
-This portfolio website showcases my background and skills.
+Live at [quangvulinh.com](https://quangvulinh.com) — static site on AWS S3 + CloudFront.
 
-- **Dynamic Certificates**: JavaScript-based loading of certificate gallery.
-- **Responsive Design**: Built with Bootstrap 5.
-- **Sections**: Home, About, Resume, Certificates, Portfolio, Contact.
+- **Pages**: Home, About, Resume, Projects, Certificates, Contact, AI Bot.
+- **Vietnamese / English switch**: `assets/js/lang.js` (remembers the choice, falls back to browser language).
+- **Projects page**: freelance & own products — travel booking + CMS, AI meeting minutes, AI animated films for kids, Vietnamese TTS voice library (with audio samples).
+- **Dynamic Certificates**: JavaScript-based certificate gallery.
+- **Responsive Design**: Bootstrap 5 + custom `assets/css/site.css`.
 
-## 🔧 Setup & Usage
+## 🔧 Setup & Deploy
 
-1.  Clone the repository.
-2.  Open `index.html` in your web browser.
+1.  Clone the repository and open `index.html` (or run `python -m http.server`).
+2.  Deploy: upload changed files to the S3 bucket, e.g. `aws s3 cp projects.html s3://quangvulinh.com/projects.html --content-type "text/html; charset=utf-8"`. CloudFront caches HTML for ~5 minutes.
 
 ## 📄 License
 
