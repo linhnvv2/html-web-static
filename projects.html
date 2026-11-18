@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects & Freelance — Nguyen Van Vu Linh</title>
+  <meta name="description" content="Personal projects and freelance services by Nguyen Van Vu Linh — web apps, CMS, booking systems, AI integration.">
+  <meta name="keywords" content="Solutions Architect, Product Owner, Project Manager, Freelance, AWS, .NET, Python, Laravel">
+  <script>
+    /* Ngôn ngữ: chọn trước đó (localStorage) > ngôn ngữ trình duyệt. Chạy trước khi vẽ trang để không nháy chữ. */
+    (function () {
+      var l = localStorage.getItem('site-lang') || ((navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en');
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.lang = l;
+    })();
+  </script>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/site.css" rel="stylesheet">
+  <style>
+    /* Khối dự án trải ngang: media 1 hàng trên, chữ chia 2 cột dưới */
+    .pj.pj-wide{grid-template-columns:1fr;gap:24px;}
+    .pj-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+    .pj-strip a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--lp-line);}
+    .pj-strip img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;transition:transform .3s ease;}
+    .pj-strip a:hover img{transform:scale(1.03);}
+    .pj-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:8px 40px;align-items:start;}
+    .pj-body .pj-points ul{margin:4px 0 0;}
+    .voice-box{background:var(--lp-bg-soft,#f6f5fb);border:1px solid var(--lp-line);border-radius:14px;padding:16px 18px;}
+    .vb-title{font-weight:700;margin-bottom:12px;color:var(--lp-ink);}
+    .vb-title i{color:var(--lp-accent);}
+    .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 18px;}
+    .vc{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--lp-line);border-radius:10px;padding:8px 10px;}
+    .vc-name{font-size:.85rem;font-weight:600;color:var(--lp-ink-soft);}
+    .vc audio{width:100%;height:34px;}
+    @media (max-width: 991px){
+      .pj-strip{grid-template-columns:repeat(2,1fr);}
+      .pj-body{grid-template-columns:1fr;}
+      .voice-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    @media (max-width: 560px){
+      .voice-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body class="lp" data-title-en="Projects &amp; Freelance — Nguyen Van Vu Linh" data-title-vi="Dự án &amp; Freelance — Nguyễn Văn Vũ Linh">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">vL</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html"><span lang="en">Home</span><span lang="vi">Trang chủ</span></a></li>
+          <li><a href="about.html"><span lang="en">About</span><span lang="vi">Giới thiệu</span></a></li>
+          <li><a href="resume.html"><span lang="en">Resume</span><span lang="vi">Hồ sơ</span></a></li>
+          <li><a href="projects.html" class="active"><span lang="en">Projects</span><span lang="vi">Dự án</span></a></li>
+          <li><a href="certificates.html"><span lang="en">Certificates</span><span lang="vi">Chứng chỉ</span></a></li>
+          <li><a href="contact.html"><span lang="en">Contact</span><span lang="vi">Liên hệ</span></a></li>
+          <li><a href="telegram.html"><span lang="en">AI Bot</span><span lang="vi">Bot AI</span></a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+          <button type="button" data-set-lang="en" title="English">EN</button><button type="button" data-set-lang="vi" title="Tiếng Việt">VI</button>
+        </div>
+        <div class="header-social-links">
+          <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="lp-hero" style="padding-bottom:40px;">
+      <div class="container" data-aos="fade-up">
+        <span class="lp-badge"><span class="dot"></span>
+          <span lang="en">Available for freelance projects</span><span lang="vi">Đang nhận dự án freelance</span></span>
+        <h1 lang="en">Personal <span class="grad">projects</span></h1>
+        <h1 lang="vi">Dự án <span class="grad">cá nhân</span></h1>
+        <p class="role" lang="en">Things I design, build and run end-to-end outside my day job — and what I can build for you.</p>
+        <p class="role" lang="vi">Những sản phẩm tôi tự thiết kế, xây dựng và vận hành trọn gói ngoài giờ — và những gì tôi có thể làm cho bạn.</p>
+        <div class="lp-cta">
+          <a class="lp-btn lp-btn-primary" style="background:linear-gradient(90deg,var(--lp-accent),var(--lp-accent2));" href="#hire"><i class="bi bi-briefcase"></i>
+            <span lang="en">Hire me</span><span lang="vi">Thuê tôi làm dự án</span></a>
+          <a class="lp-btn lp-btn-ghost" target="_blank" rel="noopener" href="https://t.me/linhnvv2/"><i class="bi bi-telegram"></i>
+            <span lang="en">Message on Telegram</span><span lang="vi">Nhắn Telegram</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="lp-section" style="background:var(--lp-bg-soft);padding-top:56px;">
+      <div class="container">
+        <span class="lp-eyebrow" lang="en">Selected work</span><span class="lp-eyebrow" lang="vi">Dự án tiêu biểu</span>
+
+        <article class="pj mt-3" data-aos="fade-up">
+          <div class="pj-shots">
+            <a href="assets/img/projects/travel-home.jpg" class="glightbox" data-gallery="travel"><img src="assets/img/projects/travel-home.jpg" alt="Travel booking website — home page" loading="lazy"></a>
+            <a href="assets/img/projects/travel-hotels.jpg" class="glightbox" data-gallery="travel"><img src="assets/img/projects/travel-hotels.jpg" alt="Hotel search with filters" loading="lazy"></a>
+            <a href="assets/img/projects/travel-detail.jpg" class="glightbox" data-gallery="travel"><img src="assets/img/projects/travel-detail.jpg" alt="Hotel detail with nearby map" loading="lazy"></a>
+            <a href="assets/img/projects/travel-car.jpg" class="glightbox" data-gallery="travel" style="display:none"><img src="assets/img/projects/travel-car.jpg" alt="Car rental" loading="lazy"></a>
+          </div>
+          <div>
+            <span class="role" style="display:inline-block;font-size:.72rem;font-weight:700;color:var(--lp-accent2);text-transform:uppercase;letter-spacing:.06em;">
+              <span lang="en">Freelance · end-to-end</span><span lang="vi">Freelance · trọn gói</span></span>
+            <h3 lang="en">Travel booking website + CMS</h3>
+            <h3 lang="vi">Website đặt dịch vụ du lịch + CMS</h3>
+            <p class="client" lang="en">Client: a travel agency in Ho Chi Minh City · 2026</p>
+            <p class="client" lang="vi">Khách hàng: công ty du lịch tại TP.HCM · 2026</p>
+            <ul lang="en">
+              <li><b>Online booking</b> for hotels, tours, attraction tickets, car rental, eSIM and flights (mock) — search with date-range picker, filters, map view, compare.</li>
+              <li><b>Payments &amp; receipts:</b> 50% deposit / full payment via bank-transfer QR, PDF receipt (A5) matching the client's paper template, amount in words, order lookup.</li>
+              <li><b>Admin CMS:</b> every content type — hotels, rooms, amenities (60+ in groups), tours, banners, posts, leads, orders, roles &amp; permissions, audit log.</li>
+              <li><b>“What's nearby” maps:</b> airports, sights, food… with distances; feature toggles per service; SEO-friendly, mobile-first.</li>
+              <li><b>Delivery:</b> 4 feedback rounds, 50+ change requests — each with a written feasibility note before it was built.</li>
+            </ul>
+            <ul lang="vi">
+              <li><b>Đặt dịch vụ online:</b> khách sạn, tour, vé vui chơi, thuê xe, eSIM, vé máy bay (mô phỏng) — tìm kiếm có lịch chọn khoảng ngày, bộ lọc, xem bản đồ, so sánh.</li>
+              <li><b>Thanh toán &amp; phiếu thu:</b> cọc 50% / thanh toán đủ qua QR chuyển khoản, phiếu thu PDF khổ A5 đúng mẫu giấy của khách, số tiền bằng chữ, tra cứu đơn.</li>
+              <li><b>CMS quản trị:</b> mọi nội dung — khách sạn, phòng, 60+ tiện ích chia theo nhóm, tour, banner, bài viết, khách hàng tiềm năng, đơn hàng, phân quyền, nhật ký.</li>
+              <li><b>Bản đồ “Xem xung quanh”:</b> sân bay, điểm tham quan, ăn uống… kèm khoảng cách; bật/tắt từng mảng dịch vụ; chuẩn SEO, thiết kế ưu tiên di động.</li>
+              <li><b>Bàn giao:</b> 4 vòng góp ý, xử lý 50+ yêu cầu — mỗi yêu cầu đều được đánh giá tính khả thi trước khi làm.</li>
+            </ul>
+            <div class="facts">
+              <span><i class="bi bi-calendar3"></i><span lang="en">~2 weeks to first demo</span><span lang="vi">Bản demo đầu tiên sau ~2 tuần</span></span>
+              <span><i class="bi bi-phone"></i><span lang="en">Responsive · dark-mode ready</span><span lang="vi">Giao diện tốt trên điện thoại</span></span>
+              <span><i class="bi bi-hdd-stack"></i><span lang="en">Runs on shared hosting or VPS</span><span lang="vi">Chạy trên shared hosting hoặc VPS</span></span>
+            </div>
+            <div class="lp-tags mb-3">
+              <span class="lp-tag">Laravel 12</span><span class="lp-tag">Filament 3</span><span class="lp-tag">MySQL 8</span><span class="lp-tag">Alpine.js</span>
+              <span class="lp-tag">Tailwind CSS</span><span class="lp-tag">Leaflet maps</span><span class="lp-tag">PDF (dompdf)</span><span class="lp-tag">Docker</span>
+            </div>
+            <a class="lp-btn lp-btn-primary" href="contact.html"><i class="bi bi-play-circle"></i><span lang="en">Request a live demo</span><span lang="vi">Yêu cầu demo</span></a>
+          </div>
+        </article>
+
+        <article class="pj mt-4" data-aos="fade-up">
+          <div class="pj-shots">
+            <a href="assets/img/projects/meeting-detail.jpg" class="glightbox" data-gallery="meeting"><img src="assets/img/projects/meeting-detail.jpg" alt="AI meeting minutes with chat-based editing" loading="lazy"></a>
+            <a href="assets/img/projects/meeting-list.jpg" class="glightbox" data-gallery="meeting"><img src="assets/img/projects/meeting-list.jpg" alt="Meeting list" loading="lazy"></a>
+            <a href="assets/img/projects/meeting-transcript.jpg" class="glightbox" data-gallery="meeting"><img src="assets/img/projects/meeting-transcript.jpg" alt="Timestamped transcript" loading="lazy"></a>
+          </div>
+          <div>
+            <span class="role" style="display:inline-block;font-size:.72rem;font-weight:700;color:var(--lp-accent2);text-transform:uppercase;letter-spacing:.06em;">
+              <span lang="en">Own product · AI · in production</span><span lang="vi">Sản phẩm tự làm · AI · đang chạy thật</span></span>
+            <h3 lang="en">AI meeting minutes</h3>
+            <h3 lang="vi">Tạo biên bản họp bằng AI</h3>
+            <p class="client" lang="en">Used daily by a small team · 2026</p>
+            <p class="client" lang="vi">Một nhóm nhỏ dùng hằng ngày · 2026</p>
+            <ul lang="en">
+              <li><b>Upload &amp; transcribe:</b> drop an audio/video recording (up to several GB, chunked &amp; resumable upload) — Vietnamese speech-to-text with timestamps.</li>
+              <li><b>AI minutes:</b> structured minutes generated automatically — objectives, discussion, decisions table, action items with owner &amp; due date.</li>
+              <li><b>Edit by chat:</b> ask “add a decisions table” or “shorten section 2” and the AI rewrites the minutes; manual edit and version tracking too.</li>
+              <li><b>Export:</b> Markdown, PDF and Word in one click; personal notes per meeting.</li>
+              <li><b>Admin:</b> users &amp; roles, trial accounts with monthly quota and one sign-up per network, login audit, LLM provider failover, auto-delete of recordings after N days.</li>
+            </ul>
+            <ul lang="vi">
+              <li><b>Tải lên &amp; gỡ băng:</b> kéo thả file ghi âm/video (tới vài GB, tải theo mảnh, mạng chập chờn vẫn tiếp tục được) — chuyển giọng nói tiếng Việt thành chữ, có mốc thời gian.</li>
+              <li><b>Biên bản tự động:</b> AI viết biên bản đúng khung — mục tiêu, nội dung thảo luận, bảng quyết định, việc cần làm kèm người phụ trách và hạn.</li>
+              <li><b>Sửa bằng chat:</b> gõ “thêm bảng quyết định”, “rút gọn mục 2”… AI viết lại biên bản; vẫn sửa tay được.</li>
+              <li><b>Xuất file:</b> Markdown, PDF, Word chỉ 1 cú bấm; ghi chú riêng cho từng cuộc họp.</li>
+              <li><b>Quản trị:</b> người dùng &amp; phân quyền, tài khoản dùng thử giới hạn lượt/tháng và mỗi mạng 1 tài khoản, nhật ký đăng nhập, tự chuyển nhà cung cấp AI khi lỗi, tự xoá file ghi âm sau N ngày.</li>
+            </ul>
+            <div class="facts">
+              <span><i class="bi bi-mic"></i><span lang="en">Speech-to-text runs on-premise</span><span lang="vi">Gỡ băng chạy trên máy chủ riêng</span></span>
+              <span><i class="bi bi-shield-lock"></i><span lang="en">Recordings never leave your server</span><span lang="vi">File ghi âm không gửi ra ngoài</span></span>
+              <span><i class="bi bi-moon-stars"></i><span lang="en">Light / dark theme</span><span lang="vi">Giao diện sáng / tối</span></span>
+            </div>
+            <div class="lp-tags mb-3">
+              <span class="lp-tag">FastAPI</span><span class="lp-tag">PostgreSQL</span><span class="lp-tag">Whisper</span><span class="lp-tag">LLM (OpenAI-compatible)</span>
+              <span class="lp-tag">Next.js 15</span><span class="lp-tag">Tailwind CSS</span><span class="lp-tag">Cloudflare Tunnel</span>
+            </div>
+            <a class="lp-btn lp-btn-primary" href="mailto:quangvulinh@gmail.com?subject=Demo%20AI%20meeting%20minutes"><i class="bi bi-play-circle"></i><span lang="en">Request a live demo</span><span lang="vi">Yêu cầu demo</span></a>
+          </div>
+        </article>
+
+
+        <article class="pj pj-wide mt-4" data-aos="fade-up">
+          <div class="pj-strip">
+            <a href="https://youtu.be/k7YQ4t83S5A" target="_blank" rel="noopener"><img src="assets/img/projects/film-xom-bo-ao-5.jpg" alt="Xóm Bờ Ao tập 5 — Đếm sao" loading="lazy"></a>
+            <a href="https://youtu.be/op4oVb9mQUE" target="_blank" rel="noopener"><img src="assets/img/projects/film-xom-bo-ao-4.jpg" alt="Xóm Bờ Ao tập 4 — Ai dậy sớm" loading="lazy"></a>
+            <a href="https://youtu.be/1KU1VzRPNsU" target="_blank" rel="noopener"><img src="assets/img/projects/film-thanh-giong.jpg" alt="Thánh Gióng" loading="lazy"></a>
+            <a href="https://youtu.be/uo1RdYgeEuw" target="_blank" rel="noopener"><img src="assets/img/projects/film-cay-khe.jpg" alt="Cây Khế" loading="lazy"></a>
+          </div>
+          <div class="pj-body">
+            <div class="pj-head">
+            <span class="role" style="display:inline-block;font-size:.72rem;font-weight:700;color:var(--lp-accent2);text-transform:uppercase;letter-spacing:.06em;">
+              <span lang="en">Own project · AI video · published</span><span lang="vi">Dự án cá nhân · phim AI · đã phát hành</span></span>
+            <h3 lang="en">AI animated films for kids</h3>
+            <h3 lang="vi">Phim hoạt hình AI cho bé</h3>
+            <p class="client" lang="en">YouTube channel “vL Kể Chuyện” · weekly releases · 2026</p>
+            <p class="client" lang="vi">Kênh YouTube “vL Kể Chuyện” · ra tập mỗi tuần · 2026</p>
+            <div class="facts">
+              <span><i class="bi bi-film"></i><span lang="en">12 episodes on the channel</span><span lang="vi">12 tập trên kênh</span></span>
+              <span><i class="bi bi-gpu-card"></i><span lang="en">Runs locally on 1 GPU</span><span lang="vi">Chạy local trên 1 GPU</span></span>
+              <span><i class="bi bi-badge-hd"></i><span lang="en">1080p · YouTube loudness</span><span lang="vi">1080p · âm lượng chuẩn YouTube</span></span>
+            </div>
+            <div class="lp-tags mb-3">
+              <span class="lp-tag">ComfyUI</span><span class="lp-tag">FLUX Klein</span><span class="lp-tag">LTX-2.5</span><span class="lp-tag">Wan 2.2</span>
+              <span class="lp-tag">VieNeu-TTS</span><span class="lp-tag">Whisper</span><span class="lp-tag">FFmpeg</span><span class="lp-tag">Multi-agent</span>
+            </div>
+            <a class="lp-btn lp-btn-primary" href="https://www.youtube.com/@vLKeChuyen" target="_blank" rel="noopener"><i class="bi bi-youtube"></i><span lang="en">Watch on YouTube</span><span lang="vi">Xem trên YouTube</span></a>
+            </div>
+            <div class="pj-points">
+            <ul lang="en">
+              <li><b>Two series:</b> Vietnamese folk tales (Dưa Hấu, Sọ Dừa, Cây Khế, Thánh Gióng…) and the original cartoon “Xóm Bờ Ao” for 1–4 year-olds.</li>
+              <li><b>Full pipeline on one PC:</b> script with set-ups and pay-offs → consistent 3D characters → image-to-video motion → Vietnamese voice acting → edit, subtitles, thumbnail, 1080p.</li>
+              <li><b>AI film crew:</b> director, writer, artist, voice, editor and QA agents; every episode passes a QA report (0 critical issues) before release.</li>
+              <li><b>Commercially licensed models only</b> (Apache / community licences); AI content clearly labelled.</li>
+            </ul>
+            <ul lang="vi">
+              <li><b>Hai series:</b> cổ tích Việt Nam (Dưa Hấu, Sọ Dừa, Cây Khế, Thánh Gióng…) và phim hoạt hình tự sáng tác “Xóm Bờ Ao” cho bé 1–4 tuổi.</li>
+              <li><b>Trọn quy trình trên 1 máy:</b> kịch bản có cài cắm – mở nút → nhân vật 3D giữ nhất quán → ảnh thành video chuyển động → lồng tiếng Việt → dựng, phụ đề, thumbnail, 1080p.</li>
+              <li><b>Đội làm phim AI:</b> đạo diễn, biên kịch, hoạ sĩ, lồng tiếng, dựng phim và QA; mỗi tập phải qua báo cáo QA (0 lỗi nặng) mới phát hành.</li>
+              <li><b>Chỉ dùng model cho phép thương mại</b> (Apache / community licence), ghi rõ nội dung có dùng AI.</li>
+            </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pj pj-wide mt-4" data-aos="fade-up">
+          <div class="voice-box">
+            <div class="vb-title"><i class="bi bi-soundwave"></i> <span lang="en">Listen — voice samples</span><span lang="vi">Nghe thử giọng đọc</span></div>
+            <div class="voice-grid">
+              <div class="vc"><div class="vc-name"><span lang="vi">Nữ · miền Nam · kể chuyện</span><span lang="en">Female · Southern · storyteller</span></div><audio controls preload="none" src="assets/audio/voice-nu_tn_nam_myduyen.mp3"></audio></div>
+              <div class="vc"><div class="vc-name"><span lang="vi">Nữ · miền Bắc · dẫn truyện</span><span lang="en">Female · Northern · narrator</span></div><audio controls preload="none" src="assets/audio/voice-nu_tn_bac_quynhanh.mp3"></audio></div>
+              <div class="vc"><div class="vc-name"><span lang="vi">Nữ · miền Bắc · dịu dàng</span><span lang="en">Female · Northern · gentle</span></div><audio controls preload="none" src="assets/audio/voice-nu_tn_bac_ngoclinh.mp3"></audio></div>
+              <div class="vc"><div class="vc-name"><span lang="vi">Nam · miền Nam · trẻ</span><span lang="en">Male · Southern · young</span></div><audio controls preload="none" src="assets/audio/voice-nam_tn_nam_adam.mp3"></audio></div>
+              <div class="vc"><div class="vc-name"><span lang="vi">Nam · miền Bắc · trầm ấm</span><span lang="en">Male · Northern · deep</span></div><audio controls preload="none" src="assets/audio/voice-nam_trungnien_bac_thientamduc.mp3"></audio></div>
+              <div class="vc"><div class="vc-name"><span lang="vi">Bé gái · miền Bắc · nhân vật</span><span lang="en">Girl · Northern · character</span></div><audio controls preload="none" src="assets/audio/voice-nu_tre_bac_cv03.mp3"></audio></div>
+            </div>
+          </div>
+          <div class="pj-body">
+            <div class="pj-head">
+            <span class="role" style="display:inline-block;font-size:.72rem;font-weight:700;color:var(--lp-accent2);text-transform:uppercase;letter-spacing:.06em;">
+              <span lang="en">Own project · AI voice · in use</span><span lang="vi">Dự án cá nhân · giọng đọc AI · đang dùng</span></span>
+            <h3 lang="en">Vietnamese text-to-speech voice library</h3>
+            <h3 lang="vi">Thư viện giọng đọc tiếng Việt (TTS)</h3>
+            <p class="client" lang="en">Voices for films, audiobooks and voice assistants · 2026</p>
+            <p class="client" lang="vi">Giọng cho phim, sách nói, trợ lý giọng nói · 2026</p>
+            <div class="lp-tags mb-3">
+              <span class="lp-tag">VieNeu-TTS v3</span><span class="lp-tag">VoxCPM2</span><span class="lp-tag">faster-whisper</span><span class="lp-tag">Python</span><span class="lp-tag">GPU server</span>
+            </div>
+            <a class="lp-btn lp-btn-primary" href="contact.html"><i class="bi bi-mic"></i><span lang="en">Need a voice-over?</span><span lang="vi">Cần lồng tiếng?</span></a>
+            </div>
+            <div class="pj-points">
+            <ul lang="en">
+              <li><b>56 licensed voices:</b> Northern, Central and Southern accents; children, young adults, middle-aged and elderly — from Apache / CC0 sources only.</li>
+              <li><b>Measured, not guessed:</b> each voice is read back by Whisper (error rate) and pitch-measured, then picked in a small web dashboard.</li>
+              <li><b>Casting rules:</b> each film gets its own voice set so episodes don't sound alike.</li>
+              <li><b>Runs offline</b> on a local GPU server; also powers a real-time voice assistant with a lip-synced avatar.</li>
+            </ul>
+            <ul lang="vi">
+              <li><b>56 giọng hợp pháp:</b> giọng Bắc, Trung, Nam; trẻ em, thanh niên, trung niên, người già — chỉ lấy từ nguồn Apache / CC0.</li>
+              <li><b>Chấm điểm bằng số:</b> mỗi giọng được Whisper nghe lại để đo lỗi và đo cao độ, rồi chọn qua một trang web nhỏ.</li>
+              <li><b>Phân vai:</b> mỗi phim một bộ giọng riêng để các tập không nghe giống nhau.</li>
+              <li><b>Chạy offline</b> trên máy chủ GPU riêng; dùng luôn cho trợ lý giọng nói có avatar nhép miệng.</li>
+            </ul>
+            </div>
+          </div>
+        </article>
+
+        <div class="more-soon" data-aos="fade-up">
+          <span lang="en">More case studies coming soon. Need something similar? <a href="#hire">Let's talk</a>.</span>
+          <span lang="vi">Sẽ cập nhật thêm dự án. Bạn cần sản phẩm tương tự? <a href="#hire">Liên hệ ngay</a>.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="lp-section svc" id="hire">
+      <div class="container" data-aos="fade-up">
+        <span class="lp-eyebrow" lang="en">Freelance services</span><span class="lp-eyebrow" lang="vi">Nhận làm freelance</span>
+        <h2 lang="en">What I can build for you</h2><h2 lang="vi">Tôi có thể làm gì cho bạn</h2>
+        <p class="lp-sub" lang="en">Small team or solo founder — I take a project from idea to production and hand over clean code and docs.</p>
+        <p class="lp-sub" lang="vi">Doanh nghiệp nhỏ hay cá nhân khởi nghiệp — tôi làm trọn từ ý tưởng tới chạy thật, bàn giao code sạch và tài liệu đầy đủ.</p>
+        <div class="lp-grid">
+          <div class="lp-card"><div class="ico"><i class="bi bi-window-stack"></i></div>
+            <h3 lang="en">Websites &amp; CMS</h3><h3 lang="vi">Website &amp; trang quản trị</h3>
+            <p lang="en">Company sites, landing pages and admin panels your team can update without a developer.</p>
+            <p lang="vi">Website công ty, landing page, trang quản trị để nhân viên tự cập nhật nội dung.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-calendar-check"></i></div>
+            <h3 lang="en">Booking &amp; ordering</h3><h3 lang="vi">Đặt chỗ &amp; bán hàng</h3>
+            <p lang="en">Booking flows, deposits, bank-transfer QR, receipts/invoices in PDF, order tracking.</p>
+            <p lang="vi">Luồng đặt chỗ, đặt cọc, QR chuyển khoản, phiếu thu/hoá đơn PDF, tra cứu đơn.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-diagram-3"></i></div>
+            <h3 lang="en">Internal tools &amp; APIs</h3><h3 lang="vi">Phần mềm nội bộ &amp; API</h3>
+            <p lang="en">Dashboards, workflows and integrations (payment gateways, Zalo/Telegram, Excel, third-party APIs).</p>
+            <p lang="vi">Dashboard, quy trình nội bộ, kết nối hệ thống (cổng thanh toán, Zalo/Telegram, Excel, API bên thứ ba).</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-stars"></i></div>
+            <h3 lang="en">AI features</h3><h3 lang="vi">Tích hợp AI</h3>
+            <p lang="en">Chatbots, document Q&amp;A, speech-to-text summaries, Vietnamese voice bots.</p>
+            <p lang="vi">Chatbot, hỏi đáp tài liệu, ghi âm → tóm tắt, voice bot tiếng Việt.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-cloud-check"></i></div>
+            <h3 lang="en">Deploy &amp; hosting</h3><h3 lang="vi">Triển khai &amp; vận hành</h3>
+            <p lang="en">Setup on shared hosting, VPS or AWS; HTTPS, backups, monitoring and handover guide.</p>
+            <p lang="vi">Cài lên hosting, VPS hoặc AWS; HTTPS, sao lưu, giám sát và tài liệu bàn giao.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-tools"></i></div>
+            <h3 lang="en">Fix &amp; upgrade</h3><h3 lang="vi">Sửa lỗi &amp; nâng cấp</h3>
+            <p lang="en">Take over an existing system: fix bugs, security patches, performance and new features.</p>
+            <p lang="vi">Tiếp nhận hệ thống có sẵn: sửa lỗi, vá bảo mật, tăng tốc và thêm tính năng.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="lp-section" style="background:var(--lp-bg-soft);">
+      <div class="container" data-aos="fade-up">
+        <span class="lp-eyebrow" lang="en">How we work</span><span class="lp-eyebrow" lang="vi">Cách làm việc</span>
+        <h2 lang="en">Clear steps, no surprises</h2><h2 lang="vi">Rõ ràng từng bước</h2>
+        <div class="steps mt-4">
+          <div class="it"><h4 lang="en">Brief &amp; proposal</h4><h4 lang="vi">Trao đổi &amp; đề xuất</h4>
+            <p lang="en">Free consultation, written scope, timeline and fixed quote.</p><p lang="vi">Tư vấn miễn phí, gửi phạm vi, tiến độ và báo giá cố định.</p></div>
+          <div class="it"><h4 lang="en">Demo early</h4><h4 lang="vi">Có demo sớm</h4>
+            <p lang="en">A working demo link within the first weeks — you test on real devices.</p><p lang="vi">Có link demo chạy thật ngay những tuần đầu để bạn dùng thử.</p></div>
+          <div class="it"><h4 lang="en">Feedback rounds</h4><h4 lang="vi">Góp ý theo vòng</h4>
+            <p lang="en">Each request gets a feasibility note before it is built.</p><p lang="vi">Mỗi yêu cầu đều được đánh giá khả thi trước khi làm.</p></div>
+          <div class="it"><h4 lang="en">Launch &amp; handover</h4><h4 lang="vi">Chạy thật &amp; bàn giao</h4>
+            <p lang="en">Deploy to your hosting, source code, docs and support period.</p><p lang="vi">Đưa lên hosting của bạn, bàn giao source, tài liệu và thời gian hỗ trợ.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="lp-final">
+      <div class="container" data-aos="fade-up">
+        <h2 lang="en">Have a project in mind?</h2><h2 lang="vi">Bạn đang có dự án?</h2>
+        <p lang="en">Tell me what you need — I'll reply within 24 hours with questions or a rough estimate.</p>
+        <p lang="vi">Gửi tôi nhu cầu của bạn — tôi phản hồi trong 24 giờ với câu hỏi hoặc ước lượng sơ bộ.</p>
+        <div class="lp-cta">
+          <a class="lp-btn lp-btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25);" target="_blank" rel="noopener" href="https://t.me/linhnvv2/"><i class="bi bi-telegram"></i>Telegram</a>
+          <a class="lp-btn lp-btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25);" href="mailto:quangvulinh@gmail.com?subject=Freelance%20project"><i class="bi bi-envelope"></i>quangvulinh@gmail.com</a>
+          <a class="lp-btn lp-btn-primary" style="background:linear-gradient(90deg,var(--lp-accent),var(--lp-accent2));" href="contact.html"><i class="bi bi-chat-dots"></i><span lang="en">Contact form</span><span lang="vi">Gửi liên hệ</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">vL</strong> <span lang="en">All Rights Reserved</span><span lang="vi">Bảo lưu mọi quyền</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/lang.js"></script>
+</body>
+
+</html>

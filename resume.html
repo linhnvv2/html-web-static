@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - vL</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Resume — Nguyen Van Vu Linh</title>
+  <meta name="description" content="Resume of Nguyen Van Vu Linh: experience, projects, certifications.">
+  <meta name="keywords" content="Solutions Architect, Product Owner, Project Manager, Freelance, AWS, .NET, Python, Laravel">
+  <script>
+    /* Ngôn ngữ: chọn trước đó (localStorage) > ngôn ngữ trình duyệt. Chạy trước khi vẽ trang để không nháy chữ. */
+    (function () {
+      var l = localStorage.getItem('site-lang') || ((navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en');
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.lang = l;
+    })();
+  </script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,49 +23,50 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Site CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link href="assets/css/site.css" rel="stylesheet">
 </head>
 
-<body class="resume-page">
+<body class="lp" data-title-en="Resume — Nguyen Van Vu Linh" data-title-vi="Hồ sơ — Nguyễn Văn Vũ Linh">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">vL</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="certificates.html">Certificates</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="telegram.html">Telegram AI Bot</a></li>
+          <li><a href="index.html"><span lang="en">Home</span><span lang="vi">Trang chủ</span></a></li>
+          <li><a href="about.html"><span lang="en">About</span><span lang="vi">Giới thiệu</span></a></li>
+          <li><a href="resume.html" class="active"><span lang="en">Resume</span><span lang="vi">Hồ sơ</span></a></li>
+          <li><a href="projects.html"><span lang="en">Projects</span><span lang="vi">Dự án</span></a></li>
+          <li><a href="certificates.html"><span lang="en">Certificates</span><span lang="vi">Chứng chỉ</span></a></li>
+          <li><a href="contact.html"><span lang="en">Contact</span><span lang="vi">Liên hệ</span></a></li>
+          <li><a href="telegram.html"><span lang="en">AI Bot</span><span lang="vi">Bot AI</span></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a target="_blank" href="https://www.facebook.com/quangvulinh/"><i class="bi bi-facebook"></i></a>
-        <a target="_blank" href="https://t.me/linhnvv2/"> <i class="bi bi-telegram"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/quangvulinh/"><i class="bi bi-linkedin"></i></a>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+          <button type="button" data-set-lang="en" title="English">EN</button><button type="button" data-set-lang="vi" title="Tiếng Việt">VI</button>
+        </div>
+        <div class="header-social-links">
+          <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
 
     </div>
@@ -65,309 +74,98 @@
 
   <main class="main">
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-
+    <section class="lp-hero sm">
+      <div class="container" data-aos="fade-up">
+        <span class="lp-badge"><span class="dot"></span> <span lang="en">Resume</span><span lang="vi">Hồ sơ</span></span>
+        <h1 lang="en">Resume</h1><h1 lang="vi">Hồ sơ <span class="grad">năng lực</span></h1>
+        <p lang="en" class="role">Fullstack developer turned Solutions Architect · PO/PM — 11+ years designing and shipping systems for customers.</p><p lang="vi" class="role">Từ lập trình viên fullstack đến Solutions Architect · PO/PM — hơn 11 năm thiết kế và bàn giao hệ thống cho khách hàng.</p>
       </div>
+    </section>
 
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Nguyen Van Vu Linh</h4>
-              <p><em>Innovative and deadline-driven Fullstack web Developer with over 9+ years of experience designing
-                  and developing website to customer.</em></p>
-              <ul>
-                <li>137/5/2 Long Phuoc Street (Old District 9), Thu Duc City, HCMC</li>
-                <li><a href="https://t.me/VuLinhBot">Phone on Telegram @VuLinhBot</a></li>
-                <li>quangvulinh@gmail.com</li>
-              </ul>
-              <div class="experience-list" style="text-align: left;">
-                <p><strong>Experience working with AWS services:</strong> S3, RDS, SQS, CloudFront, and WAF.</p>
-                <p><strong>Knowledge of infrastructure provisioning tools:</strong> AWS CloudFormation, or CDK.</p>
-                <p><strong>Experience with Docker and container orchestration platforms:</strong> ECS and EKS.</p>
-                <p><strong>In-depth understanding of Python software development stacks and frameworks:</strong> Pandas,
-                  NumPy, FastAPI, and Django.</p>
-                <p><strong>Basic knowledge of ETL techniques and frameworks:</strong> Airflow, Spark, Yarn, and Oozie.
-                </p>
-                <p><strong>Experience with modern JavaScript frameworks/libraries:</strong> React, or Angular.</p>
-                <p><strong>Expertise in API design and development:</strong> Web and mobile applications.</p>
-                <p><strong>Experience in designing DevOps CI/CD toolchains.</strong></p>
-                <p><strong>Knowledge of source control concepts:</strong> Git, GitFlow, etc.</p>
-                <p><strong>Proficiency in databases:</strong> PostgreSQL, MSSQL, MongoDB.</p>
-                <p><strong>AWS Certification:</strong> Successfully earned the AWS Certified Solutions Architect –
-                  Associate certification.</p>
-              </div>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education & Certifications</h3>
-            <div class="resume-item">
-              <h4>Engineer's degree Good &amp; Technology</h4>
-              <h5>2011-2015</h5>
-              <p><em>Ho Chi Minh City University of Transport</em></p>
-
-              <p><strong>AWS Certified Solutions Architect – Associate</strong><br>
-                Issue Date: July 25, 2023<br>
-                Validation: <a target="_blank"
-                  href="https://www.credly.com/badges/2e0aa0dd-5303-4fb3-a416-cfdcbbff9258/public_url">Verify on Credly</a> <br>
-                Expiration Date: July 15, 2027
-              </p>
-
-              <p><strong> <a target="_blank"
-                    href="https://udemy-certificate.s3.amazonaws.com/image/UC-15de37c5-a381-42cf-b26e-9a002f63a9c9.jpg">Python
-                    and the Django Framework - Udemy </a> </strong> <br>
-                Issue Date: 07-2021</p>
-
-              <p><strong> <a target="_blank"
-                    href="https://udemy-certificate.s3.amazonaws.com/image/UC-2312937f-2296-458f-b214-1b80fa0ce682.jpg">
-                    Google Associate Cloud Engineer - Udemy </a> </strong><br>
-                Issue Date: 10-2021</p>
-
-              <p><strong> <a target="_blank"
-                    href="https://www.coursera.org/account/accomplishments/certificate/YE9AB7SMHD39">Architecting with
-                    Google Kubernetes Engine - Udemy </a> </strong> <br>
-                Issue Date: 08-2021</p>
-            </div><!-- Edn Resume Item -->
-
-
+    <section class="lp-section" style="padding-top:40px;">
+      <div class="container" data-aos="fade-up">
+        <div class="rs-cols">
+          <div class="lp-card">
+            <h3 lang="en">Summary</h3><h3 lang="vi">Tóm tắt</h3>
+            <ul class="rs-list"><li><b><span lang="en">AWS services</span><span lang="vi">Dịch vụ AWS</span>:</b> S3, RDS, SQS, CloudFront, WAF</li><li><b><span lang="en">Infrastructure as code</span><span lang="vi">Hạ tầng dạng code</span>:</b> AWS CloudFormation, CDK</li><li><b><span lang="en">Containers</span><span lang="vi">Container</span>:</b> Docker, ECS, EKS</li><li><b><span lang="en">Python stack</span><span lang="vi">Python</span>:</b> Pandas, NumPy, FastAPI, Django</li><li><b><span lang="en">ETL</span><span lang="vi">ETL</span>:</b> Airflow, Spark, Yarn, Oozie</li><li><b><span lang="en">Frontend</span><span lang="vi">Frontend</span>:</b> React, Angular</li><li><b><span lang="en">API design</span><span lang="vi">Thiết kế API</span>:</b> Web &amp; mobile</li><li><b><span lang="en">DevOps</span><span lang="vi">DevOps</span>:</b> CI/CD toolchains, Git, GitFlow</li><li><b><span lang="en">Databases</span><span lang="vi">Cơ sở dữ liệu</span>:</b> PostgreSQL, MSSQL, MongoDB</li></ul>
           </div>
-
-          <!-- Left Column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-
-            <!-- Solutions Architect Section -->
-            <div class="resume-item">
-              <h4>Solutions Architect | Product Owner &amp; Project Manager</h4>
-              <h5>Aug 2022 - Present</h5>
-              <p><em>FPT Telecom International Company</em></p>
-              <p>Working across two core roles &mdash; <strong>Product Owner (PO)</strong> and
-                <strong>Project Manager (PM)</strong> &mdash; as a Solution Architect for digital conversion at FPT,
-                I bridge technical and non-technical audiences to design, plan and deliver solutions that meet client
-                needs.</p>
-
-              <h5>Projects</h5>
-              <ul>
-                <li>
-                  <strong>EST Compliance &ndash; Subscription Migration &amp; Portal</strong> (01/2026 - 04/2026):
-                  <p>Two-phase project enforcing End-of-Term compliance (Renew / Cancel / Move-to-EST) across the
-                    subscription portfolio. Phase 1: API-driven data migration &mdash; audit 100% subscriptions,
-                    detect &ldquo;EST Risk&rdquo;, batch PATCH scheduled actions with dry-run, idempotency and
-                    rollback. Phase 2: UI/Portal &mdash; End-of-Term selection panel, EST Risk badges, quick actions,
-                    CSV export, audit log and RBAC.</p>
-                  <p><strong>Technology:</strong> REST API (seek paging, PATCH scheduledActions), idempotency
-                    (ms-requestid), batch limiter/backoff, CSV/dashboard reporting, feature flags, RBAC/MFA,
-                    observability.</p>
-                </li>
-                <li>
-                  <strong>FTI-MuaSAM (Procurement System)</strong> (01/2026 - 03/2026) &mdash; <em>Role: PM</em>:
-                  <p>Procurement management system for FPT Telecom International. Led an ISC team of 9: scope
-                    definition, master plan, risk management, and deployment coordination across UAT / Staging /
-                    Production before release. Managed change requests and multi-stakeholder schedules.
-                    <a href="https://muasamfti.vn/" target="_blank">https://muasamfti.vn/</a></p>
-                  <p><strong>Technology:</strong> Web portal, CI/CD (Master/Staging branching, conflict resolution),
-                    multi-environment deployment, domain/SSL/hosting setup.</p>
-                </li>
-                <li>
-                  <strong>FTI-CSP (Cloud Solution Provider / Partner Center)</strong> (09/2025 - 12/2025) &mdash;
-                  <em>Role: Backend &amp; Business Analysis</em>:
-                  <p>Reseller portal integrating Microsoft Partner Center &mdash; manage customers, subscriptions,
-                    orders, billing, pricing and Azure/NCE. Delivered ~26 UI modules plus the backend API layer.
-                    Owned business analysis and core backend APIs: Auth/logging, Agreements, Catalog, Customers, Sale,
-                    Upgrade, NCE, Orders. Deployed across DEV / Staging / Production.</p>
-                  <p><strong>Technology:</strong> Microsoft Partner Center API &amp; Graph API, REST API, Kafka
-                    (logging to Kibana), MongoDB, Swagger, multi-environment deployment.</p>
-                </li>
-                <li>
-                  <strong>Amazing-chatbot</strong> (06/2024 - 09/2024):
-                  <p>Quick insights into overall financial health for the company. This chatbot contains search
-                    utterances and corresponding intents from the finance domain, used to train Natural Language
-                    Understanding (NLU) platforms.</p>
-                  <p><strong>Technology:</strong> Python, .NET, NLU, Flask API, Docker, Kubernetes, Jenkins.</p>
-                </li>
-                <li>
-                  <strong>FTICareer.vn</strong> (10/2023 - 12/2023):
-                  <p>A website providing detailed information about the company and available job positions. <a
-                      href="https://fticareer.vn/" target="_blank">https://fticareer.vn/</a></p>
-                  <p><strong>Technology:</strong> .NET Framework, SQL Server, AWS SNS, Auth2 with LDAP for single
-                    sign-on.</p>
-                </li>
-                <li>
-                  <strong>ASM</strong> (07/2023 - 09/2023):
-                  <p>An IT asset management project to track laptops, software licenses, and related accessories.</p>
-                  <p><strong>Technology:</strong> Laravel/PHP, MySQL, Kafka.</p>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Web Developer Section -->
-            <div class="resume-item">
-              <h4>Web Developer | Full Stack Developer</h4>
-              <h5>Oct 2016 - Jul 2022</h5>
-              <p><em>FPT Telecom</em></p>
-              <p>As a versatile IT professional, I specialized in various aspects of solution design, development, and
-                support. Responsibilities included:</p>
-              <ul>
-                <li>Developing applications and websites for internal and external users.</li>
-                <li>Designing and implementing user-friendly websites, including an optimized checkout page that boosted
-                  performance.</li>
-                <li>Identifying and resolving bugs in existing websites while implementing enhancements to improve
-                  functionality and speed.</li>
-              </ul>
-
-              <h5>Projects</h5>
-              <ul>
-                <li>
-                  <strong>IHUB</strong> (08/2020 - 03/2021):
-                  <p>Designed and managed an internal platform for SDC (Internal FPT Team).</p>
-                  <p><strong>Team Size:</strong> 5 Developers, 1 Project Manager</p>
-                  <p><strong>Technology:</strong> .NET Core 3.1, Cronjob, Kong API Gateway, GRPC, REST API.</p>
-                </li>
-                <li>
-                  <strong>IDC Server</strong>:
-                  <p>Developed a web portal to manage data center and server performance. Acted as Project Manager.</p>
-                  <p><strong>Technology:</strong> .NET Core 2.1, Kafka, Redis, RabbitMQ.</p>
-                </li>
-                <li>
-                  <strong>EDU FTC</strong> (02/2020 - 04/2020):
-                  <p>An internal and external training platform for employees. <a href="https://daotao.fpt.vn/"
-                      target="_blank">https://daotao.fpt.vn/</a></p>
-                  <p><strong>Technology:</strong> .NET Framework, ReactJS, SQL Server, Kafka.</p>
-                </li>
-                <li>
-                  <strong>Member FTI</strong> (11/2018 - 02/2019):
-                  <p>Designed a portal for billing and support tickets. <a href="https://fpt.vn/fti/"
-                      target="_blank">https://fpt.vn/fti/</a></p>
-                  <p><strong>Technology:</strong> Laravel, Python, ReactJS, SQL Server, Kafka, Auth0, Auth2.</p>
-                </li>
-                <li>
-                  <strong>Cloud Insight</strong> (02/2018 - 05/2018):
-                  <p>Built and maintained applications for managed services.</p>
-                  <p><strong>Technology:</strong> .NET Framework 3.5, SQL Server.</p>
-                </li>
-                <li>
-                  <strong>Member FPT</strong> (07/2017 - 10/2017):
-                  <p>A self-service portal offering contract signing, payment, and monitoring services for customers. <a
-                      href="https://fpt.vn/member" target="_blank">https://fpt.vn/member</a></p>
-                  <p><strong>Technology:</strong> Flask API, Python, Crontab, .NET API, Laravel (PHP), MySQL, Kafka,
-                    MongoDB, Docker, Kubernetes, RabbitMQ.</p>
-                </li>
-                <li>
-                  <strong>IVOICE</strong> (04/2017 - 07/2017):
-                  <p>Designed a feature registration form and deployed the service.</p>
-                  <p><strong>Technology:</strong> .NET Framework, SQL Server, Kafka, PostgreSQL.</p>
-                </li>
-                <li>
-                  <strong>Hi Gio Cloud</strong> (11/2016 - 02/2017):
-                  <p>Developed an API using Flask and a web portal with PHP/Laravel. <a href="https://higio.net/"
-                      target="_blank">https://higio.net/</a></p>
-                  <p><strong>Technology:</strong> Flask, Python, PHP, Redis, MySQL, Kafka, MongoDB.</p>
-                </li>
-              </ul>
-            </div>
-
-
-            <!-- Web Developer Section -->
-            <div class="resume-item">
-              <h4>.NET Developer</h4>
-              <h5>May 2015 - Oct 2016</h5>
-              <p><em>FPT Software</em></p>
-
-              <p>I designed, develop, and maintain fully-fledged and functioning platforms with databases or servers.
-                Tech base on WPF, Window, Window APP....</p>
-
-              <h5>Projects</h5>
-              <ul>
-                <li>
-                  <strong>Windows 10 Setting</strong> (2 months):
-                  <p>Configured the Windows 10 system to change default browser settings.</p>
-                  <p><strong>Team Size:</strong> 3 | <strong>Role:</strong> Developer</p>
-                </li>
-                <li>
-                  <strong>Effect Management Application</strong> (3 months):
-                  <p>Developed an application to manage files across devices.</p>
-                  <p><strong>Team Size:</strong> 16 | <strong>Role:</strong> Developer</p>
-                </li>
-                <li>
-                  <strong>Single Sign-On</strong> (3 months):
-                  <p>Maintained and enhanced Single Sign-On functionality for Windows environments, including IPv4/IPv6
-                    configurations.</p>
-                  <p><strong>Team Size:</strong> 2 | <strong>Role:</strong> Developer</p>
-                </li>
-                <li>
-                  <strong>Simulator</strong> (1 month):
-                  <p>Created an application to test server response times.</p>
-                  <p><strong>Team Size:</strong> 1 | <strong>Role:</strong> Developer</p>
-                </li>
-                <li>
-                  <strong>Setting Glass</strong> (2 months):
-                  <p>Developed file viewing applications for glass displays.</p>
-                  <p><strong>Team Size:</strong> 3 | <strong>Role:</strong> Developer</p>
-                </li>
-                <li>
-                  <strong>NFC</strong> (3 months):
-                  <p>Configured NFC cards to enable manual locking and unlocking functionalities.</p>
-                  <p><strong>Team Size:</strong> 6 | <strong>Role:</strong> Developer</p>
-                </li>
-              </ul>
-
-
-
-            </div>
+          <div class="lp-card">
+            <h3 lang="en">Education &amp; certifications</h3><h3 lang="vi">Học vấn &amp; chứng chỉ</h3>
+            <div class="cert-item"><b><span lang="en">Engineer's degree</span><span lang="vi">Kỹ sư</span></b> · 2011 – 2015<small><span lang="en">Ho Chi Minh City University of Transport</span><span lang="vi">Trường ĐH Giao thông Vận tải TP.HCM</span></small></div>
+            <div class="cert-item"><a href="https://www.credly.com/badges/2e0aa0dd-5303-4fb3-a416-cfdcbbff9258/public_url" target="_blank" rel="noopener"><b>AWS Certified Solutions Architect – Associate</b></a><small><span lang="en">Issued 25 Jul 2023 · expires 15 Jul 2027</span><span lang="vi">Cấp 25/07/2023 · hết hạn 15/07/2027</span></small></div><div class="cert-item"><a href="certificates.html" target="_blank" rel="noopener"><b>PMP — Project Management Professional</b></a><small><span lang="en">PMI</span><span lang="vi">PMI</span></small></div><div class="cert-item"><a href="https://udemy-certificate.s3.amazonaws.com/image/UC-15de37c5-a381-42cf-b26e-9a002f63a9c9.jpg" target="_blank" rel="noopener"><b>Python and the Django Framework — Udemy</b></a><small><span lang="en">07/2021</span><span lang="vi">07/2021</span></small></div><div class="cert-item"><a href="https://udemy-certificate.s3.amazonaws.com/image/UC-2312937f-2296-458f-b214-1b80fa0ce682.jpg" target="_blank" rel="noopener"><b>Google Associate Cloud Engineer — Udemy</b></a><small><span lang="en">10/2021</span><span lang="vi">10/2021</span></small></div><div class="cert-item"><a href="https://www.coursera.org/account/accomplishments/certificate/YE9AB7SMHD39" target="_blank" rel="noopener"><b>Architecting with Google Kubernetes Engine — Coursera</b></a><small><span lang="en">08/2021</span><span lang="vi">08/2021</span></small></div>
+            <a class="lp-btn lp-btn-ghost mt-3" href="certificates.html"><i class="bi bi-award"></i><span lang="en">All certificates</span><span lang="vi">Xem tất cả chứng chỉ</span></a>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- /Resume Section -->
+    <section class="lp-section" style="background:var(--lp-bg-soft);">
+      <div class="container" data-aos="fade-up">
+        <span lang="en" class="lp-eyebrow">Professional experience</span><span lang="vi" class="lp-eyebrow">Kinh nghiệm làm việc</span>
+        <h2 lang="en">11+ years at FPT</h2><h2 lang="vi">Hơn 11 năm tại FPT</h2>
+        <div class="lp-timeline mt-4">
+        <div class="lp-tl-item">
+          <span lang="en" class="when">Aug 2022 — Present</span><span lang="vi" class="when">08/2022 — Nay</span>
+          <h3 lang="en">Solutions Architect · Product Owner &amp; Project Manager</h3><h3 lang="vi">Solutions Architect · Product Owner &amp; Project Manager</h3>
+          <div class="org">FPT Telecom International Company</div>
+          <p lang="en">Working across two core roles — PO and PM — as a Solutions Architect for digital conversion, bridging technical and non-technical audiences to design, plan and deliver solutions that meet client needs.</p><p lang="vi">Đảm nhận hai vai trò PO và PM ở vị trí Solutions Architect cho mảng chuyển đổi số, làm cầu nối giữa kỹ thuật và nghiệp vụ để thiết kế, lập kế hoạch và triển khai giải pháp đúng nhu cầu khách hàng.</p>
+            <div class="rs-proj"><h4>EST Compliance — Subscription Migration &amp; Portal<small>01/2026 – 04/2026</small></h4><p lang="en">Two-phase project enforcing End-of-Term compliance (Renew / Cancel / Move-to-EST). Phase 1: API-driven data migration — audit 100% subscriptions, detect “EST Risk”, batch PATCH with dry-run, idempotency and rollback. Phase 2: portal — End-of-Term panel, risk badges, quick actions, CSV export, audit log and RBAC.</p><p lang="vi">Dự án 2 giai đoạn đảm bảo tuân thủ End-of-Term (Gia hạn / Huỷ / Chuyển EST). GĐ1: chuyển đổi dữ liệu qua API — rà soát 100% thuê bao, phát hiện “rủi ro EST”, cập nhật hàng loạt có chạy thử, chống trùng và rollback. GĐ2: cổng quản lý — bảng chọn End-of-Term, nhãn rủi ro, thao tác nhanh, xuất CSV, nhật ký và phân quyền.</p><div class="tech"><b>Tech:</b> REST API, idempotency, batch limiter/backoff, CSV/dashboard, feature flags, RBAC/MFA, observability</div></div>
+            <div class="rs-proj"><h4>FTI-MuaSAM — Procurement System<small>01/2026 – 03/2026</small> — <em>PM</em></h4><p lang="en">Procurement management system. Led an ISC team of 9: scope, master plan, risk management and deployment across UAT / Staging / Production; managed change requests and multi-stakeholder schedules.</p><p lang="vi">Hệ thống quản lý mua sắm. Dẫn dắt đội ISC 9 người: phạm vi, kế hoạch tổng, quản lý rủi ro và triển khai qua UAT / Staging / Production; quản lý yêu cầu thay đổi và lịch làm việc với nhiều bên.</p><div class="tech"><b>Tech:</b> Web portal, CI/CD, multi-environment deployment, domain/SSL/hosting</div></div>
+            <div class="rs-proj"><h4>FTI-CSP — Cloud Solution Provider / Partner Center<small>09/2025 – 12/2025</small> — <em>Backend &amp; BA</em></h4><p lang="en">Reseller portal integrating Microsoft Partner Center — customers, subscriptions, orders, billing, pricing and Azure/NCE. ~26 UI modules plus the backend API layer; owned business analysis and core APIs.</p><p lang="vi">Cổng đại lý tích hợp Microsoft Partner Center — khách hàng, thuê bao, đơn hàng, cước, giá và Azure/NCE. ~26 màn hình cùng lớp API backend; phụ trách phân tích nghiệp vụ và các API lõi.</p><div class="tech"><b>Tech:</b> Partner Center API, Graph API, REST, Kafka → Kibana, MongoDB, Swagger</div></div>
+            <div class="rs-proj"><h4>Amazing-chatbot<small>06/2024 – 09/2024</small></h4><p lang="en">Quick insights into the company's financial health; finance-domain utterances and intents used to train NLU platforms.</p><p lang="vi">Tra cứu nhanh tình hình tài chính công ty; bộ câu hỏi và ý định mảng tài chính dùng để huấn luyện nền tảng NLU.</p><div class="tech"><b>Tech:</b> Python, .NET, NLU, Flask API, Docker, Kubernetes, Jenkins</div></div>
+            <div class="rs-proj"><h4>FTICareer.vn<small>10/2023 – 12/2023</small></h4><p lang="en">Company and job-openings website.</p><p lang="vi">Website giới thiệu công ty và tin tuyển dụng.</p><div class="tech"><b>Tech:</b> .NET Framework, SQL Server, AWS SNS, OAuth2 + LDAP SSO</div></div>
+            <div class="rs-proj"><h4>ASM<small>07/2023 – 09/2023</small></h4><p lang="en">IT asset management for laptops, software licenses and accessories.</p><p lang="vi">Quản lý tài sản CNTT: laptop, bản quyền phần mềm, phụ kiện.</p><div class="tech"><b>Tech:</b> Laravel/PHP, MySQL, Kafka</div></div>
+        </div>
+        <div class="lp-tl-item">
+          <span lang="en" class="when">Oct 2016 — Jul 2022</span><span lang="vi" class="when">10/2016 — 07/2022</span>
+          <h3 lang="en">Web Developer · Full Stack Developer</h3><h3 lang="vi">Lập trình viên Web · Full Stack</h3>
+          <div class="org">FPT Telecom</div>
+          <p lang="en">Solution design, development and support: apps and websites for internal and external users, an optimised checkout page, bug fixing and performance improvements.</p><p lang="vi">Thiết kế, phát triển và hỗ trợ giải pháp: ứng dụng và website cho người dùng nội bộ lẫn khách hàng, tối ưu trang thanh toán, sửa lỗi và cải thiện tốc độ.</p>
+            <div class="rs-proj"><h4>IHUB<small>08/2020 – 03/2021</small></h4><p lang="en">Internal platform for the SDC team (5 devs, 1 PM).</p><p lang="vi">Nền tảng nội bộ cho đội SDC (5 dev, 1 PM).</p><div class="tech"><b>Tech:</b> .NET Core 3.1, Kong API Gateway, gRPC, REST</div></div>
+            <div class="rs-proj"><h4>IDC Server<small></small></h4><p lang="en">Web portal to manage the data center and server performance; acted as PM.</p><p lang="vi">Cổng quản lý trung tâm dữ liệu và hiệu năng máy chủ; kiêm PM.</p><div class="tech"><b>Tech:</b> .NET Core 2.1, Kafka, Redis, RabbitMQ</div></div>
+            <div class="rs-proj"><h4>EDU FTC<small>02/2020 – 04/2020</small></h4><p lang="en">Training platform for employees.</p><p lang="vi">Nền tảng đào tạo cho nhân viên.</p><div class="tech"><b>Tech:</b> .NET Framework, ReactJS, SQL Server, Kafka</div></div>
+            <div class="rs-proj"><h4>Member FTI<small>11/2018 – 02/2019</small></h4><p lang="en">Portal for billing and support tickets.</p><p lang="vi">Cổng tra cước và gửi yêu cầu hỗ trợ.</p><div class="tech"><b>Tech:</b> Laravel, Python, ReactJS, SQL Server, Kafka, Auth0</div></div>
+            <div class="rs-proj"><h4>Cloud Insight<small>02/2018 – 05/2018</small></h4><p lang="en">Applications for managed services.</p><p lang="vi">Ứng dụng cho dịch vụ quản trị hệ thống.</p><div class="tech"><b>Tech:</b> .NET Framework 3.5, SQL Server</div></div>
+            <div class="rs-proj"><h4>Member FPT<small>07/2017 – 10/2017</small></h4><p lang="en">Self-service portal: contract signing, payment and monitoring.</p><p lang="vi">Cổng tự phục vụ: ký hợp đồng, thanh toán, theo dõi dịch vụ.</p><div class="tech"><b>Tech:</b> Flask, Python, .NET API, Laravel, MySQL, Kafka, MongoDB, Docker, Kubernetes, RabbitMQ</div></div>
+            <div class="rs-proj"><h4>iVoice<small>04/2017 – 07/2017</small></h4><p lang="en">Feature registration form and service deployment.</p><p lang="vi">Form đăng ký tính năng và triển khai dịch vụ.</p><div class="tech"><b>Tech:</b> .NET Framework, SQL Server, Kafka, PostgreSQL</div></div>
+            <div class="rs-proj"><h4>Hi Gio Cloud<small>11/2016 – 02/2017</small></h4><p lang="en">Flask API and a PHP/Laravel web portal.</p><p lang="vi">API Flask và cổng web PHP/Laravel.</p><div class="tech"><b>Tech:</b> Flask, Python, PHP, Redis, MySQL, Kafka, MongoDB</div></div>
+        </div>
+        <div class="lp-tl-item">
+          <span lang="en" class="when">May 2015 — Oct 2016</span><span lang="vi" class="when">05/2015 — 10/2016</span>
+          <h3 lang="en">.NET Developer</h3><h3 lang="vi">Lập trình viên .NET</h3>
+          <div class="org">FPT Software</div>
+          <p lang="en">Designed, developed and maintained Windows platform applications (WPF).</p><p lang="vi">Thiết kế, phát triển và bảo trì ứng dụng trên nền tảng Windows (WPF).</p>
+            <div class="rs-proj"><h4>Windows 10 Setting · Effect Management · Single Sign-On · Simulator · Setting Glass · NFC<small>2015 – 2016</small></h4><p lang="en">Browser-default configuration, cross-device file management, Windows SSO (IPv4/IPv6), server response simulator, file viewer for glass displays, NFC lock/unlock. Teams of 1–16.</p><p lang="vi">Cấu hình trình duyệt mặc định, quản lý file đa thiết bị, đăng nhập một lần trên Windows (IPv4/IPv6), giả lập thời gian phản hồi máy chủ, xem file trên kính thông minh, khoá/mở bằng thẻ NFC. Nhóm 1–16 người.</p><div class="tech"><b>Tech:</b> .NET 3.5, WPF</div></div>
+        </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <footer id="footer" class="footer light-background">
-
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">vL</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">vL</strong> <span lang="en">All Rights Reserved</span><span lang="vi">Bảo lưu mọi quyền</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a target="_blank" href="https://www.facebook.com/quangvulinh/"><i class="bi bi-facebook"></i></a>
-        <a target="_blank" href="https://t.me/linhnvv2/"> <i class="bi bi-telegram"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/quangvulinh/"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        Designed by <a href="http://quangvulinh.com/">qvl</a>
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/lang.js"></script>
 </body>
 
 </html>

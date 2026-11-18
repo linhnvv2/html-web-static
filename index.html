@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Nguyen Van Vu Linh — Solutions Architect · PO/PM</title>
-  <meta name="description"
-    content="Nguyen Van Vu Linh — Solutions Architect, Product Owner & Project Manager. 11 years at FPT building cloud-first, fullstack, deeply integrated systems.">
-  <meta name="keywords" content="Solutions Architect, Product Owner, Project Manager, AWS, .NET, Python, FPT">
+  <meta name="description" content="Nguyen Van Vu Linh — Solutions Architect, Product Owner &amp; Project Manager. 11 years at FPT; open to freelance projects.">
+  <meta name="keywords" content="Solutions Architect, Product Owner, Project Manager, Freelance, AWS, .NET, Python, Laravel">
+  <script>
+    /* Ngôn ngữ: chọn trước đó (localStorage) > ngôn ngữ trình duyệt. Chạy trước khi vẽ trang để không nháy chữ. */
+    (function () {
+      var l = localStorage.getItem('site-lang') || ((navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en');
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.lang = l;
+    })();
+  </script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -16,145 +23,20 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Site CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Landing (infor-style) overrides — scoped to .lp-* so other pages are untouched -->
-  <style>
-    :root {
-      --lp-accent: #8b5cf6;
-      --lp-accent2: #ec4899;
-      --lp-ink: #0f1222;
-      --lp-ink-soft: #6b7280;
-      --lp-line: #e5e7eb;
-      --lp-bg-soft: #f7f7fb;
-      --lp-dark: #0e1220;
-    }
-
-    .lp { font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--lp-ink); }
-    .lp h1, .lp h2, .lp h3 { font-family: "Poppins", "Inter", sans-serif; letter-spacing: -0.02em; }
-    .lp .container { max-width: 1120px; }
-    .lp-eyebrow {
-      text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 700;
-      color: var(--lp-accent);
-    }
-    .lp-section { padding: 84px 0; }
-    .lp-section h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; margin-bottom: 8px; }
-    .lp-section .lp-sub { color: var(--lp-ink-soft); max-width: 640px; margin-bottom: 40px; }
-
-    /* Hero */
-    .lp-hero {
-      position: relative; padding: 96px 0 72px; text-align: center; overflow: hidden;
-      background:
-        radial-gradient(60% 55% at 15% 0%, #fce7f3 0%, transparent 60%),
-        radial-gradient(55% 50% at 90% 5%, #ede9fe 0%, transparent 55%),
-        #ffffff;
-    }
-    .lp-badge {
-      display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px;
-      background: #fff; border: 1px solid var(--lp-line); font-size: .82rem; font-weight: 600;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04); margin-bottom: 22px;
-    }
-    .lp-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,.18); }
-    .lp-hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; margin: 0 0 12px; }
-    .lp-hero h1 .grad {
-      background: linear-gradient(90deg, var(--lp-accent), var(--lp-accent2));
-      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .lp-hero .role { font-size: clamp(1rem, 2.4vw, 1.35rem); color: var(--lp-ink-soft); font-weight: 500; margin-bottom: 20px; }
-    .lp-hero .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; color: var(--lp-ink-soft); font-size: .92rem; margin-bottom: 30px; }
-    .lp-hero .meta i { color: var(--lp-accent); margin-right: 6px; }
-    .lp-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .lp-btn {
-      display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 12px;
-      font-weight: 600; font-size: .95rem; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .lp-btn-primary { background: var(--lp-ink); color: #fff; }
-    .lp-btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15,18,34,.22); }
-    .lp-btn-ghost { background: #fff; color: var(--lp-ink); border: 1px solid var(--lp-line); }
-    .lp-btn-ghost:hover { color: var(--lp-accent); border-color: var(--lp-accent); transform: translateY(-2px); }
-
-    /* Stat boxes */
-    .lp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
-    .lp-stat { background: #fff; border: 1px solid var(--lp-line); border-radius: 16px; padding: 20px 14px; }
-    .lp-stat .n { font-family: "Poppins", sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--lp-accent); }
-    .lp-stat .l { font-size: .78rem; color: var(--lp-ink-soft); text-transform: uppercase; letter-spacing: .08em; margin-top: 4px; }
-
-    /* Tech pills */
-    .lp-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .lp-pill { padding: 8px 16px; border-radius: 999px; background: var(--lp-bg-soft); border: 1px solid var(--lp-line); font-size: .85rem; font-weight: 500; white-space: nowrap; transition: transform .15s ease, border-color .15s ease, color .15s ease; }
-    .lp-pill:hover { transform: translateY(-2px); border-color: var(--lp-accent); color: var(--lp-accent); }
-
-    /* Marquee (auto-scrolling tech stack) */
-    .lp-marquee { position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-    .lp-marquee-track { display: flex; gap: 12px; width: max-content; animation: lp-scroll 26s linear infinite; }
-    .lp-marquee:hover .lp-marquee-track { animation-play-state: paused; }
-    @keyframes lp-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    @media (prefers-reduced-motion: reduce) { .lp-marquee-track { animation: none; flex-wrap: wrap; } }
-
-    /* Timeline */
-    .lp-timeline { position: relative; padding-left: 28px; }
-    .lp-timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--lp-accent), transparent); }
-    .lp-tl-item { position: relative; padding: 0 0 34px 8px; }
-    .lp-tl-item::before { content: ""; position: absolute; left: -25px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--lp-accent); }
-    .lp-tl-item h3 { font-size: 1.12rem; font-weight: 700; margin: 0; }
-    .lp-tl-item .when { font-size: .82rem; color: var(--lp-accent); font-weight: 600; }
-    .lp-tl-item .org { color: var(--lp-ink-soft); font-size: .92rem; margin: 2px 0 8px; }
-    .lp-tl-item p { color: var(--lp-ink-soft); font-size: .93rem; margin: 0 0 10px; }
-    .lp-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-    .lp-tag { font-size: .74rem; padding: 4px 11px; border-radius: 7px; background: rgba(139,92,246,.09); color: var(--lp-accent); font-weight: 600; }
-
-    /* Cards grid */
-    .lp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .lp-card { background: #fff; border: 1px solid var(--lp-line); border-radius: 16px; padding: 24px; transition: transform .18s ease, box-shadow .18s ease; }
-    .lp-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(15,18,34,.08); }
-    .lp-card .ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; color: #fff; font-size: 1.3rem; background: linear-gradient(135deg, var(--lp-accent), var(--lp-accent2)); margin-bottom: 14px; }
-    .lp-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; }
-    .lp-card p { color: var(--lp-ink-soft); font-size: .88rem; margin: 0; }
-    .lp-card .num { font-family: "Poppins", sans-serif; font-size: .8rem; font-weight: 700; color: var(--lp-accent); opacity: .5; }
-
-    /* Projects card extras */
-    .lp-proj .role { display: inline-block; font-size: .72rem; font-weight: 700; color: var(--lp-accent2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
-    .lp-proj .when { font-size: .78rem; color: var(--lp-ink-soft); }
-
-    /* Dark numbers section */
-    .lp-dark { background: var(--lp-dark); color: #fff; }
-    .lp-dark h2 { color: #fff; }
-    .lp-dark .lp-num-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
-    .lp-dark .lp-num .n { font-family: "Poppins", sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; background: linear-gradient(90deg, #a78bfa, #f0abfc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-    .lp-dark .lp-num .l { color: #9ca3af; font-size: .84rem; margin-top: 4px; }
-
-    /* Principles */
-    .lp-princ { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .lp-princ .it i { font-size: 1.5rem; color: var(--lp-accent); }
-    .lp-princ .it h4 { font-size: 1rem; font-weight: 700; margin: 12px 0 6px; }
-    .lp-princ .it p { color: var(--lp-ink-soft); font-size: .86rem; margin: 0; }
-
-    /* Final CTA */
-    .lp-final { background: var(--lp-dark); color: #fff; text-align: center; padding: 84px 0; }
-    .lp-final h2 { color: #fff; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; }
-    .lp-final p { color: #9ca3af; max-width: 520px; margin: 10px auto 28px; }
-
-    @media (max-width: 991px) { .lp-grid, .lp-princ, .lp-dark .lp-num-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 640px) { .lp-stats, .lp-grid, .lp-princ, .lp-dark .lp-num-grid { grid-template-columns: 1fr 1fr; } .lp-grid { grid-template-columns: 1fr; } }
-
-    /* Fallback: if AOS never fires (JS disabled / slow), content stays visible */
-    .no-js [data-aos] { opacity: 1 !important; transform: none !important; }
-    [data-aos] { transition-duration: .5s; }
-  </style>
-
+  <link href="assets/css/site.css" rel="stylesheet">
 </head>
 
-<body class="index-page lp">
+<body class="lp" data-title-en="Nguyen Van Vu Linh — Solutions Architect · PO/PM" data-title-vi="Nguyễn Văn Vũ Linh — Solutions Architect · PO/PM">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
@@ -165,22 +47,26 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="certificates.html">Certificates</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="telegram.html">Telegram AI Bot</a></li>
+          <li><a href="index.html" class="active"><span lang="en">Home</span><span lang="vi">Trang chủ</span></a></li>
+          <li><a href="about.html"><span lang="en">About</span><span lang="vi">Giới thiệu</span></a></li>
+          <li><a href="resume.html"><span lang="en">Resume</span><span lang="vi">Hồ sơ</span></a></li>
+          <li><a href="projects.html"><span lang="en">Projects</span><span lang="vi">Dự án</span></a></li>
+          <li><a href="certificates.html"><span lang="en">Certificates</span><span lang="vi">Chứng chỉ</span></a></li>
+          <li><a href="contact.html"><span lang="en">Contact</span><span lang="vi">Liên hệ</span></a></li>
+          <li><a href="telegram.html"><span lang="en">AI Bot</span><span lang="vi">Bot AI</span></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a target="_blank" href="https://www.facebook.com/quangvulinh/" class="facebook"><i
-            class="bi bi-facebook"></i></a>
-        <a target="_blank" href="https://t.me/linhnvv2/" class="instagram"><i class="bi bi-telegram"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/quangvulinh/" class="linkedin"><i
-            class="bi bi-linkedin"></i></a>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+          <button type="button" data-set-lang="en" title="English">EN</button><button type="button" data-set-lang="vi" title="Tiếng Việt">VI</button>
+        </div>
+        <div class="header-social-links">
+          <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
 
     </div>
@@ -191,24 +77,24 @@
     <!-- Hero -->
     <section class="lp-hero">
       <div class="container" data-aos="fade-up">
-        <span class="lp-badge"><span class="dot"></span> Open to Solutions Architect · PO/PM roles</span>
-        <h1>Nguyen Van <span class="grad">Vu Linh</span></h1>
+        <span class="lp-badge"><span class="dot"></span> <span lang="en">Open to Solutions Architect · PO/PM roles &amp; freelance projects</span><span lang="vi">Sẵn sàng nhận vai trò Solutions Architect · PO/PM và dự án freelance</span></span>
+        <h1 lang="en">Nguyen Van <span class="grad">Vu Linh</span></h1><h1 lang="vi">Nguyễn Văn <span class="grad">Vũ Linh</span></h1>
         <p class="role">Solutions Architect · Product Owner (PO) &amp; Project Manager (PM)</p>
         <div class="meta">
-          <span><i class="bi bi-geo-alt"></i>Thu Duc City, HCMC · VN</span>
+          <span><i class="bi bi-geo-alt"></i><span lang="en">Thu Duc City, HCMC · VN</span><span lang="vi">TP. Thủ Đức, TP.HCM</span></span>
           <span><i class="bi bi-telegram"></i>@linhnvv2</span>
-          <span><i class="bi bi-mortarboard"></i>HCMC University of Transport</span>
+          <span><i class="bi bi-mortarboard"></i><span lang="en">HCMC University of Transport</span><span lang="vi">ĐH Giao thông Vận tải TP.HCM</span></span>
         </div>
         <div class="lp-cta">
-          <a class="lp-btn lp-btn-primary" target="_blank" href="https://t.me/linhnvv2/"><i class="bi bi-telegram"></i>Contact on Telegram</a>
-          <a class="lp-btn lp-btn-ghost" href="resume.html"><i class="bi bi-file-earmark-person"></i>View full CV</a>
+          <a class="lp-btn lp-btn-primary" target="_blank" rel="noopener" href="https://t.me/linhnvv2/"><i class="bi bi-telegram"></i><span lang="en">Contact on Telegram</span><span lang="vi">Nhắn Telegram</span></a>
+          <a class="lp-btn lp-btn-ghost" href="projects.html"><i class="bi bi-briefcase"></i><span lang="en">Projects &amp; freelance</span><span lang="vi">Dự án &amp; freelance</span></a>
+          <a class="lp-btn lp-btn-ghost" href="resume.html"><i class="bi bi-file-earmark-person"></i><span lang="en">View full CV</span><span lang="vi">Xem CV đầy đủ</span></a>
         </div>
-
         <div class="lp-stats" data-aos="fade-up" data-aos-delay="100">
-          <div class="lp-stat"><div class="n">11+</div><div class="l">Years at FPT</div></div>
-          <div class="lp-stat"><div class="n">25+</div><div class="l">Projects</div></div>
-          <div class="lp-stat"><div class="n">AWS SA</div><div class="l">Certified</div></div>
-          <div class="lp-stat"><div class="n">PO/PM</div><div class="l">Dual role</div></div>
+          <div class="lp-stat"><div class="n">11+</div><div lang="en" class="l">Years at FPT</div><div lang="vi" class="l">Năm tại FPT</div></div>
+          <div class="lp-stat"><div class="n">25+</div><div lang="en" class="l">Projects</div><div lang="vi" class="l">Dự án</div></div>
+          <div class="lp-stat"><div class="n">AWS SA</div><div lang="en" class="l">Certified</div><div lang="vi" class="l">Chứng chỉ</div></div>
+          <div class="lp-stat"><div class="n">PO/PM</div><div lang="en" class="l">Dual role</div><div lang="vi" class="l">Hai vai trò</div></div>
         </div>
       </div>
     </section>
@@ -216,141 +102,107 @@
     <!-- Tech stack -->
     <section class="lp-section" style="padding-top:56px;padding-bottom:56px;">
       <div class="container" data-aos="fade-up">
-        <span class="lp-eyebrow">Current tech stack</span>
+        <span lang="en" class="lp-eyebrow">Current tech stack</span><span lang="vi" class="lp-eyebrow">Công nghệ đang dùng</span>
         <div class="lp-marquee" style="margin-top:16px;">
-          <div class="lp-marquee-track">
-            <span class="lp-pill">AWS</span><span class="lp-pill">.NET / C#</span><span class="lp-pill">Python</span>
-            <span class="lp-pill">Docker</span><span class="lp-pill">Kubernetes</span><span class="lp-pill">Kafka</span>
-            <span class="lp-pill">MongoDB</span><span class="lp-pill">SQL Server</span><span class="lp-pill">Laravel / PHP</span>
-            <span class="lp-pill">ReactJS</span><span class="lp-pill">Flask / FastAPI</span><span class="lp-pill">Jenkins</span>
-            <!-- duplicate for seamless loop -->
-            <span class="lp-pill">AWS</span><span class="lp-pill">.NET / C#</span><span class="lp-pill">Python</span>
-            <span class="lp-pill">Docker</span><span class="lp-pill">Kubernetes</span><span class="lp-pill">Kafka</span>
-            <span class="lp-pill">MongoDB</span><span class="lp-pill">SQL Server</span><span class="lp-pill">Laravel / PHP</span>
-            <span class="lp-pill">ReactJS</span><span class="lp-pill">Flask / FastAPI</span><span class="lp-pill">Jenkins</span>
-          </div>
+          <div class="lp-marquee-track"><span class="lp-pill">AWS</span><span class="lp-pill">.NET / C#</span><span class="lp-pill">Python</span><span class="lp-pill">Docker</span><span class="lp-pill">Kubernetes</span><span class="lp-pill">Kafka</span><span class="lp-pill">MongoDB</span><span class="lp-pill">SQL Server</span><span class="lp-pill">Laravel / PHP</span><span class="lp-pill">ReactJS</span><span class="lp-pill">Flask / FastAPI</span><span class="lp-pill">Jenkins</span><span class="lp-pill">AWS</span><span class="lp-pill">.NET / C#</span><span class="lp-pill">Python</span><span class="lp-pill">Docker</span><span class="lp-pill">Kubernetes</span><span class="lp-pill">Kafka</span><span class="lp-pill">MongoDB</span><span class="lp-pill">SQL Server</span><span class="lp-pill">Laravel / PHP</span><span class="lp-pill">ReactJS</span><span class="lp-pill">Flask / FastAPI</span><span class="lp-pill">Jenkins</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Experience timeline -->
     <section class="lp-section" style="background:var(--lp-bg-soft);">
       <div class="container" data-aos="fade-up">
-        <span class="lp-eyebrow">Experience</span>
-        <h2>11 years at FPT — from .NET junior to Solutions Architect</h2>
-        <p class="lp-sub">Growing across three roles while staying hands-on with cloud, backend and delivery.</p>
+        <span lang="en" class="lp-eyebrow">Experience</span><span lang="vi" class="lp-eyebrow">Kinh nghiệm</span>
+        <h2 lang="en">11 years at FPT — from .NET junior to Solutions Architect</h2><h2 lang="vi">11 năm tại FPT — từ lập trình viên .NET đến Solutions Architect</h2>
+        <p lang="en" class="lp-sub">Growing across three roles while staying hands-on with cloud, backend and delivery.</p><p lang="vi" class="lp-sub">Trải qua ba vai trò, vẫn trực tiếp làm cloud, backend và triển khai.</p>
         <div class="lp-timeline">
           <div class="lp-tl-item">
-            <span class="when">Aug 2022 — Present</span>
-            <h3>Solutions Architect · Product Owner &amp; Project Manager</h3>
+            <span lang="en" class="when">Aug 2022 — Present</span><span lang="vi" class="when">08/2022 — Nay</span>
+            <h3 lang="en">Solutions Architect · Product Owner &amp; Project Manager</h3><h3 lang="vi">Solutions Architect · Product Owner &amp; Project Manager</h3>
             <div class="org">FPT Telecom International Company</div>
-            <p>Working across two core roles — PO and PM — for digital conversion. Bridging technical and
-              non-technical audiences to design, plan and deliver cloud solutions. Recent work: EST Compliance
-              (subscription migration &amp; portal), FTI-MuaSAM procurement system, and FTI-CSP Microsoft Partner
-              Center portal.</p>
-            <div class="lp-tags">
-              <span class="lp-tag">AWS</span><span class="lp-tag">Partner Center API</span><span class="lp-tag">REST</span>
-              <span class="lp-tag">Kafka</span><span class="lp-tag">MongoDB</span><span class="lp-tag">RBAC</span>
-            </div>
+            <p lang="en">Working across two core roles — PO and PM — for digital conversion. Bridging technical and non-technical audiences to design, plan and deliver cloud solutions. Recent work: EST Compliance (subscription migration &amp; portal), FTI-MuaSAM procurement system, and FTI-CSP Microsoft Partner Center portal.</p><p lang="vi">Đảm nhận song song hai vai trò PO và PM cho mảng chuyển đổi số. Làm cầu nối giữa đội kỹ thuật và phía nghiệp vụ để thiết kế, lập kế hoạch và triển khai giải pháp cloud. Dự án gần đây: EST Compliance (chuyển đổi thuê bao &amp; cổng quản lý), hệ thống mua sắm FTI-MuaSAM và cổng FTI-CSP tích hợp Microsoft Partner Center.</p>
+            <div class="lp-tags"><span class="lp-tag">AWS</span><span class="lp-tag">Partner Center API</span><span class="lp-tag">REST</span><span class="lp-tag">Kafka</span><span class="lp-tag">MongoDB</span><span class="lp-tag">RBAC</span></div>
           </div>
           <div class="lp-tl-item">
-            <span class="when">Oct 2016 — Jul 2022</span>
-            <h3>Web Developer · Project Manager</h3>
+            <span lang="en" class="when">Oct 2016 — Jul 2022</span><span lang="vi" class="when">10/2016 — 07/2022</span>
+            <h3 lang="en">Web Developer · Project Manager</h3><h3 lang="vi">Lập trình viên Web · Quản lý dự án</h3>
             <div class="org">FPT Telecom</div>
-            <p>Designed and delivered internal and external platforms: IHUB, IDC Server, EDU FTC, Member FTI/FPT,
-              Cloud Insight, iVoice, Hi Gio Cloud. Acted as PM on several projects while building microservices and
-              APIs.</p>
-            <div class="lp-tags">
-              <span class="lp-tag">.NET Core</span><span class="lp-tag">Python</span><span class="lp-tag">Laravel</span>
-              <span class="lp-tag">Kong Gateway</span><span class="lp-tag">gRPC</span><span class="lp-tag">RabbitMQ</span>
-            </div>
+            <p lang="en">Designed and delivered internal and external platforms: IHUB, IDC Server, EDU FTC, Member FTI/FPT, Cloud Insight, iVoice, Hi Gio Cloud. Acted as PM on several projects while building microservices and APIs.</p><p lang="vi">Thiết kế và triển khai các nền tảng nội bộ và cho khách hàng: IHUB, IDC Server, EDU FTC, Member FTI/FPT, Cloud Insight, iVoice, Hi Gio Cloud. Kiêm PM nhiều dự án song song với xây dựng microservice và API.</p>
+            <div class="lp-tags"><span class="lp-tag">.NET Core</span><span class="lp-tag">Python</span><span class="lp-tag">Laravel</span><span class="lp-tag">Kong Gateway</span><span class="lp-tag">gRPC</span><span class="lp-tag">RabbitMQ</span></div>
           </div>
           <div class="lp-tl-item">
-            <span class="when">May 2015 — Oct 2016</span>
-            <h3>.NET Developer</h3>
+            <span lang="en" class="when">May 2015 — Oct 2016</span><span lang="vi" class="when">05/2015 — 10/2016</span>
+            <h3 lang="en">.NET Developer</h3><h3 lang="vi">Lập trình viên .NET</h3>
             <div class="org">FPT Software</div>
-            <p>Built desktop and Windows platform applications: file management, system configuration, server
-              simulators, glass displays and NFC utilities, using WPF and the .NET stack.</p>
-            <div class="lp-tags">
-              <span class="lp-tag">.NET 3.5</span><span class="lp-tag">WPF</span><span class="lp-tag">Windows</span>
-              <span class="lp-tag">Visual Studio</span>
-            </div>
+            <p lang="en">Built desktop and Windows platform applications: file management, system configuration, server simulators, glass displays and NFC utilities, using WPF and the .NET stack.</p><p lang="vi">Xây dựng ứng dụng desktop và nền tảng Windows: quản lý file, cấu hình hệ thống, giả lập máy chủ, ứng dụng cho kính thông minh và tiện ích NFC, dùng WPF và .NET.</p>
+            <div class="lp-tags"><span class="lp-tag">.NET 3.5</span><span class="lp-tag">WPF</span><span class="lp-tag">Windows</span><span class="lp-tag">Visual Studio</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills grid -->
     <section class="lp-section">
       <div class="container" data-aos="fade-up">
-        <span class="lp-eyebrow">Skills</span>
-        <h2>Cloud-first, fullstack, deep integration</h2>
-        <p class="lp-sub">A broad toolbox built over a decade of shipping production systems.</p>
+        <span lang="en" class="lp-eyebrow">Skills</span><span lang="vi" class="lp-eyebrow">Kỹ năng</span>
+        <h2 lang="en">Cloud-first, fullstack, deep integration</h2><h2 lang="vi">Ưu tiên cloud, fullstack, tích hợp sâu</h2>
+        <p lang="en" class="lp-sub">A broad toolbox built over a decade of shipping production systems.</p><p lang="vi" class="lp-sub">Bộ công cụ tích luỹ qua hơn 10 năm đưa hệ thống vào chạy thật.</p>
         <div class="lp-grid">
-          <div class="lp-card"><div class="ico"><i class="bi bi-cloud"></i></div><h3>AWS Cloud</h3><p>S3, RDS, SQS, SNS, CloudFront, WAF, CloudFormation/CDK. AWS Certified Solutions Architect – Associate.</p></div>
-          <div class="lp-card"><div class="ico"><i class="bi bi-filetype-py"></i></div><h3>Python Ecosystem</h3><p>Pandas, NumPy, FastAPI, Django, Flask. ETL with Airflow &amp; Spark; NLU/LLM chatbots.</p></div>
-          <div class="lp-card"><div class="ico"><i class="bi bi-window"></i></div><h3>Frontend</h3><p>ReactJS, JavaScript, Bootstrap, responsive portals and admin dashboards.</p></div>
-          <div class="lp-card"><div class="ico"><i class="bi bi-hexagon"></i></div><h3>.NET Stack</h3><p>C#, .NET Core / Framework, WPF, gRPC, REST API design and delivery.</p></div>
-          <div class="lp-card"><div class="ico"><i class="bi bi-diagram-3"></i></div><h3>DevOps &amp; Infra</h3><p>Docker, Kubernetes (ECS/EKS), Jenkins CI/CD, Kong Gateway, Kafka, RabbitMQ.</p></div>
-          <div class="lp-card"><div class="ico"><i class="bi bi-database"></i></div><h3>Databases</h3><p>PostgreSQL, SQL Server, MySQL, MongoDB, Redis.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-cloud"></i></div><h3 lang="en">AWS Cloud</h3><h3 lang="vi">AWS Cloud</h3><p lang="en">S3, RDS, SQS, SNS, CloudFront, WAF, CloudFormation/CDK. AWS Certified Solutions Architect – Associate.</p><p lang="vi">S3, RDS, SQS, SNS, CloudFront, WAF, CloudFormation/CDK. Chứng chỉ AWS Certified Solutions Architect – Associate.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-filetype-py"></i></div><h3 lang="en">Python Ecosystem</h3><h3 lang="vi">Hệ sinh thái Python</h3><p lang="en">Pandas, NumPy, FastAPI, Django, Flask. ETL with Airflow &amp; Spark; NLU/LLM chatbots.</p><p lang="vi">Pandas, NumPy, FastAPI, Django, Flask. ETL với Airflow &amp; Spark; chatbot NLU/LLM.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-window"></i></div><h3 lang="en">Frontend</h3><h3 lang="vi">Frontend</h3><p lang="en">ReactJS, Next.js, JavaScript, Tailwind/Bootstrap, responsive portals and admin dashboards.</p><p lang="vi">ReactJS, Next.js, JavaScript, Tailwind/Bootstrap, cổng thông tin và trang quản trị chạy tốt trên mọi màn hình.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-hexagon"></i></div><h3 lang="en">.NET Stack</h3><h3 lang="vi">.NET</h3><p lang="en">C#, .NET Core / Framework, WPF, gRPC, REST API design and delivery.</p><p lang="vi">C#, .NET Core / Framework, WPF, gRPC, thiết kế và xây dựng REST API.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-diagram-3"></i></div><h3 lang="en">DevOps &amp; Infra</h3><h3 lang="vi">DevOps &amp; Hạ tầng</h3><p lang="en">Docker, Kubernetes (ECS/EKS), Jenkins CI/CD, Kong Gateway, Kafka, RabbitMQ.</p><p lang="vi">Docker, Kubernetes (ECS/EKS), Jenkins CI/CD, Kong Gateway, Kafka, RabbitMQ.</p></div>
+          <div class="lp-card"><div class="ico"><i class="bi bi-database"></i></div><h3 lang="en">Databases</h3><h3 lang="vi">Cơ sở dữ liệu</h3><p lang="en">PostgreSQL, SQL Server, MySQL, MongoDB, Redis.</p><p lang="vi">PostgreSQL, SQL Server, MySQL, MongoDB, Redis.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Featured projects -->
     <section class="lp-section" style="background:var(--lp-bg-soft);">
       <div class="container" data-aos="fade-up">
-        <span class="lp-eyebrow">Featured projects</span>
-        <h2>Recent work as PO &amp; PM</h2>
-        <p class="lp-sub">Latest delivery at FPT Telecom International.</p>
+        <span lang="en" class="lp-eyebrow">Featured projects</span><span lang="vi" class="lp-eyebrow">Dự án tiêu biểu</span>
+        <h2 lang="en">Recent work as PO &amp; PM</h2><h2 lang="vi">Dự án gần đây trong vai trò PO &amp; PM</h2>
+        <p lang="en" class="lp-sub">Latest delivery at FPT Telecom International. Personal &amp; freelance work: see <a href="projects.html">Projects</a>.</p><p lang="vi" class="lp-sub">Các dự án gần nhất tại FPT Telecom International. Dự án cá nhân &amp; freelance: xem trang <a href="projects.html">Dự án</a>.</p>
         <div class="lp-grid">
           <div class="lp-card lp-proj">
             <div class="num">01</div>
             <span class="role">PO / PM</span>
             <h3>EST Compliance — Migration &amp; Portal</h3>
             <p class="when">01/2026 – 04/2026</p>
-            <p>Two-phase project enforcing End-of-Term compliance across the subscription portfolio: API-driven data
-              migration (audit, EST-risk detection, batch PATCH, rollback) plus a UI/portal with quick actions,
-              badges, CSV export and RBAC.</p>
+            <p lang="en">Two-phase project enforcing End-of-Term compliance across the subscription portfolio: API-driven data migration (audit, EST-risk detection, batch PATCH, rollback) plus a UI/portal with quick actions, badges, CSV export and RBAC.</p><p lang="vi">Dự án 2 giai đoạn đảm bảo tuân thủ End-of-Term cho toàn bộ thuê bao: chuyển đổi dữ liệu qua API (rà soát, phát hiện rủi ro EST, cập nhật hàng loạt, rollback) và cổng quản lý có thao tác nhanh, nhãn cảnh báo, xuất CSV, phân quyền.</p>
           </div>
           <div class="lp-card lp-proj">
             <div class="num">02</div>
             <span class="role">Project Manager</span>
             <h3>FTI-MuaSAM — Procurement</h3>
             <p class="when">01/2026 – 03/2026</p>
-            <p>Procurement management system. Led an ISC team of 9 through scope, master plan, risk management and
-              deployment across UAT/Staging/Production before release.</p>
+            <p lang="en">Procurement management system. Led an ISC team of 9 through scope, master plan, risk management and deployment across UAT/Staging/Production before release.</p><p lang="vi">Hệ thống quản lý mua sắm. Dẫn dắt đội ISC 9 người: chốt phạm vi, kế hoạch tổng, quản lý rủi ro và triển khai qua UAT/Staging/Production trước khi phát hành.</p>
           </div>
           <div class="lp-card lp-proj">
             <div class="num">03</div>
             <span class="role">Backend &amp; BA</span>
             <h3>FTI-CSP — Partner Center</h3>
             <p class="when">09/2025 – 12/2025</p>
-            <p>Reseller portal integrating Microsoft Partner Center (customers, subscriptions, orders, billing, Azure/NCE).
-              ~26 UI modules plus core backend APIs and business analysis.</p>
+            <p lang="en">Reseller portal integrating Microsoft Partner Center (customers, subscriptions, orders, billing, Azure/NCE). ~26 UI modules plus core backend APIs and business analysis.</p><p lang="vi">Cổng đại lý tích hợp Microsoft Partner Center (khách hàng, thuê bao, đơn hàng, cước, Azure/NCE). ~26 màn hình cùng các API backend lõi và phân tích nghiệp vụ.</p>
           </div>
           <div class="lp-card lp-proj">
             <div class="num">04</div>
             <span class="role">Solutions Architect</span>
             <h3>Amazing-chatbot</h3>
             <p class="when">06/2024 – 09/2024</p>
-            <p>Finance insights chatbot with NLU intent recognition, served via Flask API on Docker/Kubernetes with
-              Jenkins CI/CD.</p>
+            <p lang="en">Finance insights chatbot with NLU intent recognition, served via Flask API on Docker/Kubernetes with Jenkins CI/CD.</p><p lang="vi">Chatbot tra cứu tài chính, nhận diện ý định bằng NLU, phục vụ qua Flask API trên Docker/Kubernetes với Jenkins CI/CD.</p>
           </div>
           <div class="lp-card lp-proj">
             <div class="num">05</div>
             <span class="role">Developer / PM</span>
             <h3>FTICareer.vn</h3>
             <p class="when">10/2023 – 12/2023</p>
-            <p>Corporate recruitment website on .NET Framework &amp; SQL Server, with AWS SNS and LDAP-based single
-              sign-on.</p>
+            <p lang="en">Corporate recruitment website on .NET Framework &amp; SQL Server, with AWS SNS and LDAP-based single sign-on.</p><p lang="vi">Website tuyển dụng doanh nghiệp trên .NET Framework &amp; SQL Server, dùng AWS SNS và đăng nhập một lần qua LDAP.</p>
           </div>
           <div class="lp-card lp-proj">
             <div class="num">06</div>
             <span class="role">Developer</span>
             <h3>ASM — Asset Management</h3>
             <p class="when">07/2023 – 09/2023</p>
-            <p>IT asset management to track laptops, licenses and accessories. Built with Laravel/PHP, MySQL and Kafka.</p>
+            <p lang="en">IT asset management to track laptops, licenses and accessories. Built with Laravel/PHP, MySQL and Kafka.</p><p lang="vi">Quản lý tài sản CNTT: laptop, bản quyền phần mềm, phụ kiện. Xây dựng bằng Laravel/PHP, MySQL và Kafka.</p>
           </div>
         </div>
       </div>
@@ -359,28 +211,27 @@
     <!-- Dark numbers -->
     <section class="lp-section lp-dark">
       <div class="container" data-aos="fade-up">
-        <span class="lp-eyebrow">By the numbers</span>
-        <h2>A decade of shipping code</h2>
+        <span lang="en" class="lp-eyebrow">By the numbers</span><span lang="vi" class="lp-eyebrow">Những con số</span>
+        <h2 lang="en">A decade of shipping code</h2><h2 lang="vi">Hơn 10 năm viết và vận hành phần mềm</h2>
         <div class="lp-num-grid" style="margin-top:36px;">
-          <div class="lp-num"><div class="n">11+</div><div class="l">Years of experience</div></div>
-          <div class="lp-num"><div class="n">25+</div><div class="l">Projects delivered</div></div>
-          <div class="lp-num"><div class="n">3</div><div class="l">Companies at FPT group</div></div>
-          <div class="lp-num"><div class="n">2</div><div class="l">Core roles: PO &amp; PM</div></div>
+          <div class="lp-num"><div class="n">11+</div><div lang="en" class="l">Years of experience</div><div lang="vi" class="l">Năm kinh nghiệm</div></div>
+          <div class="lp-num"><div class="n">25+</div><div lang="en" class="l">Projects delivered</div><div lang="vi" class="l">Dự án đã bàn giao</div></div>
+          <div class="lp-num"><div class="n">3</div><div lang="en" class="l">Companies at FPT group</div><div lang="vi" class="l">Công ty trong tập đoàn FPT</div></div>
+          <div class="lp-num"><div class="n">2</div><div lang="en" class="l">Core roles: PO &amp; PM</div><div lang="vi" class="l">Vai trò chính: PO &amp; PM</div></div>
         </div>
       </div>
     </section>
 
-    <!-- Principles -->
     <section class="lp-section">
       <div class="container" data-aos="fade-up">
-        <span class="lp-eyebrow">How I work</span>
-        <h2>Principles after 11 years of building</h2>
-        <p class="lp-sub">Simple rules that keep delivery fast and reliable.</p>
+        <span lang="en" class="lp-eyebrow">How I work</span><span lang="vi" class="lp-eyebrow">Cách tôi làm việc</span>
+        <h2 lang="en">Principles after 11 years of building</h2><h2 lang="vi">Nguyên tắc sau 11 năm làm sản phẩm</h2>
+        <p lang="en" class="lp-sub">Simple rules that keep delivery fast and reliable.</p><p lang="vi" class="lp-sub">Vài nguyên tắc đơn giản giúp triển khai nhanh và ổn định.</p>
         <div class="lp-princ">
-          <div class="it"><i class="bi bi-rocket-takeoff"></i><h4>Ship first</h4><p>Deliver working software early, then iterate with real feedback.</p></div>
-          <div class="it"><i class="bi bi-hdd-network"></i><h4>Own the stack</h4><p>Understand infra end-to-end — from cloud to CI/CD to observability.</p></div>
-          <div class="it"><i class="bi bi-journal-code"></i><h4>Docs that last</h4><p>Write clear specs and runbooks so work isn't read twice.</p></div>
-          <div class="it"><i class="bi bi-graph-up-arrow"></i><h4>Business first</h4><p>Bridge tech and stakeholders so solutions map to real value.</p></div>
+          <div class="it"><i class="bi bi-rocket-takeoff"></i><h4 lang="en">Ship first</h4><h4 lang="vi">Ra bản chạy sớm</h4><p lang="en">Deliver working software early, then iterate with real feedback.</p><p lang="vi">Có bản chạy được thật sớm, rồi cải tiến theo góp ý thực tế.</p></div>
+          <div class="it"><i class="bi bi-hdd-network"></i><h4 lang="en">Own the stack</h4><h4 lang="vi">Nắm toàn bộ hệ thống</h4><p lang="en">Understand infra end-to-end — from cloud to CI/CD to observability.</p><p lang="vi">Hiểu hạ tầng từ đầu tới cuối — cloud, CI/CD đến giám sát.</p></div>
+          <div class="it"><i class="bi bi-journal-code"></i><h4 lang="en">Docs that last</h4><h4 lang="vi">Tài liệu dùng được lâu</h4><p lang="en">Write clear specs and runbooks so work isn't read twice.</p><p lang="vi">Viết đặc tả và hướng dẫn vận hành rõ ràng, không ai phải hỏi lại.</p></div>
+          <div class="it"><i class="bi bi-graph-up-arrow"></i><h4 lang="en">Business first</h4><h4 lang="vi">Nghiệp vụ là trên hết</h4><p lang="en">Bridge tech and stakeholders so solutions map to real value.</p><p lang="vi">Kết nối kỹ thuật với các bên liên quan để giải pháp mang lại giá trị thật.</p></div>
         </div>
       </div>
     </section>
@@ -388,11 +239,11 @@
     <!-- Final CTA -->
     <section class="lp-final">
       <div class="container" data-aos="fade-up">
-        <h2>Let's talk about your project</h2>
-        <p>Solutions architecture, cloud migration, or PO/PM delivery — happy to discuss.</p>
+        <h2 lang="en">Let's talk about your project</h2><h2 lang="vi">Cùng trao đổi về dự án của bạn</h2>
+        <p lang="en">Solutions architecture, cloud migration, PO/PM delivery or a freelance build — happy to discuss.</p><p lang="vi">Kiến trúc giải pháp, chuyển đổi lên cloud, PO/PM hay làm dự án freelance — sẵn sàng trao đổi.</p>
         <div class="lp-cta">
-          <a class="lp-btn lp-btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25);" target="_blank" href="https://t.me/linhnvv2/"><i class="bi bi-telegram"></i>Message me on Telegram</a>
-          <a class="lp-btn lp-btn-primary" style="background:linear-gradient(90deg,var(--lp-accent),var(--lp-accent2));" href="resume.html"><i class="bi bi-file-earmark-person"></i>View full CV</a>
+          <a class="lp-btn lp-btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25);" target="_blank" rel="noopener" href="https://t.me/linhnvv2/"><i class="bi bi-telegram"></i><span lang="en">Message me on Telegram</span><span lang="vi">Nhắn Telegram</span></a>
+          <a class="lp-btn lp-btn-primary" style="background:linear-gradient(90deg,var(--lp-accent),var(--lp-accent2));" href="projects.html#hire"><i class="bi bi-briefcase"></i><span lang="en">Hire me</span><span lang="vi">Thuê tôi làm dự án</span></a>
         </div>
       </div>
     </section>
@@ -401,36 +252,27 @@
 
   <footer id="footer" class="footer light-background">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">vL</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">vL</strong> <span lang="en">All Rights Reserved</span><span lang="vi">Bảo lưu mọi quyền</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a target="_blank" href="https://www.facebook.com/quangvulinh/"><i class="bi bi-facebook"></i></a>
-        <a target="_blank" href="https://t.me/linhnvv2/" class="instagram"><i class="bi bi-telegram"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/quangvulinh/"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        Designed by <a href="http://quangvulinh.com/">qvl</a>
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/lang.js"></script>
 </body>
 
 </html>

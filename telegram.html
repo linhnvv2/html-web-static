@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Kelly Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Telegram AI Bot — Nguyen Van Vu Linh</title>
+  <meta name="description" content="Local RAG chatbot on Telegram (@VuLinhBot).">
+  <meta name="keywords" content="Solutions Architect, Product Owner, Project Manager, Freelance, AWS, .NET, Python, Laravel">
+  <script>
+    /* Ngôn ngữ: chọn trước đó (localStorage) > ngôn ngữ trình duyệt. Chạy trước khi vẽ trang để không nháy chữ. */
+    (function () {
+      var l = localStorage.getItem('site-lang') || ((navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en');
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.lang = l;
+    })();
+  </script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,56 +23,50 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Site CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/site.css" rel="stylesheet">
 </head>
 
-<body class="portfolio-details-page">
+<body class="lp" data-title-en="Telegram AI Bot — Nguyen Van Vu Linh" data-title-vi="Bot AI Telegram — Nguyễn Văn Vũ Linh">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">vL</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="certificates.html">Certificates</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="telegram.html" class="active">Telegram AI Bot</a></li>
+          <li><a href="index.html"><span lang="en">Home</span><span lang="vi">Trang chủ</span></a></li>
+          <li><a href="about.html"><span lang="en">About</span><span lang="vi">Giới thiệu</span></a></li>
+          <li><a href="resume.html"><span lang="en">Resume</span><span lang="vi">Hồ sơ</span></a></li>
+          <li><a href="projects.html"><span lang="en">Projects</span><span lang="vi">Dự án</span></a></li>
+          <li><a href="certificates.html"><span lang="en">Certificates</span><span lang="vi">Chứng chỉ</span></a></li>
+          <li><a href="contact.html"><span lang="en">Contact</span><span lang="vi">Liên hệ</span></a></li>
+          <li><a href="telegram.html" class="active"><span lang="en">AI Bot</span><span lang="vi">Bot AI</span></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a target="_blank" href="https://www.facebook.com/quangvulinh/"><i class="bi bi-facebook"></i></a>
-        <a target="_blank" href="https://t.me/linhnvv2/"> <i class="bi bi-telegram"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/quangvulinh/"><i class="bi bi-linkedin"></i></a>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+          <button type="button" data-set-lang="en" title="English">EN</button><button type="button" data-set-lang="vi" title="Tiếng Việt">VI</button>
+        </div>
+        <div class="header-social-links">
+          <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
 
     </div>
@@ -72,132 +74,65 @@
 
   <main class="main">
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Retrieval-Augmented Generation </h2>
-        <p>A simple local Retrieval-Augmented Generation (RAG) chatbot that can answer to questions by acquiring
-          information from personal pdf documents</p>
-        <p>Please visit this AI Bot to get my phone number and more information about me! <a
-            href="https://t.me/VuLinhBot">Telegram @VuLinhBot</a></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Chatbot LLM</li>
-                <li><strong>Technical</strong>: Python/Telegram/ChromaLangChain/...</li>
-                <li><strong>Project date</strong>: 01 Dec, 2024</li>
-                <li><strong>Telegram URL</strong>: <a href="https://t.me/VuLinhBot">@VuLinhBot</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>For this project, I exploited the following components to build the RAG architecture:</h2>
-              <p>
-              <p> Chroma: A vector database used to store and retrieve document embeddings efficiently.</p>
-              <p>Flask: Framework for rendering web page and handling user interactions.</p>
-              <p>Ollama: Manages the local language model for generating responses.</p>
-              <p>LangChain: A framework for integrating language models and retrieval systems.</p>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
+    <section class="lp-hero sm">
+      <div class="container" data-aos="fade-up">
+        <span class="lp-badge"><span class="dot"></span> <span lang="en">AI side project</span><span lang="vi">Dự án AI cá nhân</span></span>
+        <h1 lang="en">Telegram <span class="grad">AI Bot</span></h1><h1 lang="vi">Bot AI trên <span class="grad">Telegram</span></h1>
+        <p lang="en" class="role">A local Retrieval-Augmented Generation (RAG) chatbot that answers questions from my personal PDF documents.</p><p lang="vi" class="role">Chatbot RAG chạy trên máy chủ riêng, trả lời câu hỏi dựa trên tài liệu PDF cá nhân của tôi.</p>
+        <div class="lp-cta"><a class="lp-btn lp-btn-primary" href="https://t.me/VuLinhBot" target="_blank" rel="noopener"><i class="bi bi-telegram"></i><span lang="en">Chat with @VuLinhBot</span><span lang="vi">Trò chuyện với @VuLinhBot</span></a></div>
       </div>
+    </section>
 
-    </section><!-- /Portfolio Details Section -->
+    <section class="lp-section" style="padding-top:40px;">
+      <div class="container" data-aos="fade-up">
+        <div class="rs-cols">
+          <div class="lp-card">
+            <h3 lang="en">How it works</h3><h3 lang="vi">Cách hoạt động</h3>
+            <ul class="rs-list">
+              <li><b>Chroma</b> — <span lang="en">vector database that stores and retrieves document embeddings.</span><span lang="vi">cơ sở dữ liệu vector lưu và truy xuất embedding của tài liệu.</span></li>
+              <li><b>LangChain</b> — <span lang="en">glue between the language model and the retrieval pipeline.</span><span lang="vi">kết nối mô hình ngôn ngữ với luồng truy xuất tài liệu.</span></li>
+              <li><b>Ollama</b> — <span lang="en">runs the language model locally to generate answers.</span><span lang="vi">chạy mô hình ngôn ngữ ngay trên máy chủ để sinh câu trả lời.</span></li>
+              <li><b>Flask</b> — <span lang="en">web layer and user interaction.</span><span lang="vi">lớp web và tương tác với người dùng.</span></li>
+            </ul>
+          </div>
+          <div class="lp-card">
+            <h3 lang="en">Project information</h3><h3 lang="vi">Thông tin dự án</h3>
+            <ul class="rs-list">
+              <li><b><span lang="en">Category</span><span lang="vi">Loại</span>:</b> Chatbot LLM (RAG)</li>
+              <li><b><span lang="en">Stack</span><span lang="vi">Công nghệ</span>:</b> Python, Telegram, Chroma, LangChain, Ollama</li>
+              <li><b><span lang="en">Date</span><span lang="vi">Thời gian</span>:</b> 12/2024</li>
+              <li><b>Telegram:</b> <a href="https://t.me/VuLinhBot" target="_blank" rel="noopener">@VuLinhBot</a> — <span lang="en">ask it for my phone number and more about me.</span><span lang="vi">hỏi bot để lấy số điện thoại và thông tin về tôi.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <footer id="footer" class="footer light-background">
-
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">vL</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">vL</strong> <span lang="en">All Rights Reserved</span><span lang="vi">Bảo lưu mọi quyền</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a target="_blank" href="https://www.facebook.com/quangvulinh/"><i class="bi bi-facebook"></i></a>
-        <a target="_blank" href="https://t.me/linhnvv2/"> <i class="bi bi-telegram"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/quangvulinh/"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        Designed by <a href="https://quangvulinh.com/">qvl</a>
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/quangvulinh/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" rel="noopener" href="https://t.me/linhnvv2/" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/quangvulinh/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/lang.js"></script>
 </body>
 
 </html>
