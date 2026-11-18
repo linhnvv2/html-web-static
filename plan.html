@@ -36,16 +36,64 @@ td b { color:white; display:block; } td .k { color:#94a3b8; font-size:.72rem; }
 .card ul { list-style:none; color:#94a3b8; font-size:.75rem; } .card li { margin-bottom:.45rem; line-height:1.4; }
 .card li b { color:#e2e8f0; }
 .footer { text-align:center; margin-top:2rem; color:#8696a8; font-size:.75rem; }
-.hint { display:none; color:#94a3b8; font-size:.72rem; margin:-.4rem 0 .5rem; }
 .footer a { color:#64748b; }
-@media (max-width:600px) { body { padding:.8rem; } .todo { grid-template-columns:1fr; } .todo li { flex-wrap:wrap; } .todo .tag { width:auto; order:0; } .todo .who { margin-left:auto; } .todo .txt { flex-basis:100%; order:2; } .hint { display:block; } }
+.lanes { display:none; }
+.who-legend { margin:-.3rem 0 .7rem; }
+.top { position:fixed; right:1rem; bottom:1rem; width:2.6rem; height:2.6rem; border-radius:50%; background:#0e7490; color:white; display:none; align-items:center; justify-content:center; text-decoration:none; font-size:1.1rem; box-shadow:0 4px 14px rgba(0,0,0,.5); }
+@media (max-width:760px) {
+  body { padding:0 .75rem 4rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size:15px; }
+  h1 { font-size:1.3rem; } .header-row { padding-top:1rem; }
+  h2 { font-size:1.1rem; margin:1.6rem 0 .7rem; scroll-margin-top:3.6rem; }
+  .subtitle { font-size:.85rem; }
+  .nav { position:sticky; top:0; z-index:5; margin:.8rem -.75rem 0; padding:.55rem .75rem; background:rgba(2,6,23,.94); backdrop-filter:blur(6px);
+         flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; border-bottom:1px solid #1e293b; }
+  .nav::-webkit-scrollbar { display:none; }
+  .nav a { flex:none; font-size:.85rem; padding:.4rem .8rem; }
+  .top { display:flex; width:2.2rem; height:2.2rem; right:.6rem; bottom:.8rem; font-size:.95rem; opacity:.75; }
+  .container { padding-bottom:3rem; }
+  .nav { -webkit-mask-image:linear-gradient(90deg,#000 85%,transparent); mask-image:linear-gradient(90deg,#000 85%,transparent); }
+  /* sơ đồ → thẻ dọc */
+  #tranh + .panel { display:none; }
+  .lanes { display:grid; gap:.6rem; }
+  .lane { border:1px solid var(--c); border-left-width:4px; border-radius:.7rem; background:rgba(15,23,42,.6); }
+  .lane summary { list-style:none; cursor:pointer; padding:.7rem .75rem; display:grid; gap:.35rem; }
+  .lane summary::-webkit-details-marker { display:none; }
+  .lane summary::after { content:"Xem các bước ▾"; font-size:.8rem; color:#7dd3fc; padding-top:.15rem; }
+  .lane[open] summary::after { content:"Thu gọn ▴"; }
+  .lt { color:var(--c); font-weight:700; font-size:1rem; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+  .new { background:#22d3ee; color:#020617; font-size:.65rem; padding:.05rem .45rem; border-radius:99px; }
+  .ls { color:#b6c2cf; font-size:.85rem; }
+  .lp { display:flex; flex-wrap:wrap; gap:.35rem; }
+  .lp .pill, td .pill { white-space:normal; font-size:.75rem; padding:.2rem .6rem; }
+  .steps { list-style:none; counter-reset:s; margin:0 .6rem .7rem; border-top:1px dashed #1e293b; padding-top:.6rem; display:grid; gap:.4rem; }
+  .steps li { counter-increment:s; display:grid; grid-template-columns:1.6rem 1fr; column-gap:.4rem; background:var(--f); border-radius:.5rem; padding:.45rem .6rem; }
+  .steps li::before { content:counter(s); grid-row:span 2; width:1.4rem; height:1.4rem; border-radius:50%; border:1px solid var(--c); color:var(--c); font-size:.75rem; display:flex; align-items:center; justify-content:center; }
+  .steps b { color:white; font-size:.9rem; } .steps span { color:#b6c2cf; font-size:.8rem; }
+  /* việc cần làm */
+  .todo { grid-template-columns:1fr; }
+  .todo li { flex-wrap:wrap; font-size:.9rem; padding:.65rem .75rem; row-gap:.3rem; }
+  .todo .tag { width:auto; font-size:.78rem; color:#cbd5e1; font-weight:600; }
+  .who.e { background:#0e7490; color:#ecfeff; } .todo .who { margin-left:auto; font-size:.72rem; }
+  .todo .txt { flex-basis:100%; order:2; }
+  /* bảng → thẻ */
+  #nentang + .panel { padding:0; background:none; border:0; overflow:visible; }
+  table, tbody, tr, td { display:block; min-width:0; width:100%; }
+  thead { display:none; }
+  tr { background:rgba(15,23,42,.6); border:1px solid #1e293b; border-radius:.7rem; padding:.7rem .8rem; margin-bottom:.6rem; }
+  td { border:0; padding:.2rem 0; font-size:.88rem; }
+  td.pn { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; flex-wrap:wrap; padding-bottom:.35rem; }
+  td.pn b { display:inline; font-size:.98rem; }
+  td[data-l]::before { content:attr(data-l); display:block; color:#7dd3fc; font-size:.72rem; margin-bottom:.05rem; }
+  td.ps { padding-top:.45rem; }
+  .card ul { font-size:.88rem; color:#b6c2cf; } .card h3 { font-size:.98rem; }
+  .footer { font-size:.78rem; }
+}
 </style></head><body><div class="container">
-<div class="header-row"><div class="pulse-dot"></div><h1>Plan — kế hoạch kiếm tiền</h1></div>
+<div class="header-row"><div class="pulse-dot"></div><h1 id="dau">Plan — kế hoạch kiếm tiền</h1></div>
 <p class="subtitle">10 hướng · 10 nền tảng · 14 việc cần làm • cập nhật 18/11/2026</p>
 <nav class="nav"><a href="#tranh">Bức tranh</a><a href="#viec">Việc cần làm</a><a href="#nentang">Nền tảng để đăng</a><a href="#ghichu">Rào cản &amp; đã loại</a><a href="/">← quangvulinh.com</a></nav>
 
 <h2 id="tranh">Bức tranh 10 hướng</h2>
-<p class="hint">↔ vuốt ngang để xem hết sơ đồ</p>
 <div class="panel"><svg viewBox="0 0 1000 1342" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ 10 hướng kiếm tiền">
 <defs><marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#64748b"/></marker></defs>
 <rect x="15" y="8" width="430" height="34" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
@@ -319,8 +367,21 @@ td b { color:white; display:block; } td .k { color:#94a3b8; font-size:.72rem; }
 <rect x="610" y="1317" width="16" height="10" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8"/><text x="632" y="1326" fill="#94a3b8" font-size="8.5">Ý tưởng / dự bị</text>
 <rect x="780" y="1316" width="30" height="12" rx="6" fill="#22d3ee"/><text x="795" y="1325" fill="#020617" font-size="7.5" font-weight="700" text-anchor="middle">MỚI</text><text x="816" y="1326" fill="#94a3b8" font-size="8.5">thêm 18/11</text>
 </svg></div>
+<div class="lanes">
+<details class="lane" style="--c:#34d399;--f:rgba(6,78,59,0.4)"><summary><span class="lt">PHIM CỔ TÍCH + HOẠT HÌNH</span><span class="ls">YouTube AdSense (YPP) · kênh vL Kể Chuyện</span><span class="lp"><span class="pill" style="--c:#34d399">ĐANG CHẠY · ra tập đều</span><span class="pill" style="--c:#34d399">Wan Apache · LTX free &lt;10tr USD</span></span></summary><ol class="steps"><li><b>Kịch bản</b><span>đội phim + duyệt</span></li><li><b>Vẽ ảnh</b><span>Klein 3D + Qwen 2511</span></li><li><b>Chuyển động</b><span>Wan 2.2 · LTX-2.5</span></li><li><b>Lồng tiếng + dựng</b><span>VieNeu + FFmpeg</span></li><li><b>Đăng</b><span>CN + T4 19:00</span></li></ol></details>
+<details class="lane" style="--c:#a78bfa;--f:rgba(76,29,149,0.4)"><summary><span class="lt">NHẠC AI (vL Ballad)</span><span class="ls">YouTube + YT Music/Spotify · kênh vL Ballad</span><span class="lp"><span class="pill" style="--c:#fbbf24">CHỜ KIỂM LICENSE</span><span class="pill" style="--c:#fbbf24">ACE-Step ⚠ → dùng HeartMuLa</span></span></summary><ol class="steps"><li><b>Sáng tác</b><span>HeartMuLa</span></li><li><b>Sản xuất</b><span>ACE-Step 1.5</span></li><li><b>Đăng</b><span>kênh vL Ballad</span></li></ol></details>
+<details class="lane" style="--c:#2dd4bf;--f:rgba(17,94,89,0.4)"><summary><span class="lt">BÁN GIỌNG ĐỌC (tts.quangvulinh.com)</span><span class="ls">2.000đ / 1.000 ký tự · gói 20k–200k</span><span class="lp"><span class="pill" style="--c:#fbbf24">WEB CHẠY · chưa mở thanh toán</span><span class="pill" style="--c:#34d399">Apache / CC0 ✓</span></span></summary><ol class="steps"><li><b>Thư viện giọng</b><span>49–56 giọng hợp pháp</span></li><li><b>Đọc</b><span>VieNeu v3</span></li><li><b>Web bán</b><span>nghe thử · tải MP3</span></li><li><b>Thanh toán</b><span>VietQR chuyển khoản</span></li></ol></details>
+<details class="lane" style="--c:#38bdf8;--f:rgba(12,74,110,0.4)"><summary><span class="lt">FREELANCE WEB / APP / AI<span class="new">MỚI</span></span><span class="ls">Fiverr · Upwork · Freelancer · + khách quen</span><span class="lp"><span class="pill" style="--c:#34d399">ĐÃ CÓ DỰ ÁN THẬT</span><span class="pill" style="--c:#fbbf24">Gig Fiverr chưa đăng</span></span></summary><ol class="steps"><li><b>Portfolio</b><span>quangvulinh.com · 5 dự án</span></li><li><b>Hồ sơ sàn</b><span>Fiverr 2 gig + Upwork</span></li><li><b>Nhận việc</b><span>báo giá trọn gói</span></li><li><b>Nhận tiền</b><span>Payoneer / PayPal</span></li></ol></details>
+<details class="lane" style="--c:#f472b6;--f:rgba(131,24,67,0.4)"><summary><span class="lt">VIDEO AI CHO SHOP VN<span class="new">MỚI</span></span><span class="ls">300k–3tr / video · nhóm FB · Zalo · shop quen</span><span class="lp"><span class="pill" style="--c:#fbbf24">XẾP HẠNG #1 (ra tiền nhanh)</span><span class="pill" style="--c:#94a3b8">Chưa làm mẫu</span></span></summary><ol class="steps"><li><b>3 video mẫu</b><span>cà phê · thời trang · spa</span></li><li><b>Trang bảng giá</b><span>+ form brief</span></li><li><b>Chốt khách</b><span>gói 10 video</span></li><li><b>Giao + thu tiền</b><span>chuyển khoản</span></li></ol></details>
+<details class="lane" style="--c:#a3e635;--f:rgba(54,83,20,0.4)"><summary><span class="lt">SẢN PHẨM SỐ (Gumroad)<span class="new">MỚI</span></span><span class="ls">Template · workflow · prompt · trả VND về ngân hàng</span><span class="lp"><span class="pill" style="--c:#94a3b8">DỰ BỊ</span><span class="pill" style="--c:#34d399">Chỉ bán phần Apache ✓</span></span></summary><ol class="steps"><li><b>Đóng gói</b><span>template Expo · ComfyUI</span></li><li><b>Đăng bán</b><span>Gumroad / Lemon Squeezy</span></li><li><b>Kéo khách</b><span>Reddit · nhóm FB</span></li></ol></details>
+<details class="lane" style="--c:#fb923c;--f:rgba(251,146,60,0.25)"><summary><span class="lt">NGƯỜI ẢO BÁN HÀNG</span><span class="ls">Video bán hàng / live · video trước, live sau</span><span class="lp"><span class="pill" style="--c:#fb7185">BLOCKED (âm thanh ảo)</span><span class="pill" style="--c:#34d399">Chỉ model thương mại ✓</span></span></summary><ol class="steps"><li><b>Ảnh + video</b><span>Qwen 2511 + Wan</span></li><li><b>Lồng tiếng</b><span>VieNeu</span></li><li><b>Video 9:16 (A)</b><span>bán hàng</span></li><li><b>Live mặt nạ (B)</b><span>MuseTalk + OBS</span></li></ol></details>
+<details class="lane" style="--c:#fbbf24;--f:rgba(120,53,15,0.3)"><summary><span class="lt">TỔNG ĐÀI AI (onmi)</span><span class="ls">Bán gói / dịch vụ CSKH · onmi.quangvulinh.com</span><span class="lp"><span class="pill" style="--c:#fb7185">WEB CHẠY · còn việc chặn</span><span class="pill" style="--c:#fbbf24">603 test đạt · cần QA cuối</span></span></summary><ol class="steps"><li><b>Thẻ nhân vật</b><span>kịch bản CSKH</span></li><li><b>Nghe</b><span>Zipformer STT</span></li><li><b>Trả lời</b><span>LLM</span></li><li><b>Nói</b><span>VieNeu · WebRTC</span></li></ol></details>
+<details class="lane" style="--c:#fb7185;--f:rgba(136,19,55,0.4)"><summary><span class="lt">ANDROID APPS (Play Store)</span><span class="ls">AdMob · bản Pro · affiliate · Bé học chữ miễn phí</span><span class="lp"><span class="pill" style="--c:#fbbf24">CHỜ GOM 14–15 GMAIL TEST</span><span class="pill" style="--c:#94a3b8">Tốc Độ VN: dùng riêng</span></span></summary><ol class="steps"><li><b>Build</b><span>15+ app đã có APK</span></li><li><b>Closed test</b><span>14 ngày · 12+ người</span></li><li><b>Play Console</b><span>$25 + CCCD</span></li></ol></details>
+<details class="lane" style="--c:#94a3b8;--f:rgba(30,41,59,0.5)"><summary><span class="lt">LIVE TRANSLATE (ý tưởng)</span><span class="ls">Web phiên dịch · nói 2 chiều + đọc to</span><span class="lp"><span class="pill" style="--c:#94a3b8">Ý TƯỞNG · đã lên kế hoạch</span><span class="pill" style="--c:#94a3b8">Làm sau phim</span></span></summary><ol class="steps"><li><b>Nghe</b><span>Whisper / Zipformer</span></li><li><b>Dịch</b><span>LLM local</span></li><li><b>Đọc to</b><span>VieNeu + TTS EN</span></li><li><b>Web PWA</b><span>điện thoại + PC</span></li></ol></details>
+</div>
 
 <h2 id="viec">Việc cần làm tiếp</h2>
+<p class="subtitle who-legend"><span class="who a">Anh</span> = chính chủ làm (5 việc: tài khoản, CCCD, ngân hàng, quyền admin) · <span class="who e">Em</span> = agent làm được</p>
 <ul class="todo">
 <li class="me"><span class="tag">Bán giọng đọc</span><span class="txt">Điền tài khoản ngân hàng để mở VietQR</span><span class="who a">Anh</span></li>
 <li class=""><span class="tag">Bán giọng đọc</span><span class="txt">Khởi động lại web, kiểm mã QR + 1 đơn thử</span><span class="who e">Em</span></li>
@@ -337,23 +398,21 @@ td b { color:white; display:block; } td .k { color:#94a3b8; font-size:.72rem; }
 <li class="me"><span class="tag">Người ảo</span><span class="txt">Cài driver âm thanh ảo (cần anh bấm quyền admin)</span><span class="who a">Anh</span></li>
 <li class=""><span class="tag">Live Translate</span><span class="txt">Làm sau khi xong đợt phim</span><span class="who e">Em</span></li>
 </ul>
-<p class="subtitle" style="margin-top:.6rem"><span class="who a">Anh</span> = việc cần chính chủ (tài khoản, CCCD, ngân hàng, bấm quyền admin) · <span class="who e">Em</span> = agent làm được</p>
 
 <h2 id="nentang">Nền tảng để đăng / bán</h2>
-<p class="hint">↔ vuốt ngang để xem cột phí + trạng thái</p>
 <div class="panel"><table>
 <thead><tr><th>Nền tảng</th><th>Dùng để</th><th>Phí · nhận tiền</th><th>Trạng thái</th></tr></thead>
 <tbody>
-<tr><td><b>YouTube (YPP)</b><span class="k">Kênh video</span></td><td>Phim cổ tích, hoạt hình, nhạc</td><td>Chia sẻ doanh thu quảng cáo; cần đủ giờ xem + sub</td><td><span class="pill" style="--c:#34d399">Đang đăng</span></td></tr>
-<tr><td><b>tts.quangvulinh.com</b><span class="k">Web của mình</span></td><td>Bán ký tự đọc giọng Việt</td><td>VietQR thẳng về ngân hàng, không mất phí sàn</td><td><span class="pill" style="--c:#fbbf24">Chạy · chờ mở thanh toán</span></td></tr>
-<tr><td><b>Nhóm Facebook / Zalo</b><span class="k">Bán trực tiếp</span></td><td>Video AI cho shop, chatbot, web</td><td>Chuyển khoản trực tiếp, 0% phí sàn</td><td><span class="pill" style="--c:#fbbf24">Chưa đăng bài chào</span></td></tr>
-<tr><td><b>Fiverr</b><span class="k">Sàn freelance (gig)</span></td><td>Gig 1: AI automation / AI agent · Gig 2: YouTube automation</td><td>Phí 20%; rút về Payoneer/PayPal; giữ tiền 14 ngày</td><td><span class="pill" style="--c:#fbbf24">Đã chọn · chưa tạo gig</span></td></tr>
-<tr><td><b>Upwork</b><span class="k">Sàn freelance (chào giá)</span></td><td>Dựng workflow ComfyUI, pipeline AI, web/app</td><td>15–45 USD/giờ; dự án 800–2.500 USD</td><td><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
-<tr><td><b>Freelancer.com</b><span class="k">Sàn freelance (chào giá)</span></td><td>Dự án pipeline video AI</td><td>Đông người chào giá (vd 98 người/1 việc)</td><td><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
-<tr><td><b>Gumroad / Lemon Squeezy</b><span class="k">Bán sản phẩm số</span></td><td>Template app Expo, workflow ComfyUI, gói prompt</td><td>Gumroad 10% + 0,5 USD, trả VND về ngân hàng (≥100 USD)</td><td><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
-<tr><td><b>Google Play</b><span class="k">Chợ ứng dụng</span></td><td>15+ app Android, Bé học chữ</td><td>Phí 25 USD một lần; Google khấu trừ 5% thuế</td><td><span class="pill" style="--c:#fbbf24">Chờ closed test</span></td></tr>
-<tr><td><b>Shopee Affiliate</b><span class="k">Hoa hồng</span></td><td>Gắn link vào app người lớn + kênh</td><td>Mẹ &amp; Bé ~9,4% khách mới, tối đa 70k/đơn</td><td><span class="pill" style="--c:#94a3b8">Chưa đăng ký</span></td></tr>
-<tr><td><b>Magnific (Freepik) · Zedge · Amazon KDP</b><span class="k">Kho nội dung</span></td><td>Ảnh/vector AI, hình nền, nhạc chuông, sách tô màu</td><td>Thu nhập thấp, chậm; chỉ dùng model Apache</td><td><span class="pill" style="--c:#94a3b8">Để sau</span></td></tr>
+<tr><td class="pn"><b>YouTube (YPP)</b><span class="k">Kênh video</span></td><td data-l="Dùng để">Phim cổ tích, hoạt hình, nhạc</td><td data-l="Phí · nhận tiền">Chia sẻ doanh thu quảng cáo; cần đủ giờ xem + sub</td><td class="ps"><span class="pill" style="--c:#34d399">Đang đăng</span></td></tr>
+<tr><td class="pn"><b>tts.quangvulinh.com</b><span class="k">Web của mình</span></td><td data-l="Dùng để">Bán ký tự đọc giọng Việt</td><td data-l="Phí · nhận tiền">VietQR thẳng về ngân hàng, không mất phí sàn</td><td class="ps"><span class="pill" style="--c:#fbbf24">Chạy · chờ mở thanh toán</span></td></tr>
+<tr><td class="pn"><b>Nhóm Facebook / Zalo</b><span class="k">Bán trực tiếp</span></td><td data-l="Dùng để">Video AI cho shop, chatbot, web</td><td data-l="Phí · nhận tiền">Chuyển khoản trực tiếp, 0% phí sàn</td><td class="ps"><span class="pill" style="--c:#fbbf24">Chưa đăng bài chào</span></td></tr>
+<tr><td class="pn"><b>Fiverr</b><span class="k">Sàn freelance (gig)</span></td><td data-l="Dùng để">Gig 1: AI automation / AI agent · Gig 2: YouTube automation</td><td data-l="Phí · nhận tiền">Phí 20%; rút về Payoneer/PayPal; giữ tiền 14 ngày</td><td class="ps"><span class="pill" style="--c:#fbbf24">Đã chọn · chưa tạo gig</span></td></tr>
+<tr><td class="pn"><b>Upwork</b><span class="k">Sàn freelance (chào giá)</span></td><td data-l="Dùng để">Dựng workflow ComfyUI, pipeline AI, web/app</td><td data-l="Phí · nhận tiền">15–45 USD/giờ; dự án 800–2.500 USD</td><td class="ps"><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
+<tr><td class="pn"><b>Freelancer.com</b><span class="k">Sàn freelance (chào giá)</span></td><td data-l="Dùng để">Dự án pipeline video AI</td><td data-l="Phí · nhận tiền">Đông người chào giá (vd 98 người/1 việc)</td><td class="ps"><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
+<tr><td class="pn"><b>Gumroad / Lemon Squeezy</b><span class="k">Bán sản phẩm số</span></td><td data-l="Dùng để">Template app Expo, workflow ComfyUI, gói prompt</td><td data-l="Phí · nhận tiền">Gumroad 10% + 0,5 USD, trả VND về ngân hàng (≥100 USD)</td><td class="ps"><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
+<tr><td class="pn"><b>Google Play</b><span class="k">Chợ ứng dụng</span></td><td data-l="Dùng để">15+ app Android, Bé học chữ</td><td data-l="Phí · nhận tiền">Phí 25 USD một lần; Google khấu trừ 5% thuế</td><td class="ps"><span class="pill" style="--c:#fbbf24">Chờ closed test</span></td></tr>
+<tr><td class="pn"><b>Shopee Affiliate</b><span class="k">Hoa hồng</span></td><td data-l="Dùng để">Gắn link vào app người lớn + kênh</td><td data-l="Phí · nhận tiền">Mẹ &amp; Bé ~9,4% khách mới, tối đa 70k/đơn</td><td class="ps"><span class="pill" style="--c:#94a3b8">Chưa đăng ký</span></td></tr>
+<tr><td class="pn"><b>Magnific (Freepik) · Zedge · Amazon KDP</b><span class="k">Kho nội dung</span></td><td data-l="Dùng để">Ảnh/vector AI, hình nền, nhạc chuông, sách tô màu</td><td data-l="Phí · nhận tiền">Thu nhập thấp, chậm; chỉ dùng model Apache</td><td class="ps"><span class="pill" style="--c:#94a3b8">Để sau</span></td></tr>
 </tbody></table></div>
 
 <h2 id="ghichu">Rào cản &amp; đã loại</h2>
@@ -371,4 +430,4 @@ td b { color:white; display:block; } td .k { color:#94a3b8; font-size:.72rem; }
 </div>
 
 <p class="footer">quangvulinh.com/plan • kế hoạch cá nhân, cập nhật 18/11/2026 • số liệu phí/giá tra từ trang chính thức của từng nền tảng 10/2026</p>
-</div></body></html>
+</div><a class="top" href="#dau" aria-label="Lên đầu trang">↑</a></body></html>

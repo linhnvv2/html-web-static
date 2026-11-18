@@ -151,13 +151,25 @@ TODO = [
 ]
 
 DOT = {"green": "#34d399", "amber": "#fbbf24", "rose": "#fb7185", "slate": "#94a3b8"}
+
+def lane_card(L):
+    col = C[L["c"]]
+    new = '<span class="new">MỚI</span>' if L.get("new") else ""
+    pills = "".join(f'<span class="pill" style="--c:{C[c]}">{E(t)}</span>' for t, c in L["st"])
+    steps = "".join(f'<li><b>{E(a)}</b><span>{E(b)}</span></li>' for a, b in L["steps"])
+    return (f'<details class="lane" style="--c:{col};--f:{FILL[L["c"]]}"><summary>'
+            f'<span class="lt">{E(L["t"][0])} {E(L["t"][1])}{new}</span>'
+            f'<span class="ls">{E(L["sub"][0])} · {E(L["sub"][1])}</span>'
+            f'<span class="lp">{pills}</span></summary><ol class="steps">{steps}</ol></details>')
+lanes_m = "\n".join(lane_card(L) for L in LANES)
 plat_rows = "\n".join(
-    f'<tr><td><b>{E(n)}</b><span class="k">{E(k)}</span></td><td>{E(u)}</td><td>{E(f)}</td>'
-    f'<td><span class="pill" style="--c:{DOT[c]}">{E(s)}</span></td></tr>' for n, k, u, f, s, c in PLATFORMS)
+    f'<tr><td class="pn"><b>{E(n)}</b><span class="k">{E(k)}</span></td><td data-l="Dùng để">{E(u)}</td><td data-l="Phí · nhận tiền">{E(f)}</td>'
+    f'<td class="ps"><span class="pill" style="--c:{DOT[c]}">{E(s)}</span></td></tr>' for n, k, u, f, s, c in PLATFORMS)
 drop_li = "".join(f"<li><b>{E(n)}</b>: {E(w)}</li>" for n, w in DROPPED)
 todo_li = "\n".join(
     f'<li class="{"me" if who == "Anh" else ""}"><span class="tag">{E(g)}</span><span class="txt">{E(t)}</span>'
     f'<span class="who {"a" if who == "Anh" else "e"}">{E(who)}</span></li>' for g, t, who, _ in TODO)
+n_anh = sum(1 for t in TODO if t[2] == "Anh")
 
 html = f'''<!DOCTYPE html>
 <html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -197,30 +209,80 @@ td b {{ color:white; display:block; }} td .k {{ color:#94a3b8; font-size:.72rem;
 .card ul {{ list-style:none; color:#94a3b8; font-size:.75rem; }} .card li {{ margin-bottom:.45rem; line-height:1.4; }}
 .card li b {{ color:#e2e8f0; }}
 .footer {{ text-align:center; margin-top:2rem; color:#8696a8; font-size:.75rem; }}
-.hint {{ display:none; color:#94a3b8; font-size:.72rem; margin:-.4rem 0 .5rem; }}
 .footer a {{ color:#64748b; }}
-@media (max-width:600px) {{ body {{ padding:.8rem; }} .todo {{ grid-template-columns:1fr; }} .todo li {{ flex-wrap:wrap; }} .todo .tag {{ width:auto; order:0; }} .todo .who {{ margin-left:auto; }} .todo .txt {{ flex-basis:100%; order:2; }} .hint {{ display:block; }} }}
+.lanes {{ display:none; }}
+.who-legend {{ margin:-.3rem 0 .7rem; }}
+.top {{ position:fixed; right:1rem; bottom:1rem; width:2.6rem; height:2.6rem; border-radius:50%; background:#0e7490; color:white; display:none; align-items:center; justify-content:center; text-decoration:none; font-size:1.1rem; box-shadow:0 4px 14px rgba(0,0,0,.5); }}
+@media (max-width:760px) {{
+  body {{ padding:0 .75rem 4rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size:15px; }}
+  h1 {{ font-size:1.3rem; }} .header-row {{ padding-top:1rem; }}
+  h2 {{ font-size:1.1rem; margin:1.6rem 0 .7rem; scroll-margin-top:3.6rem; }}
+  .subtitle {{ font-size:.85rem; }}
+  .nav {{ position:sticky; top:0; z-index:5; margin:.8rem -.75rem 0; padding:.55rem .75rem; background:rgba(2,6,23,.94); backdrop-filter:blur(6px);
+         flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; border-bottom:1px solid #1e293b; }}
+  .nav::-webkit-scrollbar {{ display:none; }}
+  .nav a {{ flex:none; font-size:.85rem; padding:.4rem .8rem; }}
+  .top {{ display:flex; width:2.2rem; height:2.2rem; right:.6rem; bottom:.8rem; font-size:.95rem; opacity:.75; }}
+  .container {{ padding-bottom:3rem; }}
+  .nav {{ -webkit-mask-image:linear-gradient(90deg,#000 85%,transparent); mask-image:linear-gradient(90deg,#000 85%,transparent); }}
+  /* sơ đồ → thẻ dọc */
+  #tranh + .panel {{ display:none; }}
+  .lanes {{ display:grid; gap:.6rem; }}
+  .lane {{ border:1px solid var(--c); border-left-width:4px; border-radius:.7rem; background:rgba(15,23,42,.6); }}
+  .lane summary {{ list-style:none; cursor:pointer; padding:.7rem .75rem; display:grid; gap:.35rem; }}
+  .lane summary::-webkit-details-marker {{ display:none; }}
+  .lane summary::after {{ content:"Xem các bước ▾"; font-size:.8rem; color:#7dd3fc; padding-top:.15rem; }}
+  .lane[open] summary::after {{ content:"Thu gọn ▴"; }}
+  .lt {{ color:var(--c); font-weight:700; font-size:1rem; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }}
+  .new {{ background:#22d3ee; color:#020617; font-size:.65rem; padding:.05rem .45rem; border-radius:99px; }}
+  .ls {{ color:#b6c2cf; font-size:.85rem; }}
+  .lp {{ display:flex; flex-wrap:wrap; gap:.35rem; }}
+  .lp .pill, td .pill {{ white-space:normal; font-size:.75rem; padding:.2rem .6rem; }}
+  .steps {{ list-style:none; counter-reset:s; margin:0 .6rem .7rem; border-top:1px dashed #1e293b; padding-top:.6rem; display:grid; gap:.4rem; }}
+  .steps li {{ counter-increment:s; display:grid; grid-template-columns:1.6rem 1fr; column-gap:.4rem; background:var(--f); border-radius:.5rem; padding:.45rem .6rem; }}
+  .steps li::before {{ content:counter(s); grid-row:span 2; width:1.4rem; height:1.4rem; border-radius:50%; border:1px solid var(--c); color:var(--c); font-size:.75rem; display:flex; align-items:center; justify-content:center; }}
+  .steps b {{ color:white; font-size:.9rem; }} .steps span {{ color:#b6c2cf; font-size:.8rem; }}
+  /* việc cần làm */
+  .todo {{ grid-template-columns:1fr; }}
+  .todo li {{ flex-wrap:wrap; font-size:.9rem; padding:.65rem .75rem; row-gap:.3rem; }}
+  .todo .tag {{ width:auto; font-size:.78rem; color:#cbd5e1; font-weight:600; }}
+  .who.e {{ background:#0e7490; color:#ecfeff; }} .todo .who {{ margin-left:auto; font-size:.72rem; }}
+  .todo .txt {{ flex-basis:100%; order:2; }}
+  /* bảng → thẻ */
+  #nentang + .panel {{ padding:0; background:none; border:0; overflow:visible; }}
+  table, tbody, tr, td {{ display:block; min-width:0; width:100%; }}
+  thead {{ display:none; }}
+  tr {{ background:rgba(15,23,42,.6); border:1px solid #1e293b; border-radius:.7rem; padding:.7rem .8rem; margin-bottom:.6rem; }}
+  td {{ border:0; padding:.2rem 0; font-size:.88rem; }}
+  td.pn {{ display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; flex-wrap:wrap; padding-bottom:.35rem; }}
+  td.pn b {{ display:inline; font-size:.98rem; }}
+  td[data-l]::before {{ content:attr(data-l); display:block; color:#7dd3fc; font-size:.72rem; margin-bottom:.05rem; }}
+  td.ps {{ padding-top:.45rem; }}
+  .card ul {{ font-size:.88rem; color:#b6c2cf; }} .card h3 {{ font-size:.98rem; }}
+  .footer {{ font-size:.78rem; }}
+}}
 </style></head><body><div class="container">
-<div class="header-row"><div class="pulse-dot"></div><h1>Plan — kế hoạch kiếm tiền</h1></div>
+<div class="header-row"><div class="pulse-dot"></div><h1 id="dau">Plan — kế hoạch kiếm tiền</h1></div>
 <p class="subtitle">{len(LANES)} hướng · {len(PLATFORMS)} nền tảng · {len(TODO)} việc cần làm • cập nhật {UPDATED}</p>
 <nav class="nav"><a href="#tranh">Bức tranh</a><a href="#viec">Việc cần làm</a><a href="#nentang">Nền tảng để đăng</a><a href="#ghichu">Rào cản &amp; đã loại</a><a href="/">← quangvulinh.com</a></nav>
 
 <h2 id="tranh">Bức tranh {len(LANES)} hướng</h2>
-<p class="hint">↔ vuốt ngang để xem hết sơ đồ</p>
 <div class="panel"><svg viewBox="0 0 1000 {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ {len(LANES)} hướng kiếm tiền">
 <defs><marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#64748b"/></marker></defs>
 {head}
 {chr(10).join(svg)}
 </svg></div>
+<div class="lanes">
+{lanes_m}
+</div>
 
 <h2 id="viec">Việc cần làm tiếp</h2>
+<p class="subtitle who-legend"><span class="who a">Anh</span> = chính chủ làm ({n_anh} việc: tài khoản, CCCD, ngân hàng, quyền admin) · <span class="who e">Em</span> = agent làm được</p>
 <ul class="todo">
 {todo_li}
 </ul>
-<p class="subtitle" style="margin-top:.6rem"><span class="who a">Anh</span> = việc cần chính chủ (tài khoản, CCCD, ngân hàng, bấm quyền admin) · <span class="who e">Em</span> = agent làm được</p>
 
 <h2 id="nentang">Nền tảng để đăng / bán</h2>
-<p class="hint">↔ vuốt ngang để xem cột phí + trạng thái</p>
 <div class="panel"><table>
 <thead><tr><th>Nền tảng</th><th>Dùng để</th><th>Phí · nhận tiền</th><th>Trạng thái</th></tr></thead>
 <tbody>
@@ -242,6 +304,6 @@ td b {{ color:white; display:block; }} td .k {{ color:#94a3b8; font-size:.72rem;
 </div>
 
 <p class="footer">quangvulinh.com/plan • kế hoạch cá nhân, cập nhật {UPDATED} • số liệu phí/giá tra từ trang chính thức của từng nền tảng 10/2026</p>
-</div></body></html>'''
+</div><a class="top" href="#dau" aria-label="Lên đầu trang">↑</a></body></html>'''
 open(OUT, "w", encoding="utf-8", newline="\n").write(html)
 print(OUT, H, len(html))
