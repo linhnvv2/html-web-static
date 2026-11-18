@@ -289,6 +289,50 @@
           </div>
         </article>
 
+        <article class="pj pj-wide mt-4" data-aos="fade-up">
+          <div class="pj-strip" style="grid-template-columns:repeat(3,1fr)">
+            <a href="assets/img/projects/onmi-live.jpg" class="glightbox" data-gallery="onmi"><img src="assets/img/projects/onmi-live.jpg" alt="onmi — chọn nhân vật AI để nói chuyện trực tiếp" loading="lazy"></a>
+            <a href="assets/img/projects/onmi-call.jpg" class="glightbox" data-gallery="onmi"><img src="assets/img/projects/onmi-call.jpg" alt="onmi — gọi thử: kịch bản, thông tin lấy được, độ trễ từng lượt" loading="lazy"></a>
+            <a href="assets/img/projects/onmi-personas.jpg" class="glightbox" data-gallery="onmi"><img src="assets/img/projects/onmi-personas.jpg" alt="onmi — soạn thẻ nhân vật" loading="lazy"></a>
+          </div>
+          <div class="pj-body">
+            <div class="pj-head">
+              <span class="role" style="display:inline-block;font-size:.72rem;font-weight:700;color:var(--lp-accent2);text-transform:uppercase;letter-spacing:.06em;">
+                <span lang="en">Own project · AI voice agent · MVP</span><span lang="vi">Dự án cá nhân · tổng đài AI · bản MVP</span></span>
+              <h3 lang="en">onmi — Vietnamese AI call center</h3>
+              <h3 lang="vi">onmi — tổng đài AI nói tiếng Việt</h3>
+              <p class="client" lang="en">Self-hosted web app · onmi.quangvulinh.com · 2026</p>
+              <p class="client" lang="vi">Web app tự host · onmi.quangvulinh.com · 2026</p>
+              <div class="facts">
+                <span><i class="bi bi-telephone-inbound"></i><span lang="en">Talk to AI in the browser</span><span lang="vi">Gọi AI ngay trên trình duyệt</span></span>
+                <span><i class="bi bi-stopwatch"></i><span lang="en">Per-turn latency measured</span><span lang="vi">Đo độ trễ từng lượt nói</span></span>
+                <span><i class="bi bi-shield-check"></i><span lang="en">Security-reviewed before going public</span><span lang="vi">Rà bảo mật trước khi mở công khai</span></span>
+              </div>
+              <div class="lp-tags mb-3">
+                <span class="lp-tag">Python</span><span class="lp-tag">FastAPI</span><span class="lp-tag">WebRTC</span><span class="lp-tag">WebSocket</span>
+                <span class="lp-tag">VieNeu-TTS</span><span class="lp-tag">Zipformer STT</span><span class="lp-tag">LLM router</span><span class="lp-tag">SQLite</span><span class="lp-tag">Cloudflare Tunnel</span>
+              </div>
+              <a class="lp-btn lp-btn-primary" href="contact.html"><i class="bi bi-headset"></i><span lang="en">Request a demo</span><span lang="vi">Yêu cầu demo</span></a>
+            </div>
+            <div class="pj-points">
+              <ul lang="en">
+                <li><b>Persona cards:</b> each AI agent has a name, organisation, voice and a step-by-step script (questions, slots to collect, branches) — clinic reminders, surveys, after-sales care, real-estate consulting…</li>
+                <li><b>Live voice:</b> speak naturally, no push-to-talk; speech-to-text → LLM → Vietnamese TTS with filler phrases, and a latency table (VAD / STT / LLM / TTS) for every turn.</li>
+                <li><b>Call centre features:</b> inbound menu, outbound calls to a whole customer list (CSV/XLSX import, called / not-called status), human-to-human calls, Messenger-style chat, call history with transcripts.</li>
+                <li><b>Accounts &amp; plans:</b> customer accounts with quotas, admin LLM provider/model management.</li>
+                <li><b>Responsible by design:</b> the AI always discloses itself, recording needs explicit consent, licensed voices only (Apache / CC0), runs on CPU so it never competes with GPU jobs.</li>
+              </ul>
+              <ul lang="vi">
+                <li><b>Thẻ nhân vật:</b> mỗi trợ lý AI có tên, tổ chức, giọng và kịch bản từng bước (câu hỏi, thông tin cần lấy, rẽ nhánh) — nhắc lịch phòng khám, khảo sát, chăm sóc sau bán, tư vấn đất nền…</li>
+                <li><b>Nói chuyện trực tiếp:</b> cứ nói tự nhiên, không cần giữ nút; giọng → chữ → LLM → giọng đọc tiếng Việt có câu đệm, kèm bảng độ trễ (VAD / STT / LLM / TTS) cho từng lượt.</li>
+                <li><b>Đủ chức năng tổng đài:</b> menu gọi đến, gọi lần lượt cả danh sách khách (nhập CSV/XLSX, đánh dấu đã gọi / chưa gọi), gọi người với người, trò chuyện kiểu Messenger, lịch sử cuộc gọi kèm lời thoại.</li>
+                <li><b>Tài khoản &amp; gói:</b> tài khoản khách có hạn mức, trang quản trị chọn nhà cung cấp / model LLM.</li>
+                <li><b>Làm đúng ngay từ đầu:</b> AI luôn tự giới thiệu là AI, ghi âm phải có đồng ý, chỉ dùng giọng có giấy phép (Apache / CC0), chạy CPU để không tranh GPU với việc khác.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
         <div class="more-soon" data-aos="fade-up">
           <span lang="en">More case studies coming soon. Need something similar? <a href="#hire">Let's talk</a>.</span>
           <span lang="vi">Sẽ cập nhật thêm dự án. Bạn cần sản phẩm tương tự? <a href="#hire">Liên hệ ngay</a>.</span>
