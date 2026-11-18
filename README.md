@@ -85,3 +85,6 @@ Live at [quangvulinh.com](https://quangvulinh.com) — static site on AWS S3 + C
 ## 📄 License
 
 Based on the [Kelly Bootstrap Template](https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/).
+
+## Plan (`/plan`)
+`plan.html` = kế hoạch kiếm tiền (sơ đồ hướng, việc cần làm, nền tảng). Sinh từ `tools/plan_page.py` — sửa danh sách trong script, chạy `python tools/plan_page.py`, rồi upload `plan.html` lên S3 dưới 2 key `plan.html` và `plan` (content-type text/html) để mở được `quangvulinh.com/plan`.

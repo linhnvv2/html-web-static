@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Plan — kế hoạch kiếm tiền · quangvulinh.com</title>
+<link rel="icon" href="assets/img/favicon.png">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'JetBrains Mono', Consolas, ui-monospace, monospace; background:#020617; padding:1.5rem; color:#e2e8f0; }
+.container { max-width:1400px; margin:0 auto; }
+.header-row { display:flex; align-items:center; gap:.8rem; margin-bottom:.4rem; flex-wrap:wrap; }
+.pulse-dot { width:12px; height:12px; background:#22d3ee; border-radius:50%; box-shadow:0 0 12px #22d3ee; }
+h1 { font-size:1.5rem; font-weight:700; color:white; }
+h2 { font-size:1.05rem; color:white; margin:2rem 0 .8rem; display:flex; align-items:center; gap:.5rem; }
+h2::before { content:""; width:4px; height:1.1em; background:#22d3ee; border-radius:2px; }
+.subtitle { color:#94a3b8; font-size:.82rem; }
+.nav { display:flex; gap:.5rem; flex-wrap:wrap; margin:.9rem 0 1.2rem; }
+.nav a { color:#22d3ee; text-decoration:none; font-size:.78rem; border:1px solid #164e63; padding:.3rem .7rem; border-radius:99px; }
+.nav a:hover { background:#083344; }
+.panel { background:rgba(15,23,42,.5); border-radius:1rem; border:1px solid #1e293b; padding:1rem; overflow-x:auto; }
+svg { width:100%; min-width:900px; display:block; }
+table { width:100%; border-collapse:collapse; font-size:.78rem; min-width:760px; }
+th { text-align:left; color:#94a3b8; font-weight:600; padding:.55rem .6rem; border-bottom:1px solid #1e293b; }
+td { padding:.6rem; border-bottom:1px solid #111a2e; vertical-align:top; color:#cbd5e1; line-height:1.45; }
+td b { color:white; display:block; } td .k { color:#94a3b8; font-size:.72rem; }
+.pill { display:inline-block; white-space:nowrap; font-size:.7rem; padding:.15rem .55rem; border-radius:99px; color:var(--c); border:1px solid var(--c); }
+.todo { list-style:none; display:grid; grid-template-columns:repeat(auto-fill,minmax(520px,1fr)); gap:.5rem; }
+.todo li { display:flex; align-items:center; gap:.6rem; background:rgba(15,23,42,.5); border:1px solid #1e293b; border-radius:.6rem; padding:.55rem .7rem; font-size:.78rem; }
+.todo li.me { border-color:#7c2d12; }
+.todo .tag { flex:none; width:7.5rem; color:#a5b4c3; font-size:.72rem; }
+.todo .txt { flex:1; color:#e2e8f0; line-height:1.4; }
+.who { flex:none; font-size:.68rem; font-weight:700; padding:.12rem .5rem; border-radius:99px; }
+.who.a { background:#fb923c; color:#1c0a00; } .who.e { background:#164e63; color:#a5f3fc; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+.card { background:rgba(15,23,42,.5); border-radius:.75rem; border:1px solid #1e293b; padding:1rem; }
+.card h3 { font-size:.85rem; margin-bottom:.6rem; color:white; }
+.card ul { list-style:none; color:#94a3b8; font-size:.75rem; } .card li { margin-bottom:.45rem; line-height:1.4; }
+.card li b { color:#e2e8f0; }
+.footer { text-align:center; margin-top:2rem; color:#8696a8; font-size:.75rem; }
+.hint { display:none; color:#94a3b8; font-size:.72rem; margin:-.4rem 0 .5rem; }
+.footer a { color:#64748b; }
+@media (max-width:600px) { body { padding:.8rem; } .todo { grid-template-columns:1fr; } .todo li { flex-wrap:wrap; } .todo .tag { width:auto; order:0; } .todo .who { margin-left:auto; } .todo .txt { flex-basis:100%; order:2; } .hint { display:block; } }
+</style></head><body><div class="container">
+<div class="header-row"><div class="pulse-dot"></div><h1>Plan — kế hoạch kiếm tiền</h1></div>
+<p class="subtitle">10 hướng · 10 nền tảng · 14 việc cần làm • cập nhật 18/11/2026</p>
+<nav class="nav"><a href="#tranh">Bức tranh</a><a href="#viec">Việc cần làm</a><a href="#nentang">Nền tảng để đăng</a><a href="#ghichu">Rào cản &amp; đã loại</a><a href="/">← quangvulinh.com</a></nav>
+
+<h2 id="tranh">Bức tranh 10 hướng</h2>
+<p class="hint">↔ vuốt ngang để xem hết sơ đồ</p>
+<div class="panel"><svg viewBox="0 0 1000 1342" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ 10 hướng kiếm tiền">
+<defs><marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#64748b"/></marker></defs>
+<rect x="15" y="8" width="430" height="34" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+<text x="230" y="30" fill="#22d3ee" font-size="10.5" font-weight="600" text-anchor="middle">MỐC: 2 kênh YouTube đạt YPP trước 01/02/2027</text>
+<rect x="455" y="8" width="120" height="34" rx="6" fill="rgba(15,23,42,0.5)" stroke="#34d399" stroke-width="1.5"/>
+<text x="515" y="30" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">10 HƯỚNG</text>
+<rect x="585" y="8" width="185" height="34" rx="6" fill="rgba(15,23,42,0.5)" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="677" y="30" fill="#2dd4bf" font-size="10" font-weight="600" text-anchor="middle">3 WEB ĐANG CHẠY</text>
+<rect x="780" y="8" width="205" height="34" rx="6" fill="rgba(15,23,42,0.5)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="882" y="30" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">1 GPU · phim ưu tiên</text>
+<rect x="8" y="58" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#34d399" stroke-opacity="0.25"/>
+<rect x="15" y="62" width="175" height="100" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+<text x="102" y="85" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">PHIM CỔ TÍCH</text>
+<text x="102" y="99" fill="#34d399" font-size="10" font-weight="700" text-anchor="middle">+ HOẠT HÌNH</text>
+<text x="102" y="121" fill="#b6c2cf" font-size="9" text-anchor="middle">YouTube AdSense (YPP)</text>
+<text x="102" y="136" fill="#b6c2cf" font-size="9" text-anchor="middle">kênh vL Kể Chuyện</text>
+<rect x="205.0" y="88" width="99.8" height="48" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+<text x="254.9" y="108" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Kịch bản</text>
+<text x="254.9" y="122" fill="#b6c2cf" font-size="8" text-anchor="middle">đội phim + duyệt</text>
+<line x1="304.8" y1="112" x2="318.8" y2="112" stroke="#34d399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="318.8" y="88" width="99.8" height="48" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+<text x="368.7" y="108" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Vẽ ảnh</text>
+<text x="368.7" y="122" fill="#b6c2cf" font-size="8" text-anchor="middle">Klein 3D + Qwen 2511</text>
+<line x1="418.6" y1="112" x2="432.6" y2="112" stroke="#34d399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="432.6" y="88" width="99.8" height="48" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+<text x="482.5" y="108" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Chuyển động</text>
+<text x="482.5" y="122" fill="#b6c2cf" font-size="8" text-anchor="middle">Wan 2.2 · LTX-2.5</text>
+<line x1="532.4" y1="112" x2="546.4" y2="112" stroke="#34d399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="546.4" y="88" width="99.8" height="48" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+<text x="596.3" y="108" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Lồng tiếng + dựng</text>
+<text x="596.3" y="122" fill="#b6c2cf" font-size="8" text-anchor="middle">VieNeu + FFmpeg</text>
+<line x1="646.2" y1="112" x2="660.2" y2="112" stroke="#34d399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="660.2" y="88" width="99.8" height="48" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+<text x="710.1" y="108" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Đăng</text>
+<text x="710.1" y="122" fill="#b6c2cf" font-size="8" text-anchor="middle">CN + T4 19:00</text>
+<rect x="772" y="72" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#34d399" stroke-width="1.5"/>
+<text x="878" y="92" fill="#34d399" font-size="8.5" font-weight="600" text-anchor="middle">ĐANG CHẠY · ra tập đều</text>
+<rect x="772" y="116" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#34d399" stroke-width="1.5"/>
+<text x="878" y="136" fill="#34d399" font-size="8.5" font-weight="600" text-anchor="middle">Wan Apache · LTX free &lt;10tr USD</text>
+<rect x="8" y="176" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#a78bfa" stroke-opacity="0.25"/>
+<rect x="15" y="180" width="175" height="100" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="102" y="203" fill="#a78bfa" font-size="11" font-weight="700" text-anchor="middle">NHẠC AI</text>
+<text x="102" y="217" fill="#a78bfa" font-size="10" font-weight="700" text-anchor="middle">(vL Ballad)</text>
+<text x="102" y="239" fill="#b6c2cf" font-size="9" text-anchor="middle">YouTube + YT Music/Spotify</text>
+<text x="102" y="254" fill="#b6c2cf" font-size="9" text-anchor="middle">kênh vL Ballad</text>
+<rect x="205.0" y="206" width="175.7" height="48" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="292.8" y="226" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Sáng tác</text>
+<text x="292.8" y="240" fill="#b6c2cf" font-size="8" text-anchor="middle">HeartMuLa</text>
+<line x1="380.7" y1="230" x2="394.7" y2="230" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="394.7" y="206" width="175.7" height="48" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="482.5" y="226" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Sản xuất</text>
+<text x="482.5" y="240" fill="#b6c2cf" font-size="8" text-anchor="middle">ACE-Step 1.5</text>
+<line x1="570.3" y1="230" x2="584.3" y2="230" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="584.3" y="206" width="175.7" height="48" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="672.2" y="226" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Đăng</text>
+<text x="672.2" y="240" fill="#b6c2cf" font-size="8" text-anchor="middle">kênh vL Ballad</text>
+<rect x="772" y="190" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="210" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">CHỜ KIỂM LICENSE</text>
+<rect x="772" y="234" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="254" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">ACE-Step ⚠ → dùng HeartMuLa</text>
+<rect x="8" y="294" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#2dd4bf" stroke-opacity="0.25"/>
+<rect x="15" y="298" width="175" height="100" rx="6" fill="rgba(17,94,89,0.4)" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="102" y="321" fill="#2dd4bf" font-size="11" font-weight="700" text-anchor="middle">BÁN GIỌNG ĐỌC</text>
+<text x="102" y="335" fill="#2dd4bf" font-size="10" font-weight="700" text-anchor="middle">(tts.quangvulinh.com)</text>
+<text x="102" y="357" fill="#b6c2cf" font-size="9" text-anchor="middle">2.000đ / 1.000 ký tự</text>
+<text x="102" y="372" fill="#b6c2cf" font-size="9" text-anchor="middle">gói 20k–200k</text>
+<rect x="205.0" y="324" width="128.2" height="48" rx="6" fill="rgba(17,94,89,0.4)" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="269.1" y="344" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Thư viện giọng</text>
+<text x="269.1" y="358" fill="#b6c2cf" font-size="8" text-anchor="middle">49–56 giọng hợp pháp</text>
+<line x1="333.2" y1="348" x2="347.2" y2="348" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="347.2" y="324" width="128.2" height="48" rx="6" fill="rgba(17,94,89,0.4)" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="411.4" y="344" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Đọc</text>
+<text x="411.4" y="358" fill="#b6c2cf" font-size="8" text-anchor="middle">VieNeu v3</text>
+<line x1="475.5" y1="348" x2="489.5" y2="348" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="489.5" y="324" width="128.2" height="48" rx="6" fill="rgba(17,94,89,0.4)" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="553.6" y="344" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Web bán</text>
+<text x="553.6" y="358" fill="#b6c2cf" font-size="8" text-anchor="middle">nghe thử · tải MP3</text>
+<line x1="617.8" y1="348" x2="631.8" y2="348" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="631.8" y="324" width="128.2" height="48" rx="6" fill="rgba(17,94,89,0.4)" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="695.9" y="344" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Thanh toán</text>
+<text x="695.9" y="358" fill="#b6c2cf" font-size="8" text-anchor="middle">VietQR chuyển khoản</text>
+<rect x="772" y="308" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="328" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">WEB CHẠY · chưa mở thanh toán</text>
+<rect x="772" y="352" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#34d399" stroke-width="1.5"/>
+<text x="878" y="372" fill="#34d399" font-size="8.5" font-weight="600" text-anchor="middle">Apache / CC0 ✓</text>
+<rect x="8" y="412" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#38bdf8" stroke-opacity="0.25"/>
+<rect x="15" y="416" width="175" height="100" rx="6" fill="rgba(12,74,110,0.4)" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="102" y="439" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">FREELANCE</text>
+<text x="102" y="453" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">WEB / APP / AI</text>
+<text x="102" y="475" fill="#b6c2cf" font-size="9" text-anchor="middle">Fiverr · Upwork · Freelancer</text>
+<text x="102" y="490" fill="#b6c2cf" font-size="9" text-anchor="middle">+ khách quen</text>
+<rect x="85" y="498" width="34" height="14" rx="7" fill="#22d3ee"/><text x="102" y="508" fill="#020617" font-size="8" font-weight="700" text-anchor="middle">MỚI</text>
+<rect x="205.0" y="442" width="128.2" height="48" rx="6" fill="rgba(12,74,110,0.4)" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="269.1" y="462" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Portfolio</text>
+<text x="269.1" y="476" fill="#b6c2cf" font-size="8" text-anchor="middle">quangvulinh.com · 5 dự án</text>
+<line x1="333.2" y1="466" x2="347.2" y2="466" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="347.2" y="442" width="128.2" height="48" rx="6" fill="rgba(12,74,110,0.4)" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="411.4" y="462" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Hồ sơ sàn</text>
+<text x="411.4" y="476" fill="#b6c2cf" font-size="8" text-anchor="middle">Fiverr 2 gig + Upwork</text>
+<line x1="475.5" y1="466" x2="489.5" y2="466" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="489.5" y="442" width="128.2" height="48" rx="6" fill="rgba(12,74,110,0.4)" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="553.6" y="462" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Nhận việc</text>
+<text x="553.6" y="476" fill="#b6c2cf" font-size="8" text-anchor="middle">báo giá trọn gói</text>
+<line x1="617.8" y1="466" x2="631.8" y2="466" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="631.8" y="442" width="128.2" height="48" rx="6" fill="rgba(12,74,110,0.4)" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="695.9" y="462" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Nhận tiền</text>
+<text x="695.9" y="476" fill="#b6c2cf" font-size="8" text-anchor="middle">Payoneer / PayPal</text>
+<rect x="772" y="426" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#34d399" stroke-width="1.5"/>
+<text x="878" y="446" fill="#34d399" font-size="8.5" font-weight="600" text-anchor="middle">ĐÃ CÓ DỰ ÁN THẬT</text>
+<rect x="772" y="470" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="490" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">Gig Fiverr chưa đăng</text>
+<rect x="8" y="530" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#f472b6" stroke-opacity="0.25"/>
+<rect x="15" y="534" width="175" height="100" rx="6" fill="rgba(131,24,67,0.4)" stroke="#f472b6" stroke-width="1.5"/>
+<text x="102" y="557" fill="#f472b6" font-size="11" font-weight="700" text-anchor="middle">VIDEO AI</text>
+<text x="102" y="571" fill="#f472b6" font-size="10" font-weight="700" text-anchor="middle">CHO SHOP VN</text>
+<text x="102" y="593" fill="#b6c2cf" font-size="9" text-anchor="middle">300k–3tr / video</text>
+<text x="102" y="608" fill="#b6c2cf" font-size="9" text-anchor="middle">nhóm FB · Zalo · shop quen</text>
+<rect x="85" y="616" width="34" height="14" rx="7" fill="#22d3ee"/><text x="102" y="626" fill="#020617" font-size="8" font-weight="700" text-anchor="middle">MỚI</text>
+<rect x="205.0" y="560" width="128.2" height="48" rx="6" fill="rgba(131,24,67,0.4)" stroke="#f472b6" stroke-width="1.5"/>
+<text x="269.1" y="580" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">3 video mẫu</text>
+<text x="269.1" y="594" fill="#b6c2cf" font-size="8" text-anchor="middle">cà phê · thời trang · spa</text>
+<line x1="333.2" y1="584" x2="347.2" y2="584" stroke="#f472b6" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="347.2" y="560" width="128.2" height="48" rx="6" fill="rgba(131,24,67,0.4)" stroke="#f472b6" stroke-width="1.5"/>
+<text x="411.4" y="580" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Trang bảng giá</text>
+<text x="411.4" y="594" fill="#b6c2cf" font-size="8" text-anchor="middle">+ form brief</text>
+<line x1="475.5" y1="584" x2="489.5" y2="584" stroke="#f472b6" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="489.5" y="560" width="128.2" height="48" rx="6" fill="rgba(131,24,67,0.4)" stroke="#f472b6" stroke-width="1.5"/>
+<text x="553.6" y="580" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Chốt khách</text>
+<text x="553.6" y="594" fill="#b6c2cf" font-size="8" text-anchor="middle">gói 10 video</text>
+<line x1="617.8" y1="584" x2="631.8" y2="584" stroke="#f472b6" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="631.8" y="560" width="128.2" height="48" rx="6" fill="rgba(131,24,67,0.4)" stroke="#f472b6" stroke-width="1.5"/>
+<text x="695.9" y="580" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Giao + thu tiền</text>
+<text x="695.9" y="594" fill="#b6c2cf" font-size="8" text-anchor="middle">chuyển khoản</text>
+<rect x="772" y="544" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="564" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">XẾP HẠNG #1 (ra tiền nhanh)</text>
+<rect x="772" y="588" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="878" y="608" fill="#94a3b8" font-size="8.5" font-weight="600" text-anchor="middle">Chưa làm mẫu</text>
+<rect x="8" y="648" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#a3e635" stroke-opacity="0.25"/>
+<rect x="15" y="652" width="175" height="100" rx="6" fill="rgba(54,83,20,0.4)" stroke="#a3e635" stroke-width="1.5"/>
+<text x="102" y="675" fill="#a3e635" font-size="11" font-weight="700" text-anchor="middle">SẢN PHẨM SỐ</text>
+<text x="102" y="689" fill="#a3e635" font-size="10" font-weight="700" text-anchor="middle">(Gumroad)</text>
+<text x="102" y="711" fill="#b6c2cf" font-size="9" text-anchor="middle">Template · workflow · prompt</text>
+<text x="102" y="726" fill="#b6c2cf" font-size="9" text-anchor="middle">trả VND về ngân hàng</text>
+<rect x="85" y="734" width="34" height="14" rx="7" fill="#22d3ee"/><text x="102" y="744" fill="#020617" font-size="8" font-weight="700" text-anchor="middle">MỚI</text>
+<rect x="205.0" y="678" width="175.7" height="48" rx="6" fill="rgba(54,83,20,0.4)" stroke="#a3e635" stroke-width="1.5"/>
+<text x="292.8" y="698" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Đóng gói</text>
+<text x="292.8" y="712" fill="#b6c2cf" font-size="8" text-anchor="middle">template Expo · ComfyUI</text>
+<line x1="380.7" y1="702" x2="394.7" y2="702" stroke="#a3e635" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="394.7" y="678" width="175.7" height="48" rx="6" fill="rgba(54,83,20,0.4)" stroke="#a3e635" stroke-width="1.5"/>
+<text x="482.5" y="698" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Đăng bán</text>
+<text x="482.5" y="712" fill="#b6c2cf" font-size="8" text-anchor="middle">Gumroad / Lemon Squeezy</text>
+<line x1="570.3" y1="702" x2="584.3" y2="702" stroke="#a3e635" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="584.3" y="678" width="175.7" height="48" rx="6" fill="rgba(54,83,20,0.4)" stroke="#a3e635" stroke-width="1.5"/>
+<text x="672.2" y="698" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Kéo khách</text>
+<text x="672.2" y="712" fill="#b6c2cf" font-size="8" text-anchor="middle">Reddit · nhóm FB</text>
+<rect x="772" y="662" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="878" y="682" fill="#94a3b8" font-size="8.5" font-weight="600" text-anchor="middle">DỰ BỊ</text>
+<rect x="772" y="706" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#34d399" stroke-width="1.5"/>
+<text x="878" y="726" fill="#34d399" font-size="8.5" font-weight="600" text-anchor="middle">Chỉ bán phần Apache ✓</text>
+<rect x="8" y="766" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#fb923c" stroke-opacity="0.25"/>
+<rect x="15" y="770" width="175" height="100" rx="6" fill="rgba(251,146,60,0.25)" stroke="#fb923c" stroke-width="1.5"/>
+<text x="102" y="793" fill="#fb923c" font-size="11" font-weight="700" text-anchor="middle">NGƯỜI ẢO</text>
+<text x="102" y="807" fill="#fb923c" font-size="10" font-weight="700" text-anchor="middle">BÁN HÀNG</text>
+<text x="102" y="829" fill="#b6c2cf" font-size="9" text-anchor="middle">Video bán hàng / live</text>
+<text x="102" y="844" fill="#b6c2cf" font-size="9" text-anchor="middle">video trước, live sau</text>
+<rect x="205.0" y="796" width="128.2" height="48" rx="6" fill="rgba(251,146,60,0.25)" stroke="#fb923c" stroke-width="1.5"/>
+<text x="269.1" y="816" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Ảnh + video</text>
+<text x="269.1" y="830" fill="#b6c2cf" font-size="8" text-anchor="middle">Qwen 2511 + Wan</text>
+<line x1="333.2" y1="820" x2="347.2" y2="820" stroke="#fb923c" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="347.2" y="796" width="128.2" height="48" rx="6" fill="rgba(251,146,60,0.25)" stroke="#fb923c" stroke-width="1.5"/>
+<text x="411.4" y="816" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Lồng tiếng</text>
+<text x="411.4" y="830" fill="#b6c2cf" font-size="8" text-anchor="middle">VieNeu</text>
+<line x1="475.5" y1="820" x2="489.5" y2="820" stroke="#fb923c" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="489.5" y="796" width="128.2" height="48" rx="6" fill="rgba(251,146,60,0.25)" stroke="#fb923c" stroke-width="1.5"/>
+<text x="553.6" y="816" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Video 9:16 (A)</text>
+<text x="553.6" y="830" fill="#b6c2cf" font-size="8" text-anchor="middle">bán hàng</text>
+<line x1="617.8" y1="820" x2="631.8" y2="820" stroke="#fb923c" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="631.8" y="796" width="128.2" height="48" rx="6" fill="rgba(251,146,60,0.25)" stroke="#fb923c" stroke-width="1.5"/>
+<text x="695.9" y="816" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Live mặt nạ (B)</text>
+<text x="695.9" y="830" fill="#b6c2cf" font-size="8" text-anchor="middle">MuseTalk + OBS</text>
+<rect x="772" y="780" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="878" y="800" fill="#fb7185" font-size="8.5" font-weight="600" text-anchor="middle">BLOCKED (âm thanh ảo)</text>
+<rect x="772" y="824" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#34d399" stroke-width="1.5"/>
+<text x="878" y="844" fill="#34d399" font-size="8.5" font-weight="600" text-anchor="middle">Chỉ model thương mại ✓</text>
+<rect x="8" y="884" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#fbbf24" stroke-opacity="0.25"/>
+<rect x="15" y="888" width="175" height="100" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="102" y="911" fill="#fbbf24" font-size="11" font-weight="700" text-anchor="middle">TỔNG ĐÀI AI</text>
+<text x="102" y="925" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">(onmi)</text>
+<text x="102" y="947" fill="#b6c2cf" font-size="9" text-anchor="middle">Bán gói / dịch vụ CSKH</text>
+<text x="102" y="962" fill="#b6c2cf" font-size="9" text-anchor="middle">onmi.quangvulinh.com</text>
+<rect x="205.0" y="914" width="128.2" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="269.1" y="934" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Thẻ nhân vật</text>
+<text x="269.1" y="948" fill="#b6c2cf" font-size="8" text-anchor="middle">kịch bản CSKH</text>
+<line x1="333.2" y1="938" x2="347.2" y2="938" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="347.2" y="914" width="128.2" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="411.4" y="934" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Nghe</text>
+<text x="411.4" y="948" fill="#b6c2cf" font-size="8" text-anchor="middle">Zipformer STT</text>
+<line x1="475.5" y1="938" x2="489.5" y2="938" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="489.5" y="914" width="128.2" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="553.6" y="934" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Trả lời</text>
+<text x="553.6" y="948" fill="#b6c2cf" font-size="8" text-anchor="middle">LLM</text>
+<line x1="617.8" y1="938" x2="631.8" y2="938" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="631.8" y="914" width="128.2" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="695.9" y="934" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Nói</text>
+<text x="695.9" y="948" fill="#b6c2cf" font-size="8" text-anchor="middle">VieNeu · WebRTC</text>
+<rect x="772" y="898" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="878" y="918" fill="#fb7185" font-size="8.5" font-weight="600" text-anchor="middle">WEB CHẠY · còn việc chặn</text>
+<rect x="772" y="942" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="962" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">603 test đạt · cần QA cuối</text>
+<rect x="8" y="1002" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#fb7185" stroke-opacity="0.25"/>
+<rect x="15" y="1006" width="175" height="100" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="102" y="1029" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">ANDROID APPS</text>
+<text x="102" y="1043" fill="#fb7185" font-size="10" font-weight="700" text-anchor="middle">(Play Store)</text>
+<text x="102" y="1065" fill="#b6c2cf" font-size="9" text-anchor="middle">AdMob · bản Pro · affiliate</text>
+<text x="102" y="1080" fill="#b6c2cf" font-size="9" text-anchor="middle">Bé học chữ miễn phí</text>
+<rect x="205.0" y="1032" width="175.7" height="48" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="292.8" y="1052" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Build</text>
+<text x="292.8" y="1066" fill="#b6c2cf" font-size="8" text-anchor="middle">15+ app đã có APK</text>
+<line x1="380.7" y1="1056" x2="394.7" y2="1056" stroke="#fb7185" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="394.7" y="1032" width="175.7" height="48" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="482.5" y="1052" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Closed test</text>
+<text x="482.5" y="1066" fill="#b6c2cf" font-size="8" text-anchor="middle">14 ngày · 12+ người</text>
+<line x1="570.3" y1="1056" x2="584.3" y2="1056" stroke="#fb7185" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="584.3" y="1032" width="175.7" height="48" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+<text x="672.2" y="1052" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Play Console</text>
+<text x="672.2" y="1066" fill="#b6c2cf" font-size="8" text-anchor="middle">$25 + CCCD</text>
+<rect x="772" y="1016" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="878" y="1036" fill="#fbbf24" font-size="8.5" font-weight="600" text-anchor="middle">CHỜ GOM 14–15 GMAIL TEST</text>
+<rect x="772" y="1060" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="878" y="1080" fill="#94a3b8" font-size="8.5" font-weight="600" text-anchor="middle">Tốc Độ VN: dùng riêng</text>
+<rect x="8" y="1120" width="984" height="108" rx="10" fill="rgba(15,23,42,0.25)" stroke="#94a3b8" stroke-opacity="0.25"/>
+<rect x="15" y="1124" width="175" height="100" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="102" y="1147" fill="#94a3b8" font-size="11" font-weight="700" text-anchor="middle">LIVE TRANSLATE</text>
+<text x="102" y="1161" fill="#94a3b8" font-size="10" font-weight="700" text-anchor="middle">(ý tưởng)</text>
+<text x="102" y="1183" fill="#b6c2cf" font-size="9" text-anchor="middle">Web phiên dịch</text>
+<text x="102" y="1198" fill="#b6c2cf" font-size="9" text-anchor="middle">nói 2 chiều + đọc to</text>
+<rect x="205.0" y="1150" width="128.2" height="48" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="269.1" y="1170" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Nghe</text>
+<text x="269.1" y="1184" fill="#b6c2cf" font-size="8" text-anchor="middle">Whisper / Zipformer</text>
+<line x1="333.2" y1="1174" x2="347.2" y2="1174" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="347.2" y="1150" width="128.2" height="48" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="411.4" y="1170" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Dịch</text>
+<text x="411.4" y="1184" fill="#b6c2cf" font-size="8" text-anchor="middle">LLM local</text>
+<line x1="475.5" y1="1174" x2="489.5" y2="1174" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="489.5" y="1150" width="128.2" height="48" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="553.6" y="1170" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Đọc to</text>
+<text x="553.6" y="1184" fill="#b6c2cf" font-size="8" text-anchor="middle">VieNeu + TTS EN</text>
+<line x1="617.8" y1="1174" x2="631.8" y2="1174" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="631.8" y="1150" width="128.2" height="48" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="695.9" y="1170" fill="white" font-size="9.5" font-weight="600" text-anchor="middle">Web PWA</text>
+<text x="695.9" y="1184" fill="#b6c2cf" font-size="8" text-anchor="middle">điện thoại + PC</text>
+<rect x="772" y="1134" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="878" y="1154" fill="#94a3b8" font-size="8.5" font-weight="600" text-anchor="middle">Ý TƯỞNG · đã lên kế hoạch</text>
+<rect x="772" y="1178" width="213" height="32" rx="5" fill="rgba(15,23,42,0.6)" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="878" y="1198" fill="#94a3b8" font-size="8.5" font-weight="600" text-anchor="middle">Làm sau phim</text>
+<rect x="15" y="1244" width="970" height="60" rx="10" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+<text x="30" y="1267" fill="#22d3ee" font-size="12" font-weight="700">XƯƠNG SỐNG DÙNG CHUNG</text>
+<text x="30" y="1287" fill="#94a3b8" font-size="8.5">1 bộ công cụ gánh nhiều hướng</text>
+<rect x="235" y="1256" width="178" height="36" rx="6" fill="rgba(15,23,42,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+<text x="324" y="1278" fill="white" font-size="9" font-weight="600" text-anchor="middle">ComfyUI (Klein · Wan · LTX)</text>
+<rect x="423" y="1256" width="178" height="36" rx="6" fill="rgba(15,23,42,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+<text x="512" y="1278" fill="white" font-size="9" font-weight="600" text-anchor="middle">VieNeu + thư viện giọng</text>
+<rect x="611" y="1256" width="178" height="36" rx="6" fill="rgba(15,23,42,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+<text x="700" y="1278" fill="white" font-size="9" font-weight="600" text-anchor="middle">LLM local</text>
+<rect x="799" y="1256" width="178" height="36" rx="6" fill="rgba(15,23,42,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+<text x="888" y="1278" fill="white" font-size="9" font-weight="600" text-anchor="middle">Web + Cloudflare tunnel</text>
+<text x="30" y="1326" fill="white" font-size="10" font-weight="600">CHÚ THÍCH</text>
+<rect x="100" y="1317" width="16" height="10" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399"/><text x="122" y="1326" fill="#94a3b8" font-size="8.5">Đang chạy / giấy phép OK</text>
+<rect x="270" y="1317" width="16" height="10" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24"/><text x="292" y="1326" fill="#94a3b8" font-size="8.5">Chờ / cần kiểm</text>
+<rect x="440" y="1317" width="16" height="10" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185"/><text x="462" y="1326" fill="#94a3b8" font-size="8.5">Blocked</text>
+<rect x="610" y="1317" width="16" height="10" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8"/><text x="632" y="1326" fill="#94a3b8" font-size="8.5">Ý tưởng / dự bị</text>
+<rect x="780" y="1316" width="30" height="12" rx="6" fill="#22d3ee"/><text x="795" y="1325" fill="#020617" font-size="7.5" font-weight="700" text-anchor="middle">MỚI</text><text x="816" y="1326" fill="#94a3b8" font-size="8.5">thêm 18/11</text>
+</svg></div>
+
+<h2 id="viec">Việc cần làm tiếp</h2>
+<ul class="todo">
+<li class="me"><span class="tag">Bán giọng đọc</span><span class="txt">Điền tài khoản ngân hàng để mở VietQR</span><span class="who a">Anh</span></li>
+<li class=""><span class="tag">Bán giọng đọc</span><span class="txt">Khởi động lại web, kiểm mã QR + 1 đơn thử</span><span class="who e">Em</span></li>
+<li class="me"><span class="tag">Freelance</span><span class="txt">Tạo tài khoản Fiverr + xác minh CCCD, mở Payoneer</span><span class="who a">Anh</span></li>
+<li class=""><span class="tag">Freelance</span><span class="txt">Viết nội dung 2 gig (tiêu đề, mô tả, giá, tag, FAQ) bằng tiếng Anh</span><span class="who e">Em</span></li>
+<li class=""><span class="tag">Freelance</span><span class="txt">Hồ sơ Upwork dựa trên portfolio 5 dự án</span><span class="who e">Em</span></li>
+<li class=""><span class="tag">Video cho shop</span><span class="txt">Làm 3 video mẫu 9:16 (cà phê, thời trang, spa) bằng model thương mại</span><span class="who e">Em</span></li>
+<li class=""><span class="tag">Video cho shop</span><span class="txt">Trang bảng giá + form brief; bài chào cho nhóm FB/Zalo</span><span class="who e">Em</span></li>
+<li class="me"><span class="tag">Video cho shop</span><span class="txt">Đăng bài chào + nhắn shop quen, chốt khách đầu</span><span class="who a">Anh</span></li>
+<li class=""><span class="tag">YouTube</span><span class="txt">Giữ lịch CN + T4 19:00; theo dõi giờ xem để vào YPP</span><span class="who e">Em</span></li>
+<li class=""><span class="tag">Nhạc AI</span><span class="txt">Kiểm giấy phép ACE-Step hoặc chuyển hẳn HeartMuLa</span><span class="who e">Em</span></li>
+<li class="me"><span class="tag">Android</span><span class="txt">Gom 14–15 Gmail người test, đăng ký Play Console (25 USD)</span><span class="who a">Anh</span></li>
+<li class=""><span class="tag">Tổng đài onmi</span><span class="txt">Gỡ các việc đang chặn, QA cuối trước khi chào bán</span><span class="who e">Em</span></li>
+<li class="me"><span class="tag">Người ảo</span><span class="txt">Cài driver âm thanh ảo (cần anh bấm quyền admin)</span><span class="who a">Anh</span></li>
+<li class=""><span class="tag">Live Translate</span><span class="txt">Làm sau khi xong đợt phim</span><span class="who e">Em</span></li>
+</ul>
+<p class="subtitle" style="margin-top:.6rem"><span class="who a">Anh</span> = việc cần chính chủ (tài khoản, CCCD, ngân hàng, bấm quyền admin) · <span class="who e">Em</span> = agent làm được</p>
+
+<h2 id="nentang">Nền tảng để đăng / bán</h2>
+<p class="hint">↔ vuốt ngang để xem cột phí + trạng thái</p>
+<div class="panel"><table>
+<thead><tr><th>Nền tảng</th><th>Dùng để</th><th>Phí · nhận tiền</th><th>Trạng thái</th></tr></thead>
+<tbody>
+<tr><td><b>YouTube (YPP)</b><span class="k">Kênh video</span></td><td>Phim cổ tích, hoạt hình, nhạc</td><td>Chia sẻ doanh thu quảng cáo; cần đủ giờ xem + sub</td><td><span class="pill" style="--c:#34d399">Đang đăng</span></td></tr>
+<tr><td><b>tts.quangvulinh.com</b><span class="k">Web của mình</span></td><td>Bán ký tự đọc giọng Việt</td><td>VietQR thẳng về ngân hàng, không mất phí sàn</td><td><span class="pill" style="--c:#fbbf24">Chạy · chờ mở thanh toán</span></td></tr>
+<tr><td><b>Nhóm Facebook / Zalo</b><span class="k">Bán trực tiếp</span></td><td>Video AI cho shop, chatbot, web</td><td>Chuyển khoản trực tiếp, 0% phí sàn</td><td><span class="pill" style="--c:#fbbf24">Chưa đăng bài chào</span></td></tr>
+<tr><td><b>Fiverr</b><span class="k">Sàn freelance (gig)</span></td><td>Gig 1: AI automation / AI agent · Gig 2: YouTube automation</td><td>Phí 20%; rút về Payoneer/PayPal; giữ tiền 14 ngày</td><td><span class="pill" style="--c:#fbbf24">Đã chọn · chưa tạo gig</span></td></tr>
+<tr><td><b>Upwork</b><span class="k">Sàn freelance (chào giá)</span></td><td>Dựng workflow ComfyUI, pipeline AI, web/app</td><td>15–45 USD/giờ; dự án 800–2.500 USD</td><td><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
+<tr><td><b>Freelancer.com</b><span class="k">Sàn freelance (chào giá)</span></td><td>Dự án pipeline video AI</td><td>Đông người chào giá (vd 98 người/1 việc)</td><td><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
+<tr><td><b>Gumroad / Lemon Squeezy</b><span class="k">Bán sản phẩm số</span></td><td>Template app Expo, workflow ComfyUI, gói prompt</td><td>Gumroad 10% + 0,5 USD, trả VND về ngân hàng (≥100 USD)</td><td><span class="pill" style="--c:#94a3b8">Dự bị</span></td></tr>
+<tr><td><b>Google Play</b><span class="k">Chợ ứng dụng</span></td><td>15+ app Android, Bé học chữ</td><td>Phí 25 USD một lần; Google khấu trừ 5% thuế</td><td><span class="pill" style="--c:#fbbf24">Chờ closed test</span></td></tr>
+<tr><td><b>Shopee Affiliate</b><span class="k">Hoa hồng</span></td><td>Gắn link vào app người lớn + kênh</td><td>Mẹ &amp; Bé ~9,4% khách mới, tối đa 70k/đơn</td><td><span class="pill" style="--c:#94a3b8">Chưa đăng ký</span></td></tr>
+<tr><td><b>Magnific (Freepik) · Zedge · Amazon KDP</b><span class="k">Kho nội dung</span></td><td>Ảnh/vector AI, hình nền, nhạc chuông, sách tô màu</td><td>Thu nhập thấp, chậm; chỉ dùng model Apache</td><td><span class="pill" style="--c:#94a3b8">Để sau</span></td></tr>
+</tbody></table></div>
+
+<h2 id="ghichu">Rào cản &amp; đã loại</h2>
+<div class="cards">
+<div class="card"><h3>Ra tiền gần nhất</h3><ul>
+<li>• <b>Bán giọng đọc</b>: web đã chạy, chỉ thiếu tài khoản ngân hàng để mở VietQR</li>
+<li>• <b>Video AI cho shop VN</b>: giá thị trường 300k–3tr/video, có tiền trong 1–3 tuần</li>
+<li>• <b>Freelance</b>: đã có dự án thật (web du lịch + CMS, biên bản họp AI) làm portfolio</li></ul></div>
+<div class="card"><h3>Rào cản chung</h3><ul>
+<li>• <b>Giấy phép</b>: không dùng viXTTS, Qwen-Image 2.1, MiniMax H3, HunyuanVideo cho việc kiếm tiền</li>
+<li>• <b>TikTok Shop</b> cấm giọng AI trong live (06/2026)</li>
+<li>• <b>1 GPU</b>: phim, nhạc, tổng đài, live translate không chạy song song</li>
+<li>• Ngưỡng YPP dự kiến tăng từ 01/02/2027</li></ul></div>
+<div class="card"><h3>Đã loại</h3><ul><li><b>Adobe Stock</b>: 13/20 ảnh hỏng + model phi thương mại</li><li><b>Etsy</b>: không hỗ trợ người bán ở Việt Nam</li><li><b>Envato</b>: ngừng nhận tác giả mới từ 25/09/2026, không nhận AI</li><li><b>TikTok Creator Rewards</b>: không có ở Việt Nam → TikTok chỉ để kéo khách</li><li><b>Facebook Content Monetization</b>: Việt Nam không có trong danh sách chính thức</li></ul></div>
+</div>
+
+<p class="footer">quangvulinh.com/plan • kế hoạch cá nhân, cập nhật 18/11/2026 • số liệu phí/giá tra từ trang chính thức của từng nền tảng 10/2026</p>
+</div></body></html>
