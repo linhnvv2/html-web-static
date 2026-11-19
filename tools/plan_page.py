@@ -22,7 +22,7 @@ LANES = [
          st=[("ĐANG CHẠY · ra tập đều", "green"), ("Wan Apache · LTX free <10tr USD", "green")]),
     dict(c="violet", t=("NHẠC AI", "(vL Ballad)"), sub=("YouTube + YT Music/Spotify", "kênh vL Ballad"),
          steps=[("Sáng tác", "HeartMuLa"), ("Sản xuất", "ACE-Step 1.5"), ("Đăng", "kênh vL Ballad")],
-         st=[("CHỜ KIỂM LICENSE", "amber"), ("ACE-Step ⚠ → dùng HeartMuLa", "amber")]),
+         st=[("ĐANG ĐĂNG · đủ YPP trước 02/2027", "green"), ("ACE-Step MIT ✓ · HeartMuLa Apache ✓", "green")]),
     dict(c="teal", t=("BÁN GIỌNG ĐỌC", "(tts.quangvulinh.com)"), sub=("2.000đ / 1.000 ký tự", "gói 20k–200k"),
          steps=[("Thư viện giọng", "49–56 giọng hợp pháp"), ("Đọc", "VieNeu v3"), ("Web bán", "nghe thử · tải MP3"),
                 ("Thanh toán", "VietQR chuyển khoản")],
@@ -143,7 +143,7 @@ TODO = [
     ("Video cho shop", "Trang bảng giá + form brief; bài chào cho nhóm FB/Zalo", "Em", False),
     ("Video cho shop", "Đăng bài chào + nhắn shop quen, chốt khách đầu", "Anh", True),
     ("YouTube", "Giữ lịch CN + T4 19:00; theo dõi giờ xem để vào YPP", "Em", False),
-    ("Nhạc AI", "Kiểm giấy phép ACE-Step hoặc chuyển hẳn HeartMuLa", "Em", False),
+    ("Nhạc AI", "Tự sửa lời + giữ file dự án làm bằng chứng sáng tác; tick khai báo AI khi đăng", "Em", False),
     ("Android", "Gom 14–15 Gmail người test, đăng ký Play Console (25 USD)", "Anh", True),
     ("Tổng đài onmi", "Gỡ các việc đang chặn, QA cuối trước khi chào bán", "Em", False),
     ("Người ảo", "Cài driver âm thanh ảo (cần anh bấm quyền admin)", "Anh", True),
@@ -299,7 +299,8 @@ td b {{ color:white; display:block; }} td .k {{ color:#94a3b8; font-size:.72rem;
 <li>• <b>Giấy phép</b>: không dùng viXTTS, Qwen-Image 2.1, MiniMax H3, HunyuanVideo cho việc kiếm tiền</li>
 <li>• <b>TikTok Shop</b> cấm giọng AI trong live (06/2026)</li>
 <li>• <b>1 GPU</b>: phim, nhạc, tổng đài, live translate không chạy song song</li>
-<li>• Ngưỡng YPP dự kiến tăng từ 01/02/2027</li></ul></div>
+<li>• Ngưỡng YPP dự kiến tăng từ 01/02/2027</li>
+<li>• Nhạc AI: model cho dùng thương mại, nhưng nhạc AI thuần có thể không được bảo hộ bản quyền → không đăng ký Content ID</li></ul></div>
 <div class="card"><h3>Đã loại</h3><ul>{drop_li}</ul></div>
 </div>
 
