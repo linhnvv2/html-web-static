@@ -22,7 +22,7 @@ LANES = [
          st=[("ĐANG CHẠY · ra tập đều", "green"), ("Wan Apache · LTX free <10tr USD", "green")]),
     dict(c="violet", t=("NHẠC AI", "(vL Ballad)"), sub=("YouTube + YT Music/Spotify", "kênh vL Ballad"),
          steps=[("Sáng tác", "HeartMuLa"), ("Sản xuất", "ACE-Step 1.5"), ("Đăng", "kênh vL Ballad")],
-         st=[("ĐANG ĐĂNG · đủ YPP trước 02/2027", "green"), ("ACE-Step MIT ✓ · HeartMuLa Apache ✓", "green")]),
+         st=[("GIẤY PHÉP OK · cần đăng đều để vào YPP", "amber"), ("ACE-Step MIT ✓ · HeartMuLa Apache ✓", "green")]),
     dict(c="teal", t=("BÁN GIỌNG ĐỌC", "(tts.quangvulinh.com)"), sub=("2.000đ / 1.000 ký tự", "gói 20k–200k"),
          steps=[("Thư viện giọng", "49–56 giọng hợp pháp"), ("Đọc", "VieNeu v3"), ("Web bán", "nghe thử · tải MP3"),
                 ("Thanh toán", "VietQR chuyển khoản")],
