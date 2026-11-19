@@ -116,9 +116,9 @@ PLATFORMS = [
     ("YouTube (YPP)", "Kênh video", "Phim cổ tích, hoạt hình, nhạc", "Chia sẻ doanh thu quảng cáo; cần đủ giờ xem + sub", "Đang đăng", "green"),
     ("tts.quangvulinh.com", "Web của mình", "Bán ký tự đọc giọng Việt", "VietQR thẳng về ngân hàng, không mất phí sàn", "Chạy · chờ mở thanh toán", "amber"),
     ("Nhóm Facebook / Zalo", "Bán trực tiếp", "Video AI cho shop, chatbot, web", "Chuyển khoản trực tiếp, 0% phí sàn", "Chưa đăng bài chào", "amber"),
-    ("Fiverr", "Sàn freelance (gig)", "Gig 1: AI automation / AI agent · Gig 2: YouTube automation", "Phí 20%; rút về Payoneer/PayPal; giữ tiền 14 ngày", "Đã chọn · chưa tạo gig", "amber"),
-    ("Upwork", "Sàn freelance (chào giá)", "Dựng workflow ComfyUI, pipeline AI, web/app", "15–45 USD/giờ; dự án 800–2.500 USD", "Dự bị", "slate"),
-    ("Freelancer.com", "Sàn freelance (chào giá)", "Dự án pipeline video AI", "Đông người chào giá (vd 98 người/1 việc)", "Dự bị", "slate"),
+    ("Fiverr", "Sàn freelance (gig)", "Gig 1: AI automation / AI agent · Gig 2: YouTube automation", "Phí 20%; rút về Payoneer/PayPal; giữ tiền 14 ngày", "Có tài khoản · đang tạo hồ sơ", "amber"),
+    ("Upwork", "Sàn freelance (chào giá)", "Dựng workflow ComfyUI, pipeline AI, web/app", "15–45 USD/giờ; dự án 800–2.500 USD", "Có tài khoản · đang tạo hồ sơ", "amber"),
+    ("Freelancer.com", "Sàn freelance (chào giá)", "Dự án pipeline video AI", "Đông người chào giá (vd 98 người/1 việc)", "Có tài khoản · đã chọn 13 kỹ năng", "amber"),
     ("Gumroad / Lemon Squeezy", "Bán sản phẩm số", "Template app Expo, workflow ComfyUI, gói prompt", "Gumroad 10% + 0,5 USD, trả VND về ngân hàng (≥100 USD)", "Dự bị", "slate"),
     ("Google Play", "Chợ ứng dụng", "15+ app Android, Bé học chữ", "Phí 25 USD một lần; Google khấu trừ 5% thuế", "Chờ closed test", "amber"),
     ("Shopee Affiliate", "Hoa hồng", "Gắn link vào app người lớn + kênh", "Mẹ & Bé ~9,4% khách mới, tối đa 70k/đơn", "Chưa đăng ký", "slate"),
@@ -136,7 +136,7 @@ DROPPED = [
 TODO = [
     ("Bán giọng đọc", "Điền tài khoản ngân hàng để mở VietQR", "Anh", True),
     ("Bán giọng đọc", "Khởi động lại web, kiểm mã QR + 1 đơn thử", "Em", False),
-    ("Freelance", "Tạo tài khoản Fiverr + xác minh CCCD, mở Payoneer", "Anh", True),
+    ("Freelance", "Gửi tên đúng CCCD + ảnh thật để hoàn tất hồ sơ; sau này mở Payoneer + xác minh CCCD", "Anh", True),
     ("Freelance", "Viết nội dung 2 gig (tiêu đề, mô tả, giá, tag, FAQ) bằng tiếng Anh", "Em", False),
     ("Freelance", "Hồ sơ Upwork dựa trên portfolio 5 dự án", "Em", False),
     ("Video cho shop", "Làm 3 video mẫu 9:16 (cà phê, thời trang, spa) bằng model thương mại", "Em", False),
@@ -264,7 +264,7 @@ td b {{ color:white; display:block; }} td .k {{ color:#94a3b8; font-size:.72rem;
 </style></head><body><div class="container">
 <div class="header-row"><div class="pulse-dot"></div><h1 id="dau">Plan — kế hoạch kiếm tiền</h1></div>
 <p class="subtitle">{len(LANES)} hướng · {len(PLATFORMS)} nền tảng · {len(TODO)} việc cần làm • cập nhật {UPDATED}</p>
-<nav class="nav"><a href="#tranh">Bức tranh</a><a href="#viec">Việc cần làm</a><a href="#nentang">Nền tảng để đăng</a><a href="#ghichu">Rào cản &amp; đã loại</a><a href="/">← quangvulinh.com</a></nav>
+<nav class="nav"><a href="#tranh">Bức tranh</a><a href="#viec">Việc cần làm</a><a href="#nentang">Nền tảng để đăng</a><a href="#links">Link freelance</a><a href="#ghichu">Rào cản &amp; đã loại</a><a href="/">← quangvulinh.com</a></nav>
 
 <h2 id="tranh">Bức tranh {len(LANES)} hướng</h2>
 <div class="panel"><svg viewBox="0 0 1000 {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ {len(LANES)} hướng kiếm tiền">
@@ -288,6 +288,15 @@ td b {{ color:white; display:block; }} td .k {{ color:#94a3b8; font-size:.72rem;
 <tbody>
 {plat_rows}
 </tbody></table></div>
+
+<h2 id="links">Link theo dõi freelance</h2>
+<div class="cards">
+<div class="card"><h3>Mở nhanh</h3><ul>
+<li>• <a href="https://www.fiverr.com/users/me/seller_dashboard" target="_blank" rel="noopener" style="color:#7dd3fc">Fiverr — Seller dashboard</a></li>
+<li>• <a href="https://www.upwork.com/nx/find-work/" target="_blank" rel="noopener" style="color:#7dd3fc">Upwork — Find work</a></li>
+<li>• <a href="https://www.freelancer.com/dashboard" target="_blank" rel="noopener" style="color:#7dd3fc">Freelancer — Dashboard</a></li>
+<li>• Agent tự kiểm tin nhắn / đơn / duyệt hồ sơ lúc 9:00 và 20:00 mỗi ngày, báo qua Telegram</li></ul></div>
+</div>
 
 <h2 id="ghichu">Rào cản &amp; đã loại</h2>
 <div class="cards">
